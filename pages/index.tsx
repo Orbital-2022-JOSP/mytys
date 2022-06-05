@@ -2,28 +2,27 @@ import React from "react";
 import type { GetServerSideProps } from "next";
 import Layout from "../components/Layout";
 import Post, { PostProps } from "../components/Post";
-import prisma from '../lib/prisma'
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 
-export const getServerSideProps: GetServerSideProps = async () => {
-    const feed = await prisma.post.findMany({
-        where: {
-            published: true,
-        },
-        include: {
-            author: {
-                select: {
-                    name: true,
-                },
-            },
-        },
-    });
-    return {
-        props: { feed },
-    };
-};
+// export const getServerSideProps: GetServerSideProps = async () => {
+//     const feed = await prisma.post.findMany({
+//         where: {
+//             published: true,
+//         },
+//         include: {
+//             author: {
+//                 select: {
+//                     name: true,
+//                 },
+//             },
+//         },
+//     });
+//     return {
+//         props: { feed },
+//     };
+// };
 
 type Props = {
     feed: PostProps[];

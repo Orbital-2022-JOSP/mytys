@@ -1,11 +1,11 @@
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { NextApiHandler } from "next";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import EmailProvider from 'next-auth/providers/email';
 import GitHubProvider from 'next-auth/providers/github';
 import Auth0Provider from 'next-auth/providers/auth0';
-import prisma from '../../../lib/prisma';
+import clientPromise from '../../../lib/mongodb';
+import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
 
 
 const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, options);
@@ -71,7 +71,7 @@ const options: NextAuthOptions = {
         //     },
         // }),
     ],
-    adapter: PrismaAdapter(prisma),
+    adapter: MongoDBAdapter(clientPromise),
     secret: process.env.SECRET,
     session: {
         strategy: "jwt"
