@@ -17,15 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             }
             break;
 
-        case 'POST':
-            try {
-                const newQuestion = await QuestionModel.create(req.body);
-                res.status(201).json({ success: true, data: newQuestion });
-            } catch (error) {
-                res.status(400).json({ success: false });
-            }
-            break;
-
         default:
             res.status(404).end();
             break;
