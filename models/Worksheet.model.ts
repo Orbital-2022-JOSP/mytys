@@ -53,7 +53,8 @@ const WorksheetSchema = new Schema<IWorksheet>({
         ref: "QuestionType"
     }],
     deleted: {
-        type: Boolean
+        type: Boolean,
+        default: false
     }
 })
 
