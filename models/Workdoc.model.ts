@@ -13,6 +13,7 @@ import { IWorksheet } from './Worksheet.model';
  * @member {number} userScore The user's score for this worksheet
  * @member {number} maximumScore The maximum score possible for this worksheet
  * @member {number} pointsEarned No of points the user earned from completing this worksheet
+ * @member {boolean} deleted Soft Deletion Flag
  */
 
 export interface IWorkdoc {
@@ -22,6 +23,7 @@ export interface IWorkdoc {
     userScore: number;
     maximumScore: number;
     pointsEarned: number;
+    deleted: boolean;
 }
 
 const WorkdocSchema = new Schema<IWorkdoc>({
@@ -48,6 +50,10 @@ const WorkdocSchema = new Schema<IWorkdoc>({
     pointsEarned: {
         type: Number,
         min: 0
+    },
+    deleted: {
+        type: Boolean,
+        default: false
     }
 })
 
