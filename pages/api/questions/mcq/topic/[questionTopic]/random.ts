@@ -1,10 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from '../../../../../dbConnect';
-import MCQQuestionModel from "../../../../../models/MCQQuestion.model";
+import dbConnect from '../../../../../../dbConnect';
+import MCQQuestionModel from "../../../../../../models/MCQQuestion.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const {
-        query: { questionType },
+        query: { questionTopic },
         method,
     } = req
 
@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const Questions = await MCQQuestionModel.find({ questionType: questionType }).exec();
+                const Questions = await MCQQuestionModel.findOne({ questionTopic: questionTopic }).exec();
                 res.status(201).json({ success: true, data: Questions });
             } catch (error) {
                 res.status(400).json({ success: false });

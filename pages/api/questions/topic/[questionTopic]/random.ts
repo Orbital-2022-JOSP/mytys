@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../../dbConnect';
-import OpenEndedQuestionModel from "../../../../../models/OpenEndedQuestion.model";
+import QuestionModel from "../../../../../models/Question.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const {
@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const Questions = await OpenEndedQuestionModel.find({ questionTopic: questionTopic }).exec();
+                const Questions = await QuestionModel.findOne({ questionTopic: questionTopic });
                 res.status(201).json({ success: true, data: Questions });
             } catch (error) {
                 res.status(400).json({ success: false });
