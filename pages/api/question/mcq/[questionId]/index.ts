@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const Questions = await MCQQuestionModel.find({ questionId: questionId });
+                const Questions = await MCQQuestionModel.find({ questionId: questionId }).exec();
                 res.status(201).json({ success: true, data: Questions });
             } catch (error) {
                 res.status(400).json({ success: false });
