@@ -40,11 +40,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const deletedWorksheet = await WorksheetModel.deleteOne({ _id: worksheetId });
-                if (!deletedWorksheet) {
+                const worksheet = await WorksheetModel.findByIdAndUpdate(worksheetId, {
+                    deleted: true
+                }, {
+                    new: true,
+                    runValidators: true,
+                });
+                if (!worksheet) {
                     return res.status(400).json({ success: false });
                 }
-                res.status(200).json({ success: true, data: {} });
+                res.status(200).json({ success: true, data: worksheet });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
