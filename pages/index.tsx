@@ -1,35 +1,17 @@
-import React from "react";
-import type { GetServerSideProps } from "next";
-import Layout from "../components/Layout";
-import Post, { PostProps } from "../components/Post";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import React from "react";
+import { Blog } from "../components/Blog/Blog";
+import { FAQ } from "../components/FAQ/FAQ";
+import { Features } from "../components/Features/Features";
 import { Hero } from '../components/Hero/Hero';
+import { Hero3 } from "../components/Hero3/Hero3";
+import Layout from "../components/Layout";
+import { Stats } from "../components/Stats/Stats";
+import { Steps } from "../components/Steps/Steps";
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//     const feed = await prisma.post.findMany({
-//         where: {
-//             published: true,
-//         },
-//         include: {
-//             author: {
-//                 select: {
-//                     name: true,
-//                 },
-//             },
-//         },
-//     });
-//     return {
-//         props: { feed },
-//     };
-// };
 
-type Props = {
-    feed: PostProps[];
-};
-
-const Blog: React.FC<Props> = (props) => {
+const Home: React.FC = () => {
     const router = useRouter();
     const isActive: (pathname: string) => boolean = (pathname) =>
         router.pathname === pathname;
@@ -39,18 +21,14 @@ const Blog: React.FC<Props> = (props) => {
 
     return (
         <Layout>
-            {/* <div classNameName="page">
-                <h1>Public Feed</h1>
-                <main>
-                    {props.feed.map((post) => (
-                        <div key={post.id} classNameName="post">
-                            <Post post={post} />
-                        </div>
-                    ))}
-                </main>
-            </div> */}
+            <Hero3 />
             <Hero />
-            <div className="container">
+            <Features />
+            <Steps />
+            <Stats />
+            <Blog />
+            <FAQ />
+            {/* <div className="container">
                 <header className="sticky-top">
                     <div className="row justify-content-between align-items-center bg-dark" style={{
                         backgroundImage: `url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.webp')`,
@@ -197,7 +175,7 @@ const Blog: React.FC<Props> = (props) => {
                         </div>
                     </div >
                 </div >
-            </div>
+            </div> */}
             {/* <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossOrigin="anonymous">
             </script>
@@ -225,4 +203,4 @@ const Blog: React.FC<Props> = (props) => {
     );
 };
 
-export default Blog;
+export default Home;
