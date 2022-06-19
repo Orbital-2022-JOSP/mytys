@@ -9,6 +9,7 @@ import { Hero3 } from "../components/Hero3/Hero3";
 import Layout from "../components/Layout";
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
+import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
 
 
 const Home: React.FC = () => {
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
             <Stats />
             <Blog />
             <FAQ />
+            <QuestionAttempt />
             {/* <div className="container">
                 <header className="sticky-top">
                     <div className="row justify-content-between align-items-center bg-dark" style={{
