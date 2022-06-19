@@ -5,6 +5,7 @@ import Post, { PostProps } from "../components/Post";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
+import { Hero } from '../components/Hero/Hero';
 
 // export const getServerSideProps: GetServerSideProps = async () => {
 //     const feed = await prisma.post.findMany({
@@ -48,6 +49,7 @@ const Blog: React.FC<Props> = (props) => {
                     ))}
                 </main>
             </div> */}
+            <Hero />
             <div className="container">
                 <header className="sticky-top">
                     <div className="row justify-content-between align-items-center bg-dark" style={{
