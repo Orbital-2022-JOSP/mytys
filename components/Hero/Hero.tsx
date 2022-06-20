@@ -1,7 +1,7 @@
 export const Hero: React.FC = () => {
     return (
-        <section className="text-gray-600 body-font">
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                     <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
                 </div>
@@ -39,6 +39,6 @@ export const Hero: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
