@@ -10,7 +10,6 @@ import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
 
-
 const Home: React.FC = () => {
     const router = useRouter();
     const isActive: (pathname: string) => boolean = (pathname) =>

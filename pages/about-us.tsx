@@ -5,7 +5,6 @@ import { Stats } from "../components/Stats/Stats";
 import { Team } from "../components/Team/Team";
 import { WhoAreWe } from "../components/WhoAreWe/WhoAreWe";
 
-
 const AboutUsPage: React.FC = () => {
     return (
         <>
