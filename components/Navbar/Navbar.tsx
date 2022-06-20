@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useSession } from 'next-auth/react';
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { data: session, status } = useSession()
 
     return (
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -32,56 +34,103 @@ export const Navbar = () => {
                     </span>
                 </a>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            Product
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            Features
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Product pricing"
-                            title="Product pricing"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            Pricing
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="About us"
-                            title="About us"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            About us
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                        >
-                            Sign up
-                        </a>
-                    </li>
+                    {
+                        status == "authenticated"
+                            ? <>
+                                <li>
+                                    <a
+                                        href="/"
+                                        aria-label="Our product"
+                                        title="Our product"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    >
+                                        Explore
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/"
+                                        aria-label="Product pricing"
+                                        title="Product pricing"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    >
+                                        Problems
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/"
+                                        aria-label="About us"
+                                        title="About us"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    >
+                                        Leaderboard
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/"
+                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                        aria-label="Sign up"
+                                        title="Sign up"
+                                    >
+                                        Sign out
+                                    </a>
+                                </li>
+                            </>
+                            : <>
+                                <li>
+                                    <a
+                                        href="/"
+                                        aria-label="Our product"
+                                        title="Our product"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    >
+                                        Features
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/"
+                                        aria-label="Product pricing"
+                                        title="Product pricing"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    >
+                                        How it Works
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/"
+                                        aria-label="About us"
+                                        title="About us"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    >
+                                        About us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/"
+                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                        aria-label="Sign up"
+                                        title="Sign up"
+                                    >
+                                        Sign up
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/"
+                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md border border-deep-purple-accent-400 hover:bg-deep-purple-accent-700 hover:text-white focus:shadow-outline focus:outline-none"
+                                        aria-label="Sign up"
+                                        title="Sign up"
+                                    >
+                                        Log In
+                                    </a>
+                                </li>
+                            </>
+                    }
                 </ul>
                 <div className="lg:hidden">
                     <button
