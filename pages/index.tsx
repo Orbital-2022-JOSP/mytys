@@ -6,10 +6,9 @@ import { FAQ } from "../components/FAQ/FAQ";
 import { Features } from "../components/Features/Features";
 import { Hero } from '../components/Hero/Hero';
 import { Hero3 } from "../components/Hero3/Hero3";
-import Layout from "../components/Layout";
+import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
-import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
 
 
 const Home: React.FC = () => {
@@ -18,10 +17,9 @@ const Home: React.FC = () => {
         router.pathname === pathname;
 
     const { data: session, status } = useSession();
-    console.log(session)
 
     return (
-        <Layout>
+        <>
             <Hero3 />
             <Hero />
             <Features />
@@ -201,7 +199,7 @@ const Home: React.FC = () => {
           margin-top: 2rem;
         }
       `}</style> */}
-        </Layout >
+        </>
     );
 };
 
