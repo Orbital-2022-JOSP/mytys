@@ -10,6 +10,7 @@ import Layout from "../components/Layout";
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
 import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
+import { LeaderBoard } from '../components/Leaderboard/Leaderboard';
 
 
 const Home: React.FC = () => {
@@ -30,6 +31,7 @@ const Home: React.FC = () => {
             <Blog />
             <FAQ />
             <QuestionAttempt />
+            <LeaderBoard />
             {/* <div className="container">
                 <header className="sticky-top">
                     <div className="row justify-content-between align-items-center bg-dark" style={{

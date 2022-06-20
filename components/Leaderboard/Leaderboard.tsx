@@ -1,10 +1,134 @@
+type LeaderBoardCardProps = {
+    position: string;
+    username: string;
+    points: string;
+}
+
+const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, points }) => {
+    let cardStyle = "";
+
+    cardStyle = position == "1st"
+        ? " scale-110"
+        : position == "3rd"
+            ? " scale-90"
+            : ""
+
+    return (
+        <div className={"flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow" + cardStyle}>
+            {position == "1st" && (
+                <div className="absolute inset-x-0 top-0 flex justify-center -mt-3">
+                    <div className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-deep-purple-accent-400">
+                        Leader
+                    </div>
+                </div>
+            )}
+            <div className="text-center">
+                <div className="text-lg font-semibold">{position}</div>
+                <div className="flex items-center justify-center mt-2">
+                    <div className="mr-1 text-4xl font-bold">{username}</div>
+                </div>
+                <div className="mt-2 space-y-3">
+                    <div className="text-gray-700">{points} points</div>
+                </div>
+            </div>
+            <div className="w-full px-4 mt-3">
+                <ul className="mb-4 -ml-1 space-y-2">
+                    <li className="flex items-start">
+                        <span className="mr-1">
+                            <svg
+                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                stroke="currentColor"
+                                viewBox="0 0 52 52"
+                            >
+                                <polygon
+                                    strokeWidth="4"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    fill="none"
+                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                />
+                            </svg>
+                        </span>
+                        Earth
+                    </li>
+                    <li className="flex items-start">
+                        <span className="mr-1">
+                            <svg
+                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                stroke="currentColor"
+                                viewBox="0 0 52 52"
+                            >
+                                <polygon
+                                    strokeWidth="4"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    fill="none"
+                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                />
+                            </svg>
+                        </span>
+                        Space
+                    </li>
+                    <li className="flex items-start">
+                        <span className="mr-1">
+                            <svg
+                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                stroke="currentColor"
+                                viewBox="0 0 52 52"
+                            >
+                                <polygon
+                                    strokeWidth="4"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    fill="none"
+                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                />
+                            </svg>
+                        </span>
+                        Humans
+                    </li>
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+type MiniLeaderBoardCardProps = {
+    text: string;
+}
+
+const MiniLeaderBoardCard: React.FC<MiniLeaderBoardCardProps> = ({ text }) => {
+    return (
+        <div className="flex items-center p-2 transition-colors duration-200 border rounded shadow group hover:bg-deep-purple-accent-400 hover:border-deep-purple-accent-400 bg-white">
+            <div className="mr-2">
+                <svg
+                    className="w-6 h-6 transition-colors duration-200 text-deep-purple-accent-400 group-hover:text-white sm:w-8 sm:h-8"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                >
+                    <polygon
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        fill="none"
+                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    />
+                </svg>
+            </div>
+            <span className="text-gray-800 transition-colors duration-200 group-hover:text-white">
+                {text}
+            </span>
+        </div>
+    )
+}
+
 export const LeaderBoard = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                        Our Pricing
+                        Our Leaderboard
                     </p>
                 </div>
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -40,86 +164,18 @@ export const LeaderBoard = () => {
                     accusantium doloremque rem aperiam, eaque ipsa quae.
                 </p>
             </div>
-            <div className="grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-                <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
-                    <div className="text-center">
-                        <div className="text-lg font-semibold">Start</div>
-                        <div className="flex items-center justify-center mt-2">
-                            <div className="mr-1 text-5xl font-bold">Free</div>
-                        </div>
-                        <div className="mt-2 space-y-3">
-                            <div className="text-gray-700">10 deploys per day</div>
-                            <div className="text-gray-700">10 GB of storage</div>
-                            <div className="text-gray-700">20 domains</div>
-                        </div>
-                    </div>
-                    <div>
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
-                        >
-                            Start for free
-                        </a>
-                        <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
-                            Sed ut unde omnis iste natus accusantium doloremque.
-                        </p>
-                    </div>
-                </div>
-                <div className="relative flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow border-deep-purple-accent-400">
-                    <div className="absolute inset-x-0 top-0 flex justify-center -mt-3">
-                        <div className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-deep-purple-accent-400">
-                            Most Popular
-                        </div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-lg font-semibold">Pro</div>
-                        <div className="flex items-center justify-center mt-2">
-                            <div className="mr-1 text-5xl font-bold">$38</div>
-                            <div className="text-gray-700">/ mo</div>
-                        </div>
-                        <div className="mt-2 space-y-3">
-                            <div className="text-gray-700">200 deploys per day</div>
-                            <div className="text-gray-700">80 GB of storage</div>
-                            <div className="text-gray-700">Global CDN</div>
-                        </div>
-                    </div>
-                    <div>
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        >
-                            Buy Pro
-                        </a>
-                        <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
-                            Sed ut unde omnis iste natus accusantium doloremque.
-                        </p>
-                    </div>
-                </div>
-                <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
-                    <div className="text-center">
-                        <div className="text-lg font-semibold">Business</div>
-                        <div className="flex items-center justify-center mt-2">
-                            <div className="mr-1 text-5xl font-bold">$78</div>
-                            <div className="text-gray-700">/ mo</div>
-                        </div>
-                        <div className="mt-2 space-y-3">
-                            <div className="text-gray-700">500 GB of storage</div>
-                            <div className="text-gray-700">Unlimited domains</div>
-                            <div className="text-gray-700">24/7 Support</div>
-                        </div>
-                    </div>
-                    <div>
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
-                        >
-                            Buy Business
-                        </a>
-                        <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
-                            Sed ut unde omnis iste natus accusantium doloremque.
-                        </p>
-                    </div>
-                </div>
+            <div className="grid max-w-md gap-10 row-gap-10 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
+                <LeaderBoardCard position="2nd" username="crigard1" points="824" />
+                <LeaderBoardCard position="1st" username="hloveridge0" points="1024" />
+                <LeaderBoardCard position="3rd" username="ndrabble9" points="600" />
+            </div>
+            <div className="max-w-lg space-y-6 sm:mx-auto lg:max-w-xl mt-16">
+                <MiniLeaderBoardCard text="Change the world by being yourself" />
+                <MiniLeaderBoardCard text="Change the world by being yourself" />
+                <MiniLeaderBoardCard text="Change the world by being yourself" />
+                <MiniLeaderBoardCard text="Change the world by being yourself" />
+                <MiniLeaderBoardCard text="Change the world by being yourself" />
+                <MiniLeaderBoardCard text="Change the world by being yourself" />
             </div>
         </div>
     );
