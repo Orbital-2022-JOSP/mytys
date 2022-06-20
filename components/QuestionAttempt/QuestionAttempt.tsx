@@ -2,14 +2,13 @@ export const QuestionAttempt = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col lg:flex-row">
-                <div className="max-w-xl pr-16 mx-auto mb-10">
+                <div className="max-w-xl w-full pr-16 mx-auto mb-10">
                     <h5 className="mb-6 text-3xl font-extrabold leading-none">
-                        The quick, brown fox jumps over a lazy dog
+                        Question Title
                     </h5>
                     <p className="mb-6 text-gray-900">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut unde
-                        omnis iste natus.
+                        Question Description.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, inventore! Beatae qui veritatis exercitationem similique odit, tempore iste consectetur esse repudiandae atque tempora. Provident aspernatur temporibus, nam dolores exercitationem at deleniti esse impedit et dicta, sit, pariatur dignissimos? Porro dolore dolores dignissimos non aliquid itaque nobis corrupti exercitationem repellat harum, magni natus a perspiciatis illum quod quidem, numquam temporibus repudiandae. Reiciendis eum facere architecto omnis aut magni dolor, necessitatibus, deserunt, quae rerum fugit tenetur fuga quasi rem suscipit neque ea quisquam nobis at aliquid sed quia totam molestiae. Qui voluptates molestias harum laborum itaque enim ab non porro vitae obcaecati deleniti ipsam velit earum ad odit fugiat autem quae officiis, quas sint magnam suscipit! Culpa quidem officia eveniet ex aut, deleniti eius ea debitis voluptas accusamus earum voluptatum maiores perferendis vitae vero voluptatibus ad non eligendi laborum? Qui exercitationem, aperiam quo eos eveniet culpa, aliquid quae facere blanditiis, esse cupiditate.
                     </p>
                     <div className="flex items-center">
                         <button
