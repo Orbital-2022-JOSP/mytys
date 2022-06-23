@@ -13,14 +13,14 @@ export const QuestionAttempt = () => {
                     <div className="flex items-center">
                         <button
                             type="submit"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none"
                         >
                             Next Question
                         </button>
                         <a
                             href="/"
                             aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                         >
                             Previous Question
                         </a>
@@ -31,7 +31,7 @@ export const QuestionAttempt = () => {
                         <div className="p-5">
                             <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
                                 <svg
-                                    className="w-8 h-8 text-deep-purple-accent-400"
+                                    className="w-8 h-8 text-light-blue-accent-400"
                                     stroke="currentColor"
                                     viewBox="0 0 52 52"
                                 >
@@ -50,13 +50,13 @@ export const QuestionAttempt = () => {
                                 consectetur adipiscing elit.
                             </p>
                         </div>
-                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
                     </div>
                     <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer">
                         <div className="p-5">
                             <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
                                 <svg
-                                    className="w-8 h-8 text-deep-purple-accent-400"
+                                    className="w-8 h-8 text-light-blue-accent-400"
                                     stroke="currentColor"
                                     viewBox="0 0 52 52"
                                 >
@@ -75,13 +75,13 @@ export const QuestionAttempt = () => {
                                 preliminary thinking think tank compelling.
                             </p>
                         </div>
-                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
                     </div>
                     <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer">
                         <div className="p-5">
                             <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
                                 <svg
-                                    className="w-8 h-8 text-deep-purple-accent-400"
+                                    className="w-8 h-8 text-light-blue-accent-400"
                                     stroke="currentColor"
                                     viewBox="0 0 52 52"
                                 >
@@ -100,13 +100,13 @@ export const QuestionAttempt = () => {
                                 rip-off as a cracker.
                             </p>
                         </div>
-                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
                     </div>
                     <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer">
                         <div className="p-5">
                             <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
                                 <svg
-                                    className="w-8 h-8 text-deep-purple-accent-400"
+                                    className="w-8 h-8 text-light-blue-accent-400"
                                     stroke="currentColor"
                                     viewBox="0 0 52 52"
                                 >
@@ -125,7 +125,7 @@ export const QuestionAttempt = () => {
                                 a horse.
                             </p>
                         </div>
-                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
                     </div>
                 </div>
             </div>

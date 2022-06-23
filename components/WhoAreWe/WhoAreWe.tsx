@@ -8,7 +8,7 @@ export const WhoAreWe: React.FC = () => {
                             The quick, brown fox
                             <br className="hidden md:block" />
                             jumps over{' '}
-                            <span className="inline-block text-deep-purple-accent-400">
+                            <span className="inline-block text-light-blue-accent-400">
                                 a lazy dog
                             </span>
                         </h2>
@@ -23,7 +23,7 @@ export const WhoAreWe: React.FC = () => {
                         <a
                             href="/"
                             aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                         >
                             Learn more
                         </a>

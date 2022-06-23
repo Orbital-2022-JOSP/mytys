@@ -9,8 +9,8 @@ export const Hero3 = () => {
                             <br className="hidden md:block" />
                             jumps over{' '}
                             <span className="relative px-1">
-                                <div className="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400" />
-                                <span className="relative inline-block text-deep-purple-accent-400">
+                                <div className="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-cyan-accent-400" />
+                                <span className="relative inline-block text-light-blue-accent-400">
                                     a lazy dog
                                 </span>
                             </span>
@@ -29,7 +29,7 @@ export const Hero3 = () => {
                             <li className="flex">
                                 <span className="mr-1">
                                     <svg
-                                        className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                        className="w-5 h-5 mt-px text-light-blue-accent-400"
                                         stroke="currentColor"
                                         viewBox="0 0 52 52"
                                     >
@@ -47,7 +47,7 @@ export const Hero3 = () => {
                             <li className="flex">
                                 <span className="mr-1">
                                     <svg
-                                        className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                        className="w-5 h-5 mt-px text-light-blue-accent-400"
                                         stroke="currentColor"
                                         viewBox="0 0 52 52"
                                     >
@@ -65,7 +65,7 @@ export const Hero3 = () => {
                             <li className="flex">
                                 <span className="mr-1">
                                     <svg
-                                        className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                        className="w-5 h-5 mt-px text-light-blue-accent-400"
                                         stroke="currentColor"
                                         viewBox="0 0 52 52"
                                     >
@@ -85,7 +85,7 @@ export const Hero3 = () => {
                             <li className="flex">
                                 <span className="mr-1">
                                     <svg
-                                        className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                        className="w-5 h-5 mt-px text-light-blue-accent-400"
                                         stroke="currentColor"
                                         viewBox="0 0 52 52"
                                     >
@@ -103,7 +103,7 @@ export const Hero3 = () => {
                             <li className="flex">
                                 <span className="mr-1">
                                     <svg
-                                        className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                        className="w-5 h-5 mt-px text-light-blue-accent-400"
                                         stroke="currentColor"
                                         viewBox="0 0 52 52"
                                     >
@@ -121,7 +121,7 @@ export const Hero3 = () => {
                             <li className="flex">
                                 <span className="mr-1">
                                     <svg
-                                        className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                        className="w-5 h-5 mt-px text-light-blue-accent-400"
                                         stroke="currentColor"
                                         viewBox="0 0 52 52"
                                     >

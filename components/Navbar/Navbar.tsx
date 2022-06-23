@@ -16,7 +16,7 @@ export const Navbar = () => {
                 >
                     <img
                         src='/logo.svg'
-                        className="w-8 text-deep-purple-accent-400"
+                        className="w-8 text-light-blue-accent-400"
                         // viewBox="0 0 24 24"
                         // strokeLinejoin="round"
                         // strokeWidth="2"
@@ -43,7 +43,7 @@ export const Navbar = () => {
                                         href="/"
                                         aria-label="Our product"
                                         title="Our product"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                     >
                                         Explore
                                     </a>
@@ -53,7 +53,7 @@ export const Navbar = () => {
                                         href="/"
                                         aria-label="Product pricing"
                                         title="Product pricing"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                     >
                                         Problems
                                     </a>
@@ -63,7 +63,7 @@ export const Navbar = () => {
                                         href="/"
                                         aria-label="About us"
                                         title="About us"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                     >
                                         Leaderboard
                                     </a>
@@ -71,7 +71,7 @@ export const Navbar = () => {
                                 <li>
                                     <a
                                         href="/"
-                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none"
                                         aria-label="Sign up"
                                         title="Sign up"
                                     >
@@ -85,7 +85,7 @@ export const Navbar = () => {
                                         href="/"
                                         aria-label="Our product"
                                         title="Our product"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                     >
                                         Features
                                     </a>
@@ -95,7 +95,7 @@ export const Navbar = () => {
                                         href="/"
                                         aria-label="Product pricing"
                                         title="Product pricing"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                     >
                                         How it Works
                                     </a>
@@ -105,7 +105,7 @@ export const Navbar = () => {
                                         href="/"
                                         aria-label="About us"
                                         title="About us"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                     >
                                         About us
                                     </a>
@@ -113,7 +113,7 @@ export const Navbar = () => {
                                 <li>
                                     <a
                                         href="/"
-                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none"
                                         aria-label="Sign up"
                                         title="Sign up"
                                     >
@@ -123,7 +123,7 @@ export const Navbar = () => {
                                 <li>
                                     <a
                                         href="/"
-                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md border border-deep-purple-accent-400 hover:bg-deep-purple-accent-700 hover:text-white focus:shadow-outline focus:outline-none"
+                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md border border-light-blue-accent-400 hover:bg-light-blue-accent-700 hover:text-white focus:shadow-outline focus:outline-none"
                                         aria-label="Sign up"
                                         title="Sign up"
                                     >
@@ -137,7 +137,7 @@ export const Navbar = () => {
                     <button
                         aria-label="Open Menu"
                         title="Open Menu"
-                        className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+                        className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-light-blue-50 focus:bg-light-blue-50"
                         onClick={() => setIsMenuOpen(true)}
                     >
                         <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -167,7 +167,7 @@ export const Navbar = () => {
                                             className="inline-flex items-center"
                                         >
                                             <svg
-                                                className="w-8 text-deep-purple-accent-400"
+                                                className="w-8 text-light-blue-accent-400"
                                                 viewBox="0 0 24 24"
                                                 strokeLinejoin="round"
                                                 strokeWidth="2"
@@ -209,7 +209,7 @@ export const Navbar = () => {
                                                 href="/"
                                                 aria-label="Our product"
                                                 title="Our product"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                             >
                                                 Product
                                             </a>
@@ -219,7 +219,7 @@ export const Navbar = () => {
                                                 href="/"
                                                 aria-label="Our product"
                                                 title="Our product"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                             >
                                                 Features
                                             </a>
@@ -229,7 +229,7 @@ export const Navbar = () => {
                                                 href="/"
                                                 aria-label="Product pricing"
                                                 title="Product pricing"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                             >
                                                 Pricing
                                             </a>
@@ -239,7 +239,7 @@ export const Navbar = () => {
                                                 href="/"
                                                 aria-label="About us"
                                                 title="About us"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                             >
                                                 About us
                                             </a>
@@ -247,7 +247,7 @@ export const Navbar = () => {
                                         <li>
                                             <a
                                                 href="/"
-                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none"
                                                 aria-label="Sign up"
                                                 title="Sign up"
                                             >
