@@ -13,22 +13,23 @@ export const Navbar = () => {
                     className="inline-flex items-center"
                 >
                     <svg
-                        className="w-8 text-deep-purple-accent-400"
+                        className="w-8 text-light-blue-500"
                         viewBox="0 0 24 24"
                         strokeLinejoin="round"
                         strokeWidth="2"
                         strokeLinecap="round"
-                        strokeMiterlimit="10"
                         stroke="currentColor"
                         fill="none"
                     >
-                        <rect x="3" y="1" width="7" height="12" />
-                        <rect x="3" y="17" width="7" height="6" />
-                        <rect x="14" y="1" width="7" height="6" />
-                        <rect x="14" y="11" width="7" height="12" />
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="2"/>
+                        <circle cx="12" cy="12" r="0" />
+                        <circle cx="12" cy="12" r="6"/>
+                        
                     </svg>
-                    <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
+                
+                    <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
+                        My_TYS
                     </span>
                 </a>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -37,9 +38,9 @@ export const Navbar = () => {
                             href="/"
                             aria-label="Our product"
                             title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
                         >
-                            Product
+                            Home
                         </a>
                     </li>
                     <li>
@@ -47,19 +48,9 @@ export const Navbar = () => {
                             href="/"
                             aria-label="Our product"
                             title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                         >
-                            Features
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Product pricing"
-                            title="Product pricing"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            Pricing
+                            Subjects
                         </a>
                     </li>
                     <li>
@@ -67,19 +58,33 @@ export const Navbar = () => {
                             href="/"
                             aria-label="About us"
                             title="About us"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                         >
                             About us
                         </a>
                     </li>
                     <li>
                         <a
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                            href="/pages/register.tsx"
+                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-300 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
                             aria-label="Sign up"
                             title="Sign up"
                         >
-                            Sign up
+                             <span className="font-bold">
+                            Sign Up
+                            </span>
+                        </a>
+                    </li>
+                     <li>
+                        <a
+                            href="/"
+                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
+                            aria-label="Sign up"
+                            title="Sign up"
+                        >
+                            <span className="font-bold">
+                            Log In
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -87,7 +92,7 @@ export const Navbar = () => {
                     <button
                         aria-label="Open Menu"
                         title="Open Menu"
-                        className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+                        className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-light-blue-500 focus:bg-light-blue-500"
                         onClick={() => setIsMenuOpen(true)}
                     >
                         <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -117,24 +122,26 @@ export const Navbar = () => {
                                             className="inline-flex items-center"
                                         >
                                             <svg
-                                                className="w-8 text-deep-purple-accent-400"
+                                                className="w-8 text-light-blue-500"
                                                 viewBox="0 0 24 24"
                                                 strokeLinejoin="round"
                                                 strokeWidth="2"
                                                 strokeLinecap="round"
-                                                strokeMiterlimit="10"
                                                 stroke="currentColor"
                                                 fill="none"
                                             >
-                                                <rect x="3" y="1" width="7" height="12" />
-                                                <rect x="3" y="17" width="7" height="6" />
-                                                <rect x="14" y="1" width="7" height="6" />
-                                                <rect x="14" y="11" width="7" height="12" />
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <circle cx="12" cy="12" r="2"/>
+                                                <circle cx="12" cy="12" r="0" />
+                                                <circle cx="12" cy="12" r="6"/>
+                        
                                             </svg>
-                                            <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                Company
+                
+                                            <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
+                                                My_TYS
                                             </span>
                                         </a>
+               
                                     </div>
                                     <div>
                                         <button
@@ -159,9 +166,9 @@ export const Navbar = () => {
                                                 href="/"
                                                 aria-label="Our product"
                                                 title="Our product"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                             >
-                                                Product
+                                                Home
                                             </a>
                                         </li>
                                         <li>
@@ -169,19 +176,9 @@ export const Navbar = () => {
                                                 href="/"
                                                 aria-label="Our product"
                                                 title="Our product"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                             >
-                                                Features
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Product pricing"
-                                                title="Product pricing"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                Pricing
+                                                Subjects
                                             </a>
                                         </li>
                                         <li>
@@ -189,7 +186,7 @@ export const Navbar = () => {
                                                 href="/"
                                                 aria-label="About us"
                                                 title="About us"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                             >
                                                 About us
                                             </a>
@@ -197,7 +194,7 @@ export const Navbar = () => {
                                         <li>
                                             <a
                                                 href="/"
-                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
                                                 aria-label="Sign up"
                                                 title="Sign up"
                                             >

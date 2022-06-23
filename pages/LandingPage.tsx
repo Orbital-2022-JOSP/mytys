@@ -1,3 +1,8 @@
+
+
+
+
+
 import { useSession } from "next-auth/react";
 import {useRouter} from "next/router";
 import React from "react";
@@ -24,10 +29,12 @@ const Home: React.FC = () => {
         <Layout>
             <Hero3 />
             <Hero />
+            <Features />
             <Steps />
             <Stats />
             <Blog />
-            
+            <FAQ />
+            <QuestionAttempt />
             {/* <div className="container">
                 <header className="sticky-top">
                     <div className="row justify-content-between align-items-center bg-dark" style={{
@@ -204,3 +211,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
