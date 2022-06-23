@@ -1,13 +1,13 @@
 import { SessionProvider } from "next-auth/react";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { AdminLayout } from '../components/AdminLayout/AdminLayout';
 import { Footer } from "../components/Footer/Footer";
-import { Hero2 } from "../components/Hero2/Hero2";
 import { Navbar } from '../components/Navbar/Navbar';
 import '../styles/globals.css';
 
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps, router }: AppProps) => {
     return (
         <SessionProvider session={pageProps.session}>
             <Head>
@@ -16,9 +16,20 @@ const App = ({ Component, pageProps }: AppProps) => {
                     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossOrigin="anonymous" /> */}
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
             </Head>
-            <Navbar />
-            <Component {...pageProps} />
-            <Footer />
+            {
+                router.pathname.startsWith("/admin")
+                    ?
+                    <>
+                        <AdminLayout>
+                            <Component {...pageProps} />
+                        </AdminLayout>
+                    </>
+                    : <>
+                        <Navbar />
+                        <Component {...pageProps} />
+                        <Footer />
+                    </>
+            }
         </SessionProvider>
     );
 };
