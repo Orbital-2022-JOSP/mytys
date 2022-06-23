@@ -1,8 +1,3 @@
-
-
-
-
-
 import { useSession } from "next-auth/react";
 import {useRouter} from "next/router";
 import React from "react";
@@ -15,7 +10,9 @@ import Layout from "../components/Layout";
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
 import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
-
+import { DirectToSignInPage } from "../components/DirectToSignInPage/DirectToSignInPage";
+import { MailingList } from "../components/MailingList/MailingList";
+import { LandingPage_main } from "../components/LandingPage_main/LandingPage_main";
 
 const Home: React.FC = () => {
     const router = useRouter();
@@ -27,14 +24,13 @@ const Home: React.FC = () => {
 
     return (
         <Layout>
-            <Hero3 />
-            <Hero />
-            <Features />
+            <LandingPage_main />
+            <MailingList />
             <Steps />
             <Stats />
             <Blog />
-            <FAQ />
-            <QuestionAttempt />
+            
+            
             {/* <div className="container">
                 <header className="sticky-top">
                     <div className="row justify-content-between align-items-center bg-dark" style={{

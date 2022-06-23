@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-export const Navbar = () => {
+/**
+ * This NavBar is for the home of the user after they Log In to their account page
+ *  
+ */
+
+export const NavBar_Homepage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -57,38 +62,43 @@ export const Navbar = () => {
                     <li>
                         <a
                             href="/"
-                            aria-label="About us"
-                            title="About us"
+                            aria-label="Quiz"
+                            title="Quiz"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                         >
-                            About us
+                            Quiz
                         </a>
                     </li>
                     <li>
-                        <Link href = {"/register"}> 
                         <a
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-300 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
+                            href="/"
+                            aria-label="LeaderBoard"
+                            title="LeaderBoard"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                         >
-                             <span className="font-bold">
-                            Sign Up
-                            </span>
+                            LeaderBoard
                         </a>
-                        </Link>
                     </li>
-                     <li>
+                    <li>
                         <a
                             href="/"
                             className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
+                            aria-label="Log Out"
+                            title="Log Out"
                         >
                             <span className="font-bold">
-                            Log In
+                            Log Out
                             </span>
                         </a>
                     </li>
+                     <li>
+                            <div className="ml-3 relative">
+                <button type="button" className="max-w-xs rounded-full flex items-center text-sm bg-light-blue-100 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                  <span className="sr-only">Open user menu</span>
+                  <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+                </button>
+              </div>
+                     </li>
                 </ul>
                 <div className="lg:hidden">
                     <button
@@ -186,22 +196,40 @@ export const Navbar = () => {
                                         <li>
                                             <a
                                                 href="/"
-                                                aria-label="About us"
-                                                title="About us"
+                                                aria-label="Quiz"
+                                                title="Quiz"
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                             >
-                                                About us
+                                                Quiz
                                             </a>
+                                        </li>
+                                            <li>
+                                                <a
+                                                    href="/"
+                                                    aria-label="LeaderBoard"
+                                                    title="LeaderBoard"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                                                >
+                                                    LeaderBoard
+                                                </a>
                                         </li>
                                         <li>
                                             <a
                                                 href="/"
-                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
-                                                aria-label="Sign up"
-                                                title="Sign up"
+                                                aria-label="Log Out"
+                                                title="Log Out"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                             >
-                                                Sign up
+                                                Log Out
                                             </a>
+                                        </li>
+                                        <li>
+                                            <div className="ml-3 relative">
+                                                <button type="button" className="max-w-xs rounded-full flex items-center text-sm bg-light-blue-100 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                                    <span className="sr-only">Open user menu</span>
+                                                    <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+                                                </button>
+                                            </div>
                                         </li>
                                     </ul>
                                 </nav>

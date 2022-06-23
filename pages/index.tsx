@@ -24,10 +24,12 @@ const Home: React.FC = () => {
         <Layout>
             <Hero3 />
             <Hero />
+            <Features />
             <Steps />
             <Stats />
             <Blog />
-            
+            <FAQ />
+            <QuestionAttempt />
             {/* <div className="container">
                 <header className="sticky-top">
                     <div className="row justify-content-between align-items-center bg-dark" style={{
