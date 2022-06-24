@@ -13,6 +13,7 @@ import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
 import { DirectToSignInPage } from "../components/DirectToSignInPage/DirectToSignInPage";
 import { MailingList } from "../components/MailingList/MailingList";
 import { LandingPage_main } from "../components/LandingPage_main/LandingPage_main";
+import { Testimonials2 } from "../components/Testimonials2/Testimonials2";
 
 const Home: React.FC = () => {
     const router = useRouter();
@@ -28,7 +29,7 @@ const Home: React.FC = () => {
             <MailingList />
             <Steps />
             <Stats />
-            <Blog />
+            <Testimonials2 />
             
             
             {/* <div className="container">
@@ -207,4 +208,6 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
 
