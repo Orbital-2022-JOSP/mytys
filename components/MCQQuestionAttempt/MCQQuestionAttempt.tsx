@@ -1,14 +1,35 @@
+import { Types } from 'mongoose';
 import Link from 'next/link';
+import { IQuestionAnswer } from '../../models/QuestionAnswer.model';
+import { IMCQQuestionOption } from '../../models/MCQQuestionOption.model';
+import { useState } from 'react';
 
 type MCQQuestionAttemptProps = {
     title: string,
     description?: string,
-    options: Array<string>,
+    correctAnswer: IMCQQuestionOption,
+    options: Array<IMCQQuestionOption>,
     nextLink?: string,
     prevLink?: string
 }
 
 export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ title, description, options, nextLink, prevLink }) => {
+    const [questionOption, setQuestionOption] = useState({})
+
+    const handleOptionSelect = (event) => {
+        console.log(event)
+    }
+
+    const handleSubmit = (optionChosen: string) => {
+
+        const questionAnswer: IQuestionAnswer = {
+            user: new Types.ObjectId("123"),
+            question: new Types.ObjectId("123"),
+            score: 0,
+            MCQAnswer: new Types.ObjectId("123")
+        }
+    }
+
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col lg:flex-row">
@@ -42,7 +63,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ title, d
                     {
                         options
                             ? options.map((option, idx) => (
-                                <div key={"questionOption" + idx} className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer">
+                                <div key={"questionOption" + idx} className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer" onClick={handleOptionSelect}>
                                     <div className="p-5">
                                         <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
                                             <svg
@@ -59,7 +80,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ title, d
                                                 />
                                             </svg>
                                         </div>
-                                        <p className="mb-2 font-bold">{option}</p>
+                                        <p className="mb-2 font-bold">{option.text}</p>
                                     </div>
                                     <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
                                 </div>
