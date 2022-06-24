@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Footer } from "../components/Footer/Footer";
 import { Hero2 } from "../components/Hero2/Hero2";
 import { Navbar } from '../components/Navbar/Navbar';
+import { NavBar_Homepage } from "../components/NavBar_Homepage/NavBar_Homepage";
 import '../styles/globals.css';
 
 
@@ -18,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             </Head>
             <Navbar />
             <Component {...pageProps} />
-            <Footer />
+            <Footer /> 
         </SessionProvider>
     );
 };

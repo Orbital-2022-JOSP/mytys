@@ -6,9 +6,14 @@ import { FAQ } from "../components/FAQ/FAQ";
 import { Features } from "../components/Features/Features";
 import { Hero } from '../components/Hero/Hero';
 import { Hero3 } from "../components/Hero3/Hero3";
-import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
+import Layout from "../components/Layout";
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
+import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
+import { DirectToSignInPage } from "../components/DirectToSignInPage/DirectToSignInPage";
+import { MailingList } from "../components/MailingList/MailingList";
+import { LandingPage_main } from "../components/LandingPage_main/LandingPage_main";
+import { Testimonials2 } from "../components/Testimonials2/Testimonials2";
 
 const Home: React.FC = () => {
     const router = useRouter();
@@ -16,17 +21,17 @@ const Home: React.FC = () => {
         router.pathname === pathname;
 
     const { data: session, status } = useSession();
+    console.log(session)
 
     return (
-        <>
-            <Hero3 />
-            <Hero />
-            <Features />
+        <Layout>
+            <LandingPage_main />
+            <MailingList />
             <Steps />
             <Stats />
-            <Blog />
-            <FAQ />
-            <QuestionAttempt />
+            <Testimonials2 />
+            
+            
             {/* <div className="container">
                 <header className="sticky-top">
                     <div className="row justify-content-between align-items-center bg-dark" style={{
@@ -198,8 +203,11 @@ const Home: React.FC = () => {
           margin-top: 2rem;
         }
       `}</style> */}
-        </>
+        </Layout >
     );
 };
 
 export default Home;
+
+
+
