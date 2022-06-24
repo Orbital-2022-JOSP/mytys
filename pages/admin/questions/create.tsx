@@ -1,9 +1,10 @@
 import React from "react";
+import { QuestionForm } from '../../../components/Forms/QuestionForm/QuestionForm';
 
 const AdminQuestionsCreatePage: React.FC = () => {
     return (
         <>
-            <p>Create new question page</p>
+            <QuestionForm />
         </>
     );
 };
