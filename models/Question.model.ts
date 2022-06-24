@@ -1,4 +1,4 @@
-import mongoose, { model, Schema } from 'mongoose';
+import mongoose, { model, Schema, Types } from 'mongoose';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';
 
@@ -6,6 +6,7 @@ import { IQuestionType } from './QuestionType.model';
  * The generic question interface
  * 
  * @interface IQuestion
+ * @member {Types.ObjectId} id Id of the question
  * @member {string} title Title of the question
  * @member {string} description Description of the question
  * @member {number} difficulty The difficulty of the question, 0 to 100 based on user feedback, convert integer into out of 5 stars rating
@@ -15,6 +16,7 @@ import { IQuestionType } from './QuestionType.model';
  */
 
 export interface IQuestion {
+    id?: Types.ObjectId;
     title: string;
     description: string;
     difficulty: number;
