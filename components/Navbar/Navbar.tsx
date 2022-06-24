@@ -15,100 +15,13 @@ export const Navbar = () => {
                     title="Company"
                     className="inline-flex items-center"
                 >
-                    <svg
-                        className="w-8 text-light-blue-500"
-                        viewBox="0 0 24 24"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        stroke="currentColor"
-                        fill="none"
-                    >
-                        <circle cx="12" cy="12" r="10"/>
-                        <circle cx="12" cy="12" r="2"/>
-                        <circle cx="12" cy="12" r="0" />
-                        <circle cx="12" cy="12" r="6"/>
-                        
-                    </svg>
-                
-                    <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
-                        My_TYS
-                    </span>
-                </a>
-                <ul className="flex items-center hidden space-x-8 lg:flex">
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                        >
-                            Subjects
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/"
-                            aria-label="About us"
-                            title="About us"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                        >
-                            About us
-                        </a>
-                    </li>
-                    <li>
-                        <Link href = {"/register"}> 
-                        <a
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-300 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                        >
-                             <span className="font-bold">
-                            Sign Up
-                            </span>
-                        </a>
-                        </Link>
-                    </li>
-                     <li>
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                        >
-                            <span className="font-bold">
-                            Log In
-                            </span>
-                        </a>
-                    </li>
                     <img
                         src='/logo.svg'
                         className="w-8 text-light-blue-accent-400"
-                        // viewBox="0 0 24 24"
-                        // strokeLinejoin="round"
-                        // strokeWidth="2"
-                        // strokeLinecap="round"
-                        // strokeMiterlimit="10"
-                        // stroke="currentColor"
-                        // fill="none"
                     />
-                        {/* <rect x="3" y="1" width="7" height="12" />
-                        <rect x="3" y="17" width="7" height="6" />
-                        <rect x="14" y="1" width="7" height="6" />
-                        <rect x="14" y="11" width="7" height="12" /> */}
-                    {/* </svg> */}
-                    <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        MyTYS
+                
+                    <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
+                        MYTYS
                     </span>
                 </a>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -164,7 +77,7 @@ export const Navbar = () => {
                                         title="Our product"
                                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                     >
-                                        Features
+                                        Subjects
                                     </a>
                                 </li>
                                 <li>
