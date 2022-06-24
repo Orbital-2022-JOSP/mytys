@@ -3,8 +3,8 @@ export const HowItWorks = () => {
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="grid gap-10 lg:grid-cols-2">
                 <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
-                    <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
-                        <svg className="text-teal-900 w-7 h-7" viewBox="0 0 24 24">
+                    <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-cyan-accent-400">
+                        <svg className="text-cyan-900 w-7 h-7" viewBox="0 0 24 24">
                             <polyline
                                 fill="none"
                                 stroke="currentColor"
@@ -51,7 +51,7 @@ export const HowItWorks = () => {
                             Let us handle
                             <br className="hidden md:block" />
                             your next{' '}
-                            <span className="inline-block text-deep-purple-accent-400">
+                            <span className="inline-block text-light-blue-accent-400">
                                 destination
                             </span>
                         </h2>
@@ -65,7 +65,7 @@ export const HowItWorks = () => {
                         <a
                             href="/"
                             aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                         >
                             Learn more
                             <svg
