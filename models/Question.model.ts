@@ -12,6 +12,7 @@ import { IQuestionType } from './QuestionType.model';
  * @member {string} explanation The explanation of the answer to the question whether that be by a tutor or sysAdmin
  * @member {Array<IQuestionTopic>} questionTopics The question topics covered by this question
  * @member {Array<IQuestionType>} questionTypes The question types covered by this question
+ * @member {string} subject The subject of the question
  */
 
 export interface IQuestion {
@@ -21,6 +22,7 @@ export interface IQuestion {
     explanation: string;
     questionTopics: Array<IQuestionTopic>;
     questionTypes: Array<IQuestionType>;
+    subject: string;
 }
 
 const QuestionSchema = new Schema<IQuestion>({
@@ -44,6 +46,9 @@ const QuestionSchema = new Schema<IQuestion>({
         type: mongoose.Schema.Types.ObjectId,
         ref: "QuestionType"
     }],
+    subject: {
+        type: String
+    },
 })
 
 export default mongoose.models.Question || model<IQuestion>('Question', QuestionSchema)
