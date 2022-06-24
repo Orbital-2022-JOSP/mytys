@@ -12,7 +12,7 @@ export const Blog = () => {
                         <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
                             <a
                                 href="/"
-                                className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+                                className="transition-colors duration-200 text-light-blue-gray-900 hover:text-light-blue-accent-700"
                                 aria-label="Category"
                                 title="traveling"
                             >
@@ -24,7 +24,7 @@ export const Blog = () => {
                             href="/"
                             aria-label="Category"
                             title="Visit the East"
-                            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-light-blue-accent-700"
                         >
                             Visit the East
                         </a>
@@ -35,7 +35,7 @@ export const Blog = () => {
                         <a
                             href="/"
                             aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                         >
                             Learn more
                         </a>
@@ -51,7 +51,7 @@ export const Blog = () => {
                         <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
                             <a
                                 href="/"
-                                className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+                                className="transition-colors duration-200 text-light-blue-gray-900 hover:text-light-blue-accent-700"
                                 aria-label="Category"
                                 title="traveling"
                             >
@@ -63,7 +63,7 @@ export const Blog = () => {
                             href="/"
                             aria-label="Category"
                             title="Simple is better"
-                            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-light-blue-accent-700"
                         >
                             Simple is better
                         </a>
@@ -74,7 +74,7 @@ export const Blog = () => {
                         <a
                             href="/"
                             aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                         >
                             Learn more
                         </a>
@@ -90,7 +90,7 @@ export const Blog = () => {
                         <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
                             <a
                                 href="/"
-                                className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+                                className="transition-colors duration-200 text-light-blue-gray-900 hover:text-light-blue-accent-700"
                                 aria-label="Category"
                                 title="traveling"
                             >
@@ -102,7 +102,7 @@ export const Blog = () => {
                             href="/"
                             aria-label="Category"
                             title="Film It!"
-                            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-light-blue-accent-700"
                         >
                             Film It!
                         </a>
@@ -113,7 +113,7 @@ export const Blog = () => {
                         <a
                             href="/"
                             aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                         >
                             Learn more
                         </a>

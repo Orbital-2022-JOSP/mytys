@@ -11,9 +11,9 @@ export const Hero: React.FC = () => {
                     <div className="flex w-full md:justify-start justify-center items-end">
                         <div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4">
                             <label htmlFor="hero-field" className="leading-7 text-sm text-gray-600">Placeholder</label>
-                            <input type="text" id="hero-field" name="hero-field" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-blue-200 focus:bg-transparent focus:border-blue-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="text" id="hero-field" name="hero-field" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-light-blue-200 focus:bg-transparent focus:border-light-blue-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                         </div>
-                        <button className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+                        <button className="inline-flex text-white bg-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 rounded text-lg">Button</button>
                     </div>
                     <p className="text-sm mt-2 text-gray-500 mb-8 w-full">Neutra shabby chic ramps, viral fixie.</p>
                     <div className="flex lg:flex-row md:flex-col">

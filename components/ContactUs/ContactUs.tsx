@@ -16,7 +16,7 @@ export const ContactUs: React.FC = () => {
                         </div>
                         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-                            <a className="text-blue-500 leading-relaxed">example@email.com</a>
+                            <a className="text-light-blue-500 leading-relaxed">example@email.com</a>
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
                             <p className="leading-relaxed">123-456-7890</p>
                         </div>
@@ -27,17 +27,17 @@ export const ContactUs: React.FC = () => {
                     <p className="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
                     <div className="relative mb-4">
                         <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
-                        <input type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                        <input type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-light-blue-500 focus:ring-2 focus:ring-light-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                        <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                        <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-light-blue-500 focus:ring-2 focus:ring-light-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
-                        <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                        <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-light-blue-500 focus:ring-2 focus:ring-light-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                     </div>
-                    <button className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+                    <button className="text-white bg-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 rounded text-lg">Button</button>
                     <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
                 </div>
             </div>
