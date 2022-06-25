@@ -8,25 +8,27 @@ const MCQQuestionAnsweringPage: React.FC = () => {
 
     const fetcher = (url: string) => fetch(url).then(r => r.json())
     const { data, error } = useSWR(`/api/questions/${id}`, fetcher);
-    
-    let questionData = data ? data.data : {};
-    console.log(questionData)
 
-    // const props: MCQQuestionAttemptProps = {
-    //     title: string,
-    //     description?: string,
-    //     correctAnswer: IMCQQuestionOption,
-    //     options: Array<IMCQQuestionOption>,
-    //     nextLink?: string,
-    //     prevLink?: string
-    // }
+    let questionData = data ? data.data : undefined;
 
     return (
-        <div>
-            <p>Hello World</p>
-            <p>{id}</p>
-            <MCQQuestionAttempt {...data} />
-        </div>
+        <>
+            {
+                questionData
+                    ?
+                    <MCQQuestionAttempt
+                        questionId={questionData._id}
+                        title={questionData.title}
+                        description={questionData.description}
+                        explanation={questionData.explanation}
+                        correctAnswer={questionData.mcqQuestions[0].correctAnswer}
+                        options={questionData.mcqQuestions[0].options}
+                        // nextLink={"/questions/mcq/random"}
+                        // prevLink={"/questions/mcq/random"}
+                    />
+                    : <p>Loading</p>
+            }
+        </>
     )
 }
 
