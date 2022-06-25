@@ -23,8 +23,8 @@ const MCQQuestionAnsweringPage: React.FC = () => {
                         explanation={questionData.explanation}
                         correctAnswer={questionData.mcqQuestions[0].correctAnswer}
                         options={questionData.mcqQuestions[0].options}
-                        // nextLink={"/questions/mcq/random"}
-                        // prevLink={"/questions/mcq/random"}
+                        nextLink={"/questions/mcq/random"}
+                        prevLink={"/questions/mcq/random"}
                     />
                     : <p>Loading</p>
             }
