@@ -22,6 +22,8 @@ export interface IQuestionAnswerExtended {
  * @member {string} OpenEndedAnswer The answer if the question is an open ended question
  */
 
+
+// MCQ Answer and Open Ended Answer might not be necessary in the future
 export interface IQuestionAnswer {
     user: Types.ObjectId;
     question: Types.ObjectId
