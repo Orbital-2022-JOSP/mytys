@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../dbConnect";
-import QuestionTopicModel from "../../../models/MCQQuestionOption.model";
+import QuestionTopicModel from "../../../models/QuestionTopic.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { method } = req;
