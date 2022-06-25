@@ -1,33 +1,40 @@
 import { Types } from 'mongoose';
 import Link from 'next/link';
-import { IQuestionAnswer } from '../../models/QuestionAnswer.model';
-import { IMCQQuestionOption } from '../../models/MCQQuestionOption.model';
 import { useState } from 'react';
+import { IMCQQuestionOption } from '../../models/MCQQuestionOption.model';
+import { IQuestionAnswer } from '../../models/QuestionAnswer.model';
 
-type MCQQuestionAttemptProps = {
+export type MCQQuestionAttemptProps = {
+    questionId: Types.ObjectId,
     title: string,
     description?: string,
+    explanation: string,
     correctAnswer: IMCQQuestionOption,
     options: Array<IMCQQuestionOption>,
     nextLink?: string,
     prevLink?: string
 }
 
-export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ title, description, options, nextLink, prevLink }) => {
-    const [questionOption, setQuestionOption] = useState({})
+export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ questionId, title, description, explanation, correctAnswer, options, nextLink, prevLink }) => {
+    const [completed, setCompleted] = useState(false);
+    const [correct, setCorrect] = useState(false);
 
-    const handleOptionSelect = (event) => {
-        console.log(event)
-    }
-
-    const handleSubmit = (optionChosen: string) => {
-
+    const handleOptionSelect = (chosenOption: IMCQQuestionOption) => {
+        setCompleted(true);
+        setCorrect(chosenOption._id == correctAnswer._id)
         const questionAnswer: IQuestionAnswer = {
-            user: new Types.ObjectId("123"),
-            question: new Types.ObjectId("123"),
-            score: 0,
-            MCQAnswer: new Types.ObjectId("123")
+            user: new Types.ObjectId("629cb24f61c6587b1bae14bb"),
+            question: questionId,
+            score: chosenOption._id == correctAnswer._id ? 1 : 0,
         }
+        fetch('/api/questionAnswers/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(questionAnswer)
+        });
     }
 
     return (
@@ -35,10 +42,10 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ title, d
             <div className="flex flex-col lg:flex-row">
                 <div className="max-w-xl w-full pr-16 mx-auto mb-10">
                     <h5 className="mb-6 text-3xl font-extrabold leading-none">
-                        {title ? title : "Question Title"}
+                        {title}
                     </h5>
                     <p className="mb-6 text-gray-900">
-                        {description ? description : "Question Description. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, inventore! Beatae qui veritatis exercitationem similique odit, tempore iste consectetur esse repudiandae atque tempora. Provident aspernatur temporibus, nam dolores exercitationem at deleniti esse impedit et dicta, sit, pariatur dignissimos? Porro dolore dolores dignissimos non aliquid itaque nobis corrupti exercitationem repellat harum, magni natus a perspiciatis illum quod quidem, numquam temporibus repudiandae. Reiciendis eum facere architecto omnis aut magni dolor, necessitatibus, deserunt, quae rerum fugit tenetur fuga quasi rem suscipit neque ea quisquam nobis at aliquid sed quia totam molestiae. Qui voluptates molestias harum laborum itaque enim ab non porro vitae obcaecati deleniti ipsam velit earum ad odit fugiat autem quae officiis, quas sint magnam suscipit! Culpa quidem officia eveniet ex aut, deleniti eius ea debitis voluptas accusamus earum voluptatum maiores perferendis vitae vero voluptatibus ad non eligendi laborum? Qui exercitationem, aperiam quo eos eveniet culpa, aliquid quae facere blanditiis, esse cupiditate."}
+                        {description}
                     </p>
                     <div className="flex items-center">
                         <Link href={nextLink ? nextLink : "/question/random"}>
@@ -59,136 +66,44 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ title, d
                         </Link>
                     </div>
                 </div>
-                <div className="grid gap-5 row-gap-5 sm:grid-cols-2">
-                    {
-                        options
-                            ? options.map((option, idx) => (
-                                <div key={"questionOption" + idx} className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer" onClick={handleOptionSelect}>
-                                    <div className="p-5">
-                                        <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
-                                            <svg
-                                                className="w-8 h-8 text-light-blue-accent-400"
-                                                stroke="currentColor"
-                                                viewBox="0 0 52 52"
-                                            >
-                                                <polygon
-                                                    strokeWidth="3"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    fill="none"
-                                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                                />
-                                            </svg>
+                {
+                    completed
+                        ? <div className={`p-5 lg:w-1/2 xl:w-5/12 transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl outline ${correct ? "outline-green-400" : "outline-red-400"}`}>
+                            <h6 className="mb-2 font-semibold leading-5">{correct ? "Correct" : "Not quite right"}</h6>
+                            <p className="text-sm text-gray-700">
+                                {explanation}
+                            </p>
+                        </div>
+                        : <div className="grid gap-5 row-gap-5 sm:grid-cols-2 lg:w-1/2 xl:w-5/12">
+                            {
+                                options.map((option, idx) => (
+                                    <div key={"questionOption" + idx} className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer" onClick={() => handleOptionSelect(option)}>
+                                        <div className="p-5">
+                                            <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+                                                <svg
+                                                    className="w-8 h-8 text-light-blue-accent-400"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 52 52"
+                                                >
+                                                    <polygon
+                                                        strokeWidth="3"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        fill="none"
+                                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <p className="mb-2 font-bold">{option.text}</p>
                                         </div>
-                                        <p className="mb-2 font-bold">{option.text}</p>
+                                        <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
                                     </div>
-                                    <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
-                                </div>
-                            ))
-                            : <>
-                                <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer">
-                                    <div className="p-5">
-                                        <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
-                                            <svg
-                                                className="w-8 h-8 text-light-blue-accent-400"
-                                                stroke="currentColor"
-                                                viewBox="0 0 52 52"
-                                            >
-                                                <polygon
-                                                    strokeWidth="3"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    fill="none"
-                                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                                />
-                                            </svg>
-                                        </div>
-                                        <p className="mb-2 font-bold">Football Sports</p>
-                                        <p className="text-sm leading-5 text-gray-900">
-                                            Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit.
-                                        </p>
-                                    </div>
-                                    <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
-                                </div>
-                                <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer">
-                                    <div className="p-5">
-                                        <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
-                                            <svg
-                                                className="w-8 h-8 text-light-blue-accent-400"
-                                                stroke="currentColor"
-                                                viewBox="0 0 52 52"
-                                            >
-                                                <polygon
-                                                    strokeWidth="3"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    fill="none"
-                                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                                />
-                                            </svg>
-                                        </div>
-                                        <p className="mb-2 font-bold">Bowling Sports</p>
-                                        <p className="text-sm leading-5 text-gray-900">
-                                            Disrupt inspire and think tank, social entrepreneur but
-                                            preliminary thinking think tank compelling.
-                                        </p>
-                                    </div>
-                                    <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
-                                </div>
-                                <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer">
-                                    <div className="p-5">
-                                        <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
-                                            <svg
-                                                className="w-8 h-8 text-light-blue-accent-400"
-                                                stroke="currentColor"
-                                                viewBox="0 0 52 52"
-                                            >
-                                                <polygon
-                                                    strokeWidth="3"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    fill="none"
-                                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                                />
-                                            </svg>
-                                        </div>
-                                        <p className="mb-2 font-bold">Cycling Sports</p>
-                                        <p className="text-sm leading-5 text-gray-900">
-                                            A slice of heaven. O for awesome, this chocka full cuzzie is as
-                                            rip-off as a cracker.
-                                        </p>
-                                    </div>
-                                    <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
-                                </div>
-                                <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl cursor-pointer">
-                                    <div className="p-5">
-                                        <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
-                                            <svg
-                                                className="w-8 h-8 text-light-blue-accent-400"
-                                                stroke="currentColor"
-                                                viewBox="0 0 52 52"
-                                            >
-                                                <polygon
-                                                    strokeWidth="3"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    fill="none"
-                                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                                />
-                                            </svg>
-                                        </div>
-                                        <p className="mb-2 font-bold">Weight Lifting Sports</p>
-                                        <p className="text-sm leading-5 text-gray-900">
-                                            Meanwhile, in behind the bicycle shed, Hercules Morse, as big as
-                                            a horse.
-                                        </p>
-                                    </div>
-                                    <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-light-blue-accent-400 group-hover:scale-x-100" />
-                                </div>
-                            </>
-                    }
-                </div>
+                                ))
+                            }
+                        </div>
+                }
+
+
             </div>
         </div>
     );
