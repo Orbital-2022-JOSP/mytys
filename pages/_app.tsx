@@ -2,6 +2,7 @@ import { SessionProvider } from "next-auth/react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { Footer } from "../components/Footer/Footer";
+import { FooterWithContent } from "../components/FooterWithContent/FooterWithContent";
 import { Hero2 } from "../components/Hero2/Hero2";
 import { Navbar } from '../components/Navbar/Navbar';
 import { NavBar_Homepage } from "../components/NavBar_Homepage/NavBar_Homepage";
@@ -19,7 +20,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             </Head>
             <Navbar />
             <Component {...pageProps} />
-            <Footer /> 
+            <FooterWithContent /> 
         </SessionProvider>
     );
 };
