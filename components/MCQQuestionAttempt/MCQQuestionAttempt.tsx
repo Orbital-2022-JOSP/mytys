@@ -11,8 +11,8 @@ export type MCQQuestionAttemptProps = {
     explanation: string,
     correctAnswer: IMCQQuestionOption,
     options: Array<IMCQQuestionOption>,
-    nextLink?: string,
-    prevLink?: string
+    nextLink: string,
+    prevLink: string
 }
 
 export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ questionId, title, description, explanation, correctAnswer, options, nextLink, prevLink }) => {
@@ -48,7 +48,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
                         {description}
                     </p>
                     <div className="flex items-center">
-                        <Link href={nextLink ? nextLink : "/question/random"}>
+                        <Link href={nextLink} replace={true}>
                             <a
                                 aria-label="Next Question Link"
                                 className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none disabled"
@@ -56,7 +56,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
                                 Next Question
                             </a>
                         </Link>
-                        <Link href={prevLink ? prevLink : ""}>
+                        <Link href={prevLink} replace={true}>
                             <a
                                 aria-label=""
                                 className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
