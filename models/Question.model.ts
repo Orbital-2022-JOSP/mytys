@@ -17,7 +17,7 @@ import { IQuestionType } from './QuestionType.model';
  */
 
 export interface IQuestion {
-    id?: Types.ObjectId;
+    _id?: Types.ObjectId;
     title: string;
     description: string;
     difficulty: number;
