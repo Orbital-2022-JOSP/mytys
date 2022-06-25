@@ -7,7 +7,19 @@ const MCQQuestionAnsweringPage: React.FC = () => {
     const { id } = router.query;
 
     const fetcher = (url: string) => fetch(url).then(r => r.json())
-    const { data, error } = useSWR(`/api/questions/mcq/${id}`, fetcher);
+    const { data, error } = useSWR(`/api/questions/${id}`, fetcher);
+    
+    let questionData = data ? data.data : {};
+    console.log(questionData)
+
+    // const props: MCQQuestionAttemptProps = {
+    //     title: string,
+    //     description?: string,
+    //     correctAnswer: IMCQQuestionOption,
+    //     options: Array<IMCQQuestionOption>,
+    //     nextLink?: string,
+    //     prevLink?: string
+    // }
 
     return (
         <div>
