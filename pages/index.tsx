@@ -7,7 +7,6 @@ import { Features } from "../components/Features/Features";
 import { Hero } from '../components/Hero/Hero';
 import { Hero3 } from "../components/Hero3/Hero3";
 import { LeaderBoard } from '../components/Leaderboard/Leaderboard';
-import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
 
@@ -27,7 +26,6 @@ const Home: React.FC = () => {
             <Stats />
             <Blog />
             <FAQ />
-            <QuestionAttempt />
             <LeaderBoard />
         </>
     );
