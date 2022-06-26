@@ -9,6 +9,8 @@ import { Hero3 } from "../components/Hero3/Hero3";
 import { LeaderBoard } from '../components/Leaderboard/Leaderboard';
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
+import { WhoAreWe } from "../components/WhoAreWe/WhoAreWe";
+import { WhoAreWe1 } from "../components/WhoAreWe1/WhoAreWe1";
 
 const Home: React.FC = () => {
     const router = useRouter();
