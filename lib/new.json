@@ -1,0 +1,429 @@
+[
+    {
+        "questionBody": {
+            "title": "Find the ratio of 80 g to 4 kg 80 g.",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "First, convert 4kg 80g to grams, which will yield the result 4080g. 80/4080 = 1/51",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "1:51"
+            },
+            "options": [
+                {
+                    "text": "1:8"
+                },
+                {
+                    "text": "1:50"
+                },
+                {
+                    "text": "1:51"
+                },
+                {
+                    "text": "1:60"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "Sarah is 2/3 as old as Philip. What is the ratio of Philip's age to Sarah's age?",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "Sara:Philip = 2/3:1, therefore, by multiplying 3 on both sides, we get Sara:Philip = 2:3",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "3:2"
+            },
+            "options": [
+                {
+                    "text": "2:3"
+                },
+                {
+                    "text": "3:2"
+                },
+                {
+                    "text": "2:5"
+                },
+                {
+                    "text": "5:2"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "A rectangle has a perimeter of 40 cm. Its length is 12 cm. What is the ratio of its length to its breadth in the simplest form?",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "Two breadths is 40 - 2(12) = 16, which means 1 breadth ia 16/2 = 8. The answer therefore is 12:8 = 3:2",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "3:2"
+            },
+            "options": [
+                {
+                    "text": "2:3"
+                },
+                {
+                    "text": "3:2"
+                },
+                {
+                    "text": "3:5"
+                },
+                {
+                    "text": "4:1"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "There are 45 pupils on a bus. 30 of them are girls and the rest are boys. Find the ratio of the number of boys to the number of girls.",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "Number of boys = 45 - 30 = 15. Boys:Girls = 15:30 = 1:2",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": []
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "1:2"
+            },
+            "options": [
+                {
+                    "text": "1:3"
+                },
+                {
+                    "text": "2:1"
+                },
+                {
+                    "text": "1:2"
+                },
+                {
+                    "text": "2:3"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "Janet and Alicia shared 32 beads. Janet received 4 more beads than Alicia. Find the ratio of the number of Alicia's beads to Janet's.",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "Alicia's beads = (32 - 4)/2 = 14, therefore Alicia:Janet = 14: 14+4 = 7:9",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "7:9"
+            },
+            "options": [
+                {
+                    "text": "9:7"
+                },
+                {
+                    "text": "7:9"
+                },
+                {
+                    "text": "5:4"
+                },
+                {
+                    "text": "4:5"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "The ratio of Angela's pencils to Kelvin's is 3 : 7. If Kelvin has 28 more pencils than Angela, how many pencils do they have altogether?",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "Kelvin has 28 more pencils than angela, which means that 28 pencils corresponds to 7-3 units = 4 units, where ecah unit is 28/4 = 7. Since there are a total of 7+3 = 10 units, the total number of pencils is 10 x 7 = 70",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "70"
+            },
+            "options": [
+                {
+                    "text": "12"
+                },
+                {
+                    "text": "21"
+                },
+                {
+                    "text": "38"
+                },
+                {
+                    "text": "70"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "The ratio of the number of girls to the number of boys in a school is 9 : 8. There are 99 more girls than boys in the school. How many pupils are there in the school?",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "There are 99 more girls than boys in a school, and their difference in the number of units is 9-8 = 1 unit. Since 99 students correspond to 1 unit, the total number of students which is 9+8 = 17 units corresponds to 99 x 17 = 1683 students",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "1683"
+            },
+            "options": [
+                {
+                    "text": "792"
+                },
+                {
+                    "text": "891"
+                },
+                {
+                    "text": "1683"
+                },
+                {
+                    "text": "7128"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": " There are 2 red beads, 6 blue beads and 15 green beads in a box. Find the ratio of the number of red beads to the number of blue beads to the number of green beads in the box.",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "The ratio red:blue:green = 2:6:15. Since 2:6:15 cannot be simplified, this answer is the final answer",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "2:6:15"
+            },
+            "options": [
+                {
+                    "text": "2:6:15"
+                },
+                {
+                    "text": "1:3:15"
+                },
+                {
+                    "text": "2:3:5"
+                },
+                {
+                    "text": "1:3:5"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "A box contains 15 pencils. 9 of them are red and the rest are blue. The ratio of the number of blue pencils to that of the red pencils is ________________. ",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "There are a total of 15 pencils with 9 red ones, which means 6 of them are blue. This means blue:red = 6:9 = 2:3",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "2:3"
+            },
+            "options": [
+                {
+                    "text": "2:3"
+                },
+                {
+                    "text": "3:2"
+                },
+                {
+                    "text": "3:5"
+                },
+                {
+                    "text": "5:3"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "Maggie baked 195 fruit tarts and muffins in the ratio 5 : 8. How many more muffins did she bake than fruit tarts?",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "The total number of pastries is 195 which corresponds to 13 units of pastries. Thus 1 unit of pastries corresponds to 15 pastries. The difference in units between number of muffins and fruit tarts is 8-5 = 3 units, which corresponds to 3 x 15 = 45 pastries ",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "45"
+            },
+            "options": [
+                {
+                    "text": "13"
+                },
+                {
+                    "text": "15"
+                },
+                {
+                    "text": "45"
+                },
+                {
+                    "text": "75"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "There is a rectangle with an area of 72 cm² and breadth 4 cm. What is the ratio of its length to its perimeter?",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "Length of rectangle = 72/4 = 18cm. Perimeter of rectangle = 18 x 2 + 4 x 2 = 44cm. Thus ratio = 18:44 = 9:22",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "9:22"
+            },
+            "options": [
+                {
+                    "text": "1:4"
+                },
+                {
+                    "text": "1:11"
+                },
+                {
+                    "text": "9:11"
+                },
+                {
+                    "text": "9:22"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": " Mr Tan is 24 years older than her daughter. 4 years ago, the ratio of Mrs Tan's age to her daughter's age is 5 : 1. What is the ratio of Mr Tan's age to her daughter's age in 2 years' time?",
+            "description": "",
+            "difficulty": 40,
+            "explanation": "4 years ago, the difference between Mr Tan's age and his daughter's age would be the same. Thus 4 years ago, the difference of 24 years corresponds to 5-1=4 units, meaning 1 unit corresponds to 6 years. This means 4 years ago, Mr Tan was 5 units x 6 years = 30 years, and his daughter is 6 years. In two years time the ratio = 30 + 4 + 2: 6 + 4 + 2 = 36:12 = 3:1",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "3:1"
+            },
+            "options": [
+                {
+                    "text": "3:1"
+                },
+                {
+                    "text": "4:1"
+                },
+                {
+                    "text": "13:1"
+                },
+                {
+                    "text": "17:5"
+                }
+            ]
+        }
+    },
+    {
+        "questionBody": {
+            "title": "Mr Thiam gave 5/6 of his money to his wife. He used 2/5 of his remaining money on food. What was the ratio of the amount of money he had at first to the amount of money he had left?",
+            "description": "After giving to his wife, he has (6-5)/6 = 1/6 of his money remaining. After spending on food, he has (5-2)/5 = 3/5 of his money after giving wife remaining, thus he has a net 3/5 x 1/6 = 1/10 of his money remaining. Thus the answer is 10:1",
+            "difficulty": 40,
+            "explanation": "",
+            "questionTopics": [
+                "62b5d378305eff87905d7c2d"
+            ],
+            "questionTypes": [
+                "62b5d398305eff87905d7c2f"
+            ]
+        },
+        "mcqQuestionBody": {
+            "correctAnswer": {
+                "text": "10:1"
+            },
+            "options": [
+                {
+                    "text": "11:7"
+                },
+                {
+                    "text": "3:1"
+                },
+                {
+                    "text": "10:1"
+                },
+                {
+                    "text": "30:13"
+                }
+            ]
+        }
+    }
+]

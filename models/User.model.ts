@@ -41,4 +41,10 @@ const UserSchema = new mongoose.Schema({
     }
 })
 
+UserSchema.virtual('answeredQuestions', {
+    ref: 'QuestionAnswer',
+    localField: '_id',
+    foreignField: 'user'
+});
+
 export default mongoose.models.User || mongoose.model('User', UserSchema, 'users')
