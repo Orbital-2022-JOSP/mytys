@@ -11,6 +11,7 @@ import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
 import { WhoAreWe } from "../components/WhoAreWe/WhoAreWe";
 import { WhoAreWe1 } from "../components/WhoAreWe1/WhoAreWe1";
+import { FAQ1 } from "../components/FAQ1/FAQ1";
 
 const Home: React.FC = () => {
     const router = useRouter();
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
 
     return (
         <>
+        <FAQ1/>
             <Hero3 />
             <Hero />
             <Features />
