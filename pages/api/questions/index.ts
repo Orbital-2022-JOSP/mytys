@@ -10,8 +10,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const Questions = await QuestionModel.find({});
-                res.status(201).json({ success: true, data: Questions });
+                const questions = await QuestionModel.find({});
+                res.status(201).json({ success: true, data: questions });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
