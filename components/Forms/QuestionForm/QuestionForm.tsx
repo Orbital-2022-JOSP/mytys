@@ -10,7 +10,7 @@ type QuestionFormProps = {
 export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, questionTypes }) => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [difficulty, setDifficulty] = useState("");
+    const [difficulty, setDifficulty] = useState(10);
     const [explanation, setExplanation] = useState("");
     const [qnTopics, setQnTopics] = useState([]);
     const [qnTypes, setQnTypes] = useState([]);
@@ -96,17 +96,17 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, ques
 
                                     <div className="col-span-6 sm:col-span-3">
                                         <label htmlFor="difficulty" className="block text-sm font-medium text-gray-700">Difficulty</label>
-                                        <select id="difficulty" name="difficulty" autoComplete="difficulty-name" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
-                                            <option>10</option>
-                                            <option>20</option>
-                                            <option>30</option>
-                                            <option>40</option>
-                                            <option>50</option>
-                                            <option>60</option>
-                                            <option>70</option>
-                                            <option>80</option>
-                                            <option>90</option>
-                                            <option>100</option>
+                                        <select id="difficulty" name="difficulty" autoComplete="difficulty-name" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" value={difficulty} onChange={(e) => setDifficulty(parseInt(e.target.value))}>
+                                            <option value={10}>10</option>
+                                            <option value={20}>20</option>
+                                            <option value={30}>30</option>
+                                            <option value={40}>40</option>
+                                            <option value={50}>50</option>
+                                            <option value={60}>60</option>
+                                            <option value={70}>70</option>
+                                            <option value={80}>80</option>
+                                            <option value={90}>90</option>
+                                            <option value={100}>100</option>
                                         </select>
                                     </div>
 
