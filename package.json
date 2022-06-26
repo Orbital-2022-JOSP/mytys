@@ -11,6 +11,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "@next-auth/mongodb-adapter": "^1.0.3",
     "mongodb": "^4.6.0",
     "mongoose": "^6.3.5",
