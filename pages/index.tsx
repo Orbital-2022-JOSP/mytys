@@ -10,6 +10,7 @@ import { LeaderBoard } from '../components/Leaderboard/Leaderboard';
 import { QuestionAttempt } from '../components/QuestionAttempt/QuestionAttempt';
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
+import { Team1 } from "../components/Team1/Team1";
 
 const Home: React.FC = () => {
     const router = useRouter();
