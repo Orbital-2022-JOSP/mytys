@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { IMCQQuestionOption } from '../../models/MCQQuestionOption.model';
 import { IQuestionAnswer } from '../../models/QuestionAnswer.model';
+import { useSession } from 'next-auth/react';
 
 export type MCQQuestionAttemptProps = {
     questionId: Types.ObjectId,
@@ -18,6 +19,7 @@ export type MCQQuestionAttemptProps = {
 export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ questionId, title, description, explanation, correctAnswer, options, nextLink, prevLink }) => {
     const [completed, setCompleted] = useState(false);
     const [correct, setCorrect] = useState(false);
+    const { data: session, status } = useSession();
 
     const handleOptionSelect = (chosenOption: IMCQQuestionOption) => {
         setCompleted(true);
@@ -40,7 +42,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col lg:flex-row">
-                <div className="max-w-xl w-full pr-16 mx-auto mb-10">
+                {/* <div className="max-w-xl w-full pr-16 mx-auto mb-10">
                     <h5 className="mb-6 text-3xl font-extrabold leading-none">
                         {title}
                     </h5>
@@ -101,8 +103,9 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
                                 ))
                             }
                         </div>
-                }
+                } */}
 
+                <p>Please sign in to start answering</p>
 
             </div>
         </div>
