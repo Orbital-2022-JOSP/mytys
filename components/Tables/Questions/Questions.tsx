@@ -88,7 +88,7 @@ export const QuestionsTable: React.FC<QuestionTableProps> = ({ questions }) => {
                 <div className="flex pl-4 mt-4 lg:w-5/6 w-full mx-auto">
                     <Link href={"/admin/questions/create"}>
                         <a className="text-light-blue-500 inline-flex items-center md:mb-2 lg:mb-0">Create new Question
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
                         </a>
