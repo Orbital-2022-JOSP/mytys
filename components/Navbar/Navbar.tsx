@@ -1,6 +1,6 @@
-import Link from 'next/link';
+import { signIn, useSession } from 'next-auth/react';
 import { useState } from 'react';
-import { useSession } from 'next-auth/react';
+
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ export const Navbar = () => {
                         src='/logo.svg'
                         className="w-8 text-light-blue-accent-400"
                     />
-                
+
                     <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
                         MYTYS
                     </span>
@@ -131,24 +131,14 @@ export const Navbar = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a
-                                        href="/"
+                                    <button
+                                        onClick={() => signIn("google", { callbackUrl: '/' })}
                                         className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none"
                                         aria-label="Sign up"
                                         title="Sign up"
                                     >
-                                        Sign up
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/"
-                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md border border-light-blue-accent-400 hover:bg-light-blue-accent-700 hover:text-white focus:shadow-outline focus:outline-none"
-                                        aria-label="Sign up"
-                                        title="Sign up"
-                                    >
                                         Log In
-                                    </a>
+                                    </button>
                                 </li>
                             </>
                     }
@@ -190,12 +180,12 @@ export const Navbar = () => {
                                                 src='/logo.svg'
                                                 className="w-8 text-light-blue-accent-400"
                                             />
-                
+
                                             <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
                                                 My_TYS
                                             </span>
                                         </a>
-               
+
                                     </div>
                                     <div>
                                         <button
