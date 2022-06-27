@@ -161,7 +161,7 @@ export const Features1 = () => {
                             A <span className = "text-light-blue-500">FREE</span> tuition experience
                         </h6>
                         <p className="mb-3 text-sm text-gray-900">
-                           As a relatively new project, we are still monitoring our site's traffic and participation. Until further notice, this site's features and services remain free to all users
+                           As a relatively new project, we are still monitoring our site&apos;s traffic and participation. Until further notice, this site&apos;s features and services remain free to all users
                         </p>
                         <a
                             href="/"
