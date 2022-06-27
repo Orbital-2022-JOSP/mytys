@@ -35,7 +35,7 @@ export const NavBar_Homepage = () => {
                     </svg>
                 
                     <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
-                        My_TYS
+                        MYTYS
                     </span>
                 </a>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -150,7 +150,7 @@ export const NavBar_Homepage = () => {
                                             </svg>
                 
                                             <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
-                                                My_TYS
+                                                MYTYS
                                             </span>
                                         </a>
                
