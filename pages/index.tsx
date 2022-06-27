@@ -20,10 +20,6 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <FAQ />
-            <Hero3 />
-            <Hero />
-            <Features />
             <LandingPage_main />
             <MailingList />
             <Steps />
