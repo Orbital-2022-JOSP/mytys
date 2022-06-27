@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../dbConnect";
-import QuestionTopicModel from "../../../models/QuestionTopic.model";
+import QuestionAnswerModel from "../../../models/QuestionAnswer.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { method } = req;
@@ -10,8 +10,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const questionTopics = await QuestionTopicModel.find({});
-                res.status(201).json({ success: true, data: questionTopics });
+                const questionAnswers = await QuestionAnswerModel.find({});
+                res.status(201).json({ success: true, data: questionAnswers });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
@@ -19,8 +19,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'POST':
             try {
-                const questionTopic = await QuestionTopicModel.create(req.body);
-                res.status(201).json({ success: true, data: questionTopic });
+                const questionAnswer = await QuestionAnswerModel.create(req.body);
+                res.status(201).json({ success: true, data: questionAnswer });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
