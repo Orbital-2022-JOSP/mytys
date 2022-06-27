@@ -3,6 +3,8 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { AdminLayout } from '../components/AdminLayout/AdminLayout';
 import { Footer } from "../components/Footer/Footer";
+import { FooterWithContent } from "../components/FooterWithContent/FooterWithContent";
+import { Hero2 } from "../components/Hero2/Hero2";
 import { Navbar } from '../components/Navbar/Navbar';
 import '../styles/globals.css';
 
@@ -27,7 +29,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
                     : <>
                         <Navbar />
                         <Component {...pageProps} />
-                        <Footer />
+                        <FooterWithContent /> 
                     </>
             }
         </SessionProvider>
