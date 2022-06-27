@@ -1,4 +1,4 @@
-import mongoose, { model, Schema } from 'mongoose';
+import mongoose, { model, Schema, Types } from 'mongoose';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';
 
@@ -14,6 +14,7 @@ import { IQuestionType } from './QuestionType.model';
  */
 
 export interface ICourse {
+    _id?: Types.ObjectId;
     title: string;
     description: string;
     difficulty: number;

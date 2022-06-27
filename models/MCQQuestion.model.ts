@@ -12,6 +12,7 @@ import { IMCQQuestionOption } from './MCQQuestionOption.model';
  */
 
 export interface IMCQQuestion {
+    _id?: Types.ObjectId;
     questionId: Types.ObjectId;
     questionType: "mcq";
     correctAnswer: IMCQQuestionOption;
