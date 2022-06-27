@@ -1,6 +1,6 @@
 export const WhoAreWe1: React.FC = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 sm:py-8 lg:px-8 lg:py-16">
             <div className="p-8 rounded shadow-xl sm:p-16">
                 <div className="flex flex-col lg:flex-row">
                     <div className="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">

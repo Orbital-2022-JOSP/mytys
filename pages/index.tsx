@@ -1,6 +1,16 @@
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import React from "react";
+import { Blog } from "../components/Blog/Blog";
+import { FAQ } from "../components/FAQ/FAQ";
+import { FAQ1 } from "../components/FAQ1/FAQ1";
+import { Features } from "../components/Features/Features";
+import { Hero } from '../components/Hero/Hero';
+import { Hero3 } from "../components/Hero3/Hero3";
+import { LeaderBoard } from '../components/Leaderboard/Leaderboard';
+import { Stats } from "../components/Stats/Stats";
+import { Steps } from "../components/Steps/Steps";
+
 import { LandingPage_main } from "../components/LandingPage_main/LandingPage_main";
 import { MailingList } from "../components/MailingList/MailingList";
 import { Stats } from "../components/Stats/Stats";
@@ -17,6 +27,10 @@ const Home: React.FC = () => {
 
     return (
         <>
+            <FAQ/>
+            <Hero3 />
+            <Hero />
+            <Features />
             <LandingPage_main />
             <MailingList />
             <Steps />
