@@ -1,4 +1,4 @@
-import mongoose, { model, Schema } from 'mongoose';
+import mongoose, { model, Schema, Types } from 'mongoose';
 import { IQuestionAnswer } from './QuestionAnswer.model';
 import { IUser } from './User.model';
 import { IWorksheet } from './Worksheet.model';
@@ -17,6 +17,7 @@ import { IWorksheet } from './Worksheet.model';
  */
 
 export interface IWorkdoc {
+    _id?: Types.ObjectId;
     worksheet: IWorksheet;
     questionAttempts: Array<IQuestionAnswer>;
     user: IUser;

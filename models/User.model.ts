@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 
 /**
  * The user interface
@@ -12,6 +12,7 @@ import mongoose from 'mongoose';
  */
 
 export interface IUser {
+    _id?: Types.ObjectId;
     email: string;
     name: string;
     image: string;

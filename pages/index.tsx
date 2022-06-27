@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { Blog } from "../components/Blog/Blog";
 import { FAQ } from "../components/FAQ/FAQ";
+import { FAQ1 } from "../components/FAQ1/FAQ1";
 import { Features } from "../components/Features/Features";
 import { Hero } from '../components/Hero/Hero';
 import { Hero3 } from "../components/Hero3/Hero3";
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
 
     return (
         <>
+        <FAQ1/>
             <Hero3 />
             <Hero />
             <Features />

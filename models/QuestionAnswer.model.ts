@@ -25,6 +25,7 @@ export interface IQuestionAnswerExtended {
 
 // MCQ Answer and Open Ended Answer might not be necessary in the future
 export interface IQuestionAnswer {
+    _id?: Types.ObjectId;
     user: Types.ObjectId;
     question: Types.ObjectId
     score: number;
