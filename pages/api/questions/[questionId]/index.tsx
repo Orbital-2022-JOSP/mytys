@@ -49,6 +49,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             }
             break;
 
+        case 'DELETE' /* Delete a model by its ID */:
+            try {
+                const deletedQuestion = await QuestionModel.deleteOne({ _id: questionId });
+                if (!deletedQuestion) {
+                    return res.status(400).json({ success: false });
+                }
+                res.status(200).json({ success: true, data: {} });
+            } catch (error) {
+                res.status(400).json({ success: false });
+            }
+            break;
+
         default:
             res.status(404).end();
             break;

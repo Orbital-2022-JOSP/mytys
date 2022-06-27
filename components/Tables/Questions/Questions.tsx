@@ -1,5 +1,29 @@
 import Link from 'next/link';
-export const QuestionsTable: React.FC = () => {
+import { IQuestion } from '../../../models/Question.model';
+import { useState } from 'react';
+
+type QuestionTableProps = {
+    questions?: Array<IQuestion>;
+}
+
+export const QuestionsTable: React.FC<QuestionTableProps> = ({ questions }) => {
+    const [questionId, setQuestionId] = useState("");
+
+    const handleDelete = () => {
+        if (questionId != "") {
+            fetch(
+                `/api/questions/${questionId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            });
+            window.location.reload();
+        }
+    }
+
+    console.log(questionId)
     return (
         <section className="text-gray-600 body-font">
             <div className="container px-5 py-24 mx-auto">
@@ -13,53 +37,47 @@ export const QuestionsTable: React.FC = () => {
                             <tr>
                                 <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Title</th>
                                 <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Difficulty</th>
-                                <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Type</th>
+                                <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Subject</th>
                                 <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Topics</th>
                                 <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Types</th>
-                                <th className="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
+                                <th className="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">Select</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td className="px-4 py-3">Start</td>
-                                <td className="px-4 py-3">5 Mb/s</td>
-                                <td className="px-4 py-3">15 GB</td>
-                                <td className="px-4 py-3 text-lg text-gray-900">Free</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
-                                <td className="w-10 text-center">
-                                    <input name="plan" type="radio" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="border-t-2 border-gray-200 px-4 py-3">Pro</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3">25 Mb/s</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3">25 GB</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
-                                <td className="border-t-2 border-gray-200 w-10 text-center">
-                                    <input name="plan" type="radio" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="border-t-2 border-gray-200 px-4 py-3">Business</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3">36 Mb/s</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3">40 GB</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$50</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
-                                <td className="border-t-2 border-gray-200 w-10 text-center">
-                                    <input name="plan" type="radio" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Exclusive</td>
-                                <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">48 Mb/s</td>
-                                <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">120 GB</td>
-                                <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$72</td>
-                                <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
-                                <td className="border-t-2 border-b-2 border-gray-200 w-10 text-center">
-                                    <input name="plan" type="radio" />
-                                </td>
-                            </tr>
+                            {
+                                questions
+                                    ? questions.map((question, idx) => (
+                                        <tr key={"question" + question._id}>
+                                            <td className="px-4 py-3">
+                                                <p>{question.title}</p>
+                                            </td>
+                                            <td className="px-4 py-3">
+                                                <p>{question.difficulty}</p>
+                                            </td>
+                                            <td className="px-4 py-3">
+                                                <p> {question.subject}</p>
+                                            </td>
+                                            <td className="px-4 py-3 text-lg text-gray-900">
+                                                {question.questionTopics.map((qnTopic, idx) => (
+                                                    <p key={"question" + question._id + qnTopic._id}>{qnTopic.name}</p>
+                                                ))}
+                                            </td>
+                                            <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">
+                                                {question.questionTypes.map((qnType, idx) => (
+                                                    <p key={"question" + question._id + qnType._id}>{qnType.name}</p>
+                                                ))}
+                                            </td>
+                                            <td className="w-10 text-center">
+                                                <input name="plan" type="radio" value={question._id.toString()} onChange={(e) => setQuestionId(e.target.value)} />
+                                            </td>
+                                        </tr>
+                                    ))
+                                    : <tr>
+                                        <td className="border-t-2 border-b-2 border-gray-200 p-5 text-center" colSpan={6}>
+                                            No Questions
+                                        </td>
+                                    </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -71,7 +89,7 @@ export const QuestionsTable: React.FC = () => {
                             </svg>
                         </a>
                     </Link>
-                    <button className="flex ml-auto text-white bg-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 rounded">Delete</button>
+                    <button className="flex ml-auto text-white bg-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 rounded" onClick={handleDelete}>Delete</button>
                 </div>
             </div>
         </section>

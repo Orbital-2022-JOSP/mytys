@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../dbConnect";
 import QuestionModel from "../../../models/Question.model";
+import QuestionTopicModel from "../../../models/QuestionTopic.model";
+import QuestionTypeModel from "../../../models/QuestionType.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { method } = req;
@@ -10,7 +12,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const questions = await QuestionModel.find({});
+                const questions = await QuestionModel
+                    .find({})
+                    .populate({
+                        path: 'questionTopics',
+                        model: QuestionTopicModel
+                    })
+                    .populate({
+                        path: 'questionTypes',
+                        model: QuestionTypeModel
+                    })
                 res.status(201).json({ success: true, data: questions });
             } catch (error) {
                 res.status(400).json({ success: false });
