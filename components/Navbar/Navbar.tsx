@@ -69,7 +69,7 @@ export const Navbar = () => {
                                 </li>
                                 <li>
                                     <button
-                                        onClick={() => signOut({ callbackUrl: "/s" })}
+                                        onClick={() => signOut({ callbackUrl: "/" })}
                                         className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
                                         aria-label="Log Out"
                                         title="Log Out"
