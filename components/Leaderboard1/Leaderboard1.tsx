@@ -164,9 +164,9 @@ export const LeaderBoard1 = () => {
                 </p>
             </div>
             <div className="grid max-w-md gap-10 row-gap-10 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-                <LeaderBoardCard position="2nd" username="GetName1" points="Getpts1" subjects={["Chemistry", "Math", "Physics"]}/>
-                <LeaderBoardCard position="1st" username="GetName2" points="Getpts2" subjects={["Chemistry", "Math"]}/>
-                <LeaderBoardCard position="3rd" username="GetName3" points="Getpts3" subjects={["Chemistry", "Math", "Physics"]}/>
+                <LeaderBoardCard position="2nd" username="John" points="2000" subjects={["Chemistry", "Math", "Physics"]}/>
+                <LeaderBoardCard position="1st" username="Josh" points="2109" subjects={["Chemistry", "Math"]}/>
+                <LeaderBoardCard position="3rd" username="Sam" points="1809" subjects={["Chemistry", "Math", "Physics"]}/>
             </div>
             <div className="max-w-lg space-y-6 sm:mx-auto lg:max-w-xl mt-16">
                 <MiniLeaderBoardCard text="Try to participate actively in the quizzes to get a chance to be on the leaderboard!" />
