@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { IQuestion } from '../../../models/Question.model';
 import { useState } from 'react';
+import { UpdateQuestionModal } from '../../Modals/UpdateQuestionModal';
 
 type QuestionTableProps = {
     questions?: Array<IQuestion>;
@@ -8,6 +9,7 @@ type QuestionTableProps = {
 
 export const QuestionsTable: React.FC<QuestionTableProps> = ({ questions }) => {
     const [questionId, setQuestionId] = useState("");
+    const [shoQuestionTable, setShowQuestionTable] = useState(false);
 
     const handleDelete = () => {
         if (questionId != "") {
@@ -23,10 +25,10 @@ export const QuestionsTable: React.FC<QuestionTableProps> = ({ questions }) => {
         }
     }
 
-    console.log(questionId)
     return (
         <section className="text-gray-600 body-font">
             <div className="container px-5 py-24 mx-auto">
+                <UpdateQuestionModal show={shoQuestionTable} closeShowFunc={() => setShowQuestionTable(false)} />
                 <div className="flex flex-col text-center w-full mb-20">
                     <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Questions</h1>
                     {/* <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Banh mi cornhole echo park skateboard authentic crucifix neutra tilde lyft biodiesel artisan direct trade mumblecore 3 wolf moon twee</p> */}
@@ -89,7 +91,8 @@ export const QuestionsTable: React.FC<QuestionTableProps> = ({ questions }) => {
                             </svg>
                         </a>
                     </Link>
-                    <button className="flex ml-auto text-white bg-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 rounded" onClick={handleDelete}>Delete</button>
+                    <button className="flex ml-auto text-light-blue-500 outline outline-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 hover:text-white rounded" onClick={() => setShowQuestionTable(true)}>Update</button>
+                    <button className="flex ml-2 text-white bg-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 rounded" onClick={handleDelete}>Delete</button>
                 </div>
             </div>
         </section>
