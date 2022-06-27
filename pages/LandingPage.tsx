@@ -21,7 +21,6 @@ const Home: React.FC = () => {
             <MailingList />
             <Steps />
             <Stats />
-            <Testimonials2 />
             
             
             {/* <div className="container">
