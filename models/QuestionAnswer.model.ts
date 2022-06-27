@@ -1,24 +1,34 @@
-import mongoose, { model, Schema } from 'mongoose';
+import mongoose, { model, Schema, Types } from 'mongoose';
 import { IMCQQuestionOption } from './MCQQuestionOption.model';
 import { IQuestion } from './Question.model';
 import { IUser } from './User.model';
+
+export interface IQuestionAnswerExtended {
+    user: IUser;
+    question: IQuestion;
+    score: number;
+    MCQAnswer?: IMCQQuestionOption;
+    OpenEndedAnswer?: string;
+}
 
 /**
  * The generic question answer interface
  * 
  * @interface IQuestionAnswer
- * @member {IUser} user The user that answered the question
- * @member {IQuestion} question The question
+ * @member {Types.ObjectId} user The user id that answered the question
+ * @member {Types.ObjectId} question The question id
  * @member {number} score The score that the user receive for their answer, most likely 0 or 1
- * @member {IMCQQuestionOption} MCQAnswer The answer if the question is a MCQ question
+ * @member {Types.ObjectId} MCQAnswer The answer if the question is a MCQ question
  * @member {string} OpenEndedAnswer The answer if the question is an open ended question
  */
 
+
+// MCQ Answer and Open Ended Answer might not be necessary in the future
 export interface IQuestionAnswer {
-    user: IUser;
-    question: IQuestion;
+    user: Types.ObjectId;
+    question: Types.ObjectId
     score: number;
-    MCQAnswer?: IMCQQuestionOption;
+    MCQAnswer?: Types.ObjectId;
     OpenEndedAnswer?: string;
 }
 

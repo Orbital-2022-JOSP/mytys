@@ -17,7 +17,7 @@ import { IQuestionType } from './QuestionType.model';
  */
 
 export interface IQuestion {
-    id?: Types.ObjectId;
+    _id?: Types.ObjectId;
     title: string;
     description: string;
     difficulty: number;
@@ -51,6 +51,14 @@ const QuestionSchema = new Schema<IQuestion>({
     subject: {
         type: String
     },
+}, {
+    toJSON: { virtuals: true }
 })
+
+QuestionSchema.virtual('mcqQuestions', {
+    ref: 'MCQQuestion',
+    localField: '_id',
+    foreignField: 'questionId'
+});
 
 export default mongoose.models.Question || model<IQuestion>('Question', QuestionSchema)

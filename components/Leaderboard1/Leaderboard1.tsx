@@ -2,9 +2,10 @@ type LeaderBoardCardProps = {
     position: string;
     username: string;
     points: string;
+    subjects: string[]
 }
 
-const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, points }) => {
+const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, points, subjects}) => {
     let cardStyle = "";
 
     cardStyle = position == "1st"
@@ -17,7 +18,7 @@ const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, p
         <div className={"flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow" + cardStyle}>
             {position == "1st" && (
                 <div className="absolute inset-x-0 top-0 flex justify-center -mt-3">
-                    <div className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-deep-purple-accent-400">
+                    <div className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-light-blue-500">
                         Leader
                     </div>
                 </div>
@@ -25,7 +26,7 @@ const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, p
             <div className="text-center">
                 <div className="text-lg font-semibold">{position}</div>
                 <div className="flex items-center justify-center mt-2">
-                    <div className="mr-1 text-4xl font-bold">{username}</div>
+                    <div className="mr-1 text-4xl font-bold text-light-blue-500">{username}</div>
                 </div>
                 <div className="mt-2 space-y-3">
                     <div className="text-gray-700">{points} points</div>
@@ -36,7 +37,7 @@ const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, p
                     <li className="flex items-start">
                         <span className="mr-1">
                             <svg
-                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                className="w-5 h-5 mt-px text-light-blue-500"
                                 stroke="currentColor"
                                 viewBox="0 0 52 52"
                             >
@@ -49,12 +50,12 @@ const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, p
                                 />
                             </svg>
                         </span>
-                        Earth
+                        {subjects[0]}
                     </li>
                     <li className="flex items-start">
                         <span className="mr-1">
                             <svg
-                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                className="w-5 h-5 mt-px text-light-blue-500"
                                 stroke="currentColor"
                                 viewBox="0 0 52 52"
                             >
@@ -67,12 +68,12 @@ const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, p
                                 />
                             </svg>
                         </span>
-                        Space
+                        {subjects[1]}
                     </li>
                     <li className="flex items-start">
                         <span className="mr-1">
                             <svg
-                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                className="w-5 h-5 mt-px text-light-blue-500"
                                 stroke="currentColor"
                                 viewBox="0 0 52 52"
                             >
@@ -85,9 +86,9 @@ const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, p
                                 />
                             </svg>
                         </span>
-                        Humans
+                        {subjects[2]}
                     </li>
-                </ul>   
+                </ul>
             </div>
         </div>
     )
@@ -99,10 +100,10 @@ type MiniLeaderBoardCardProps = {
 
 const MiniLeaderBoardCard: React.FC<MiniLeaderBoardCardProps> = ({ text }) => {
     return (
-        <div className="flex items-center p-2 transition-colors duration-200 border rounded shadow group hover:bg-deep-purple-accent-400 hover:border-deep-purple-accent-400 bg-white">
+        <div className="flex items-center p-2 transition-colors duration-200 border rounded shadow group hover:bg-light-blue-500 hover:border-light-blue-800 bg-white">
             <div className="mr-2">
                 <svg
-                    className="w-6 h-6 transition-colors duration-200 text-deep-purple-accent-400 group-hover:text-white sm:w-8 sm:h-8"
+                    className="w-6 h-6 transition-colors duration-200 text-light-blue-500 group-hover:text-white sm:w-8 sm:h-8"
                     stroke="currentColor"
                     viewBox="0 0 52 52"
                 >
@@ -122,7 +123,7 @@ const MiniLeaderBoardCard: React.FC<MiniLeaderBoardCardProps> = ({ text }) => {
     )
 }
 
-export const LeaderBoard = () => {
+export const LeaderBoard1 = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -159,22 +160,16 @@ export const LeaderBoard = () => {
                     </span>
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremque rem aperiam, eaque ipsa quae.
+                   Here are our top few performers of the week!
                 </p>
             </div>
             <div className="grid max-w-md gap-10 row-gap-10 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-                <LeaderBoardCard position="2nd" username="crigard1" points="824" />
-                <LeaderBoardCard position="1st" username="hloveridge0" points="1024" />
-                <LeaderBoardCard position="3rd" username="ndrabble9" points="600" />
+                <LeaderBoardCard position="2nd" username="GetName1" points="Getpts1" subjects={["Chemistry", "Math", "Physics"]}/>
+                <LeaderBoardCard position="1st" username="GetName2" points="Getpts2" subjects={["Chemistry", "Math"]}/>
+                <LeaderBoardCard position="3rd" username="GetName3" points="Getpts3" subjects={["Chemistry", "Math", "Physics"]}/>
             </div>
             <div className="max-w-lg space-y-6 sm:mx-auto lg:max-w-xl mt-16">
-                <MiniLeaderBoardCard text="Change the world by being yourself" />
-                <MiniLeaderBoardCard text="Change the world by being yourself" />
-                <MiniLeaderBoardCard text="Change the world by being yourself" />
-                <MiniLeaderBoardCard text="Change the world by being yourself" />
-                <MiniLeaderBoardCard text="Change the world by being yourself" />
-                <MiniLeaderBoardCard text="Change the world by being yourself" />
+                <MiniLeaderBoardCard text="Try to participate actively in the quizzes to get a chance to be on the leaderboard!" />
             </div>
         </div>
     );

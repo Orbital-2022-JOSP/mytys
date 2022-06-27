@@ -1,4 +1,4 @@
-import { model, Schema } from 'mongoose';
+import mongoose, { model, Schema, Types } from 'mongoose';
 
 /**
  * The question type interface
@@ -8,6 +8,7 @@ import { model, Schema } from 'mongoose';
  */
 
 export interface IQuestionType {
+    _id?: Types.ObjectId;
     name: string;
 }
 
