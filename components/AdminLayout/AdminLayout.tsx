@@ -1,4 +1,5 @@
 import { ChatIcon, HomeIcon, UserIcon } from "@heroicons/react/outline";
+import { useSession } from 'next-auth/react';
 import Link from "next/link";
 
 type AdminLayoutProps = {
@@ -6,6 +7,8 @@ type AdminLayoutProps = {
 };
 
 export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
+    const { data: session, status } = useSession();
+
     return (
         <>
             <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
