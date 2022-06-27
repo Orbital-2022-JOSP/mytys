@@ -77,10 +77,9 @@ const options: NextAuthOptions = {
         strategy: "jwt"
     },
     callbacks: {
-        async session({ session, user, token }) {
-            console.log(session)
-            console.log(user)
-            console.log(token)
+        async session({ session, token }) {
+            session.id = token.id;
+            session.userRole = token.userRole;
             return session
         },
     }
