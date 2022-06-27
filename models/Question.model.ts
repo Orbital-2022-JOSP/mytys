@@ -1,4 +1,6 @@
 import mongoose, { model, Schema, Types } from 'mongoose';
+import MCQQuestionModel from './MCQQuestion.model';
+import OpenEndedQuestionModel from './OpenEndedQuestion.model';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';
 
@@ -60,5 +62,11 @@ QuestionSchema.virtual('mcqQuestions', {
     localField: '_id',
     foreignField: 'questionId'
 });
+
+QuestionSchema.pre('remove', function (next) {
+    MCQQuestionModel.remove({ questionId: this._id }).exec();
+    OpenEndedQuestionModel.remove({ questionId: this._id }).exec();
+    next();
+})
 
 export default mongoose.models.Question || model<IQuestion>('Question', QuestionSchema)
