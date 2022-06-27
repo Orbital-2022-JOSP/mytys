@@ -77,17 +77,11 @@ const options: NextAuthOptions = {
         strategy: "jwt"
     },
     callbacks: {
-        async jwt({ token, user }) {
-            token.id = user.id;
-            token.userRole = user.userRole;
-            return token
-        },
-        async session({ session, user }) {
+        async session({ session, user, token }) {
             console.log(session)
             console.log(user)
-            session.user.id = user.id;
-            session.user.userRole = user.userRole;
-            return session;
-        }
+            console.log(token)
+            return session
+        },
     }
 };
