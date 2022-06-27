@@ -1,18 +1,37 @@
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import React from "react";
-import { JoinUsCTA1 } from "../components/JoinUsCTA1/JoinUsCTA1";
+import { Blog } from "../components/Blog/Blog";
+import { FAQ } from "../components/FAQ/FAQ";
+import { FAQ1 } from "../components/FAQ1/FAQ1";
+import { Features } from "../components/Features/Features";
+import { Hero } from '../components/Hero/Hero';
+import { Hero3 } from "../components/Hero3/Hero3";
+import { LeaderBoard } from '../components/Leaderboard/Leaderboard';
 import { Stats } from "../components/Stats/Stats";
-import { Team1 } from "../components/Team1/Team1";
-import { WhoAreWe1 } from "../components/WhoAreWe1/WhoAreWe1";
+import { Steps } from "../components/Steps/Steps";
 
-const AboutUsPage1: React.FC = () => {
+
+const Home: React.FC = () => {
+    const router = useRouter();
+    const isActive: (pathname: string) => boolean = (pathname) =>
+        router.pathname === pathname;
+
+    const { data: session, status } = useSession();
+
     return (
         <>
-            <WhoAreWe1 />
-            <Team1 />
+        <FAQ/>
+            <Hero3 />
+            <Hero />
+            <Features />
+            <Steps />
             <Stats />
-            <JoinUsCTA1 />
+            <Blog />
+            <FAQ />
+            <LeaderBoard />
         </>
     );
 };
 
-export default AboutUsPage1;
+export default Home;
