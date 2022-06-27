@@ -75,5 +75,12 @@ const options: NextAuthOptions = {
     secret: process.env.SECRET,
     session: {
         strategy: "jwt"
+    },
+    callbacks: {
+        async session({ session, token }) {
+            session.id = token.id;
+            session.userRole = token.userRole;
+            return session
+        },
     }
 };
