@@ -78,9 +78,11 @@ const options: NextAuthOptions = {
     },
     callbacks: {
         async session({ session, user }) {
+            console.log(session)
+            console.log(user)
             session.user.id = user.id;
             session.user.userRole = user.userRole;
             return session;
-        },
+        }
     },
 };
