@@ -15,3 +15,5 @@ declare module "next-auth" {
         userRole: string;
     }
 }
+
+declare module "next-auth/client"
