@@ -10,6 +10,8 @@ import { Hero3 } from "../components/Hero3/Hero3";
 import { LeaderBoard } from '../components/Leaderboard/Leaderboard';
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
+import { LeaderBoard1 } from "../components/Leaderboard1/Leaderboard1";
+import { HowItWorks1 } from "../components/HowItWorks1/HowItWorks1";
 
 const Home: React.FC = () => {
     const router = useRouter();
@@ -20,7 +22,9 @@ const Home: React.FC = () => {
 
     return (
         <>
-        <FAQ1/>
+            <LeaderBoard1/>
+            <FAQ1/>
+            <HowItWorks1/>
             <Hero3 />
             <Hero />
             <Features />
