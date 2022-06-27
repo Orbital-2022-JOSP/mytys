@@ -9,10 +9,10 @@ import { Hero3 } from "../components/Hero3/Hero3";
 import { LeaderBoard } from '../components/Leaderboard/Leaderboard';
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
+import { Team1 } from "../components/Team1/Team1";
 import { WhoAreWe } from "../components/WhoAreWe/WhoAreWe";
 import { WhoAreWe1 } from "../components/WhoAreWe1/WhoAreWe1";
 import { FAQ1 } from "../components/FAQ1/FAQ1";
-
 
 const Home: React.FC = () => {
     const router = useRouter();
