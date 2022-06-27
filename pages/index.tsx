@@ -13,6 +13,7 @@ import { WhoAreWe } from "../components/WhoAreWe/WhoAreWe";
 import { WhoAreWe1 } from "../components/WhoAreWe1/WhoAreWe1";
 import { FAQ1 } from "../components/FAQ1/FAQ1";
 
+
 const Home: React.FC = () => {
     const router = useRouter();
     const isActive: (pathname: string) => boolean = (pathname) =>
