@@ -9,6 +9,20 @@ type QuestionTableProps = {
 export const QuestionsTable: React.FC<QuestionTableProps> = ({ questions }) => {
     const [questionId, setQuestionId] = useState("");
 
+    const handleDelete = () => {
+        if (questionId != "") {
+            fetch(
+                `/api/questions/${questionId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            });
+            window.location.reload();
+        }
+    }
+
     console.log(questionId)
     return (
         <section className="text-gray-600 body-font">
@@ -75,7 +89,7 @@ export const QuestionsTable: React.FC<QuestionTableProps> = ({ questions }) => {
                             </svg>
                         </a>
                     </Link>
-                    <button className="flex ml-auto text-white bg-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 rounded">Delete</button>
+                    <button className="flex ml-auto text-white bg-light-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-light-blue-600 rounded" onClick={handleDelete}>Delete</button>
                 </div>
             </div>
         </section>
