@@ -1,4 +1,5 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export const Navbar = () => {
@@ -8,44 +9,49 @@ export const Navbar = () => {
     return (
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
-                <a
-                    href="/"
-                    aria-label="Company"
-                    title="Company"
-                    className="inline-flex items-center"
-                >
-                    <img
-                        src='/logo.svg'
-                        className="w-8 text-light-blue-accent-400"
-                    />
+                <Link href={"/"}>
+                    <a
+                        href="/"
+                        aria-label="Company"
+                        title="Company"
+                        className="inline-flex items-center"
+                    >
+                        <img
+                            src='/logo.svg'
+                            className="w-8 text-light-blue-accent-400"
+                        />
 
-                    <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
-                        MYTYS
-                    </span>
-                </a>
+                        <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
+                            MYTYS
+                        </span>
+                    </a>
+                </Link>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
                     {
                         status == "authenticated"
                             ? <>
                                 <li>
-                                    <a
-                                        href="/"
-                                        aria-label="Our product"
-                                        title="Our product"
-                                        className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
-                                    >
-                                        Home
-                                    </a>
+                                    <Link href={"/"}>
+                                        <a
+                                            href="/"
+                                            aria-label="Our product"
+                                            title="Our product"
+                                            className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
+                                        >
+                                            Home
+                                        </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="/"
-                                        aria-label="Our subjects"
-                                        title="Our subjects"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                                    >
-                                        Subjects
-                                    </a>
+                                    <Link href={"/subjects"}>
+                                        <a
+                                            aria-label="Our subjects"
+                                            title="Our subjects"
+                                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                                        >
+                                            Subjects
+                                        </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <a
@@ -58,14 +64,16 @@ export const Navbar = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a
-                                        href="/"
-                                        aria-label="LeaderBoard"
-                                        title="LeaderBoard"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                                    >
-                                        LeaderBoard
-                                    </a>
+                                    <Link href={"/leaderboard"}>
+                                        <a
+                                            href="/"
+                                            aria-label="LeaderBoard"
+                                            title="LeaderBoard"
+                                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                                        >
+                                            LeaderBoard
+                                        </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <button
@@ -90,44 +98,52 @@ export const Navbar = () => {
                             </>
                             : <>
                                 <li>
-                                    <a
-                                        href="/"
-                                        aria-label="Our product"
-                                        title="Our product"
-                                        className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
-                                    >
-                                        Home
-                                    </a>
+                                    <Link href={"/"}>
+                                        <a
+                                            href="/"
+                                            aria-label="Our product"
+                                            title="Our product"
+                                            className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
+                                        >
+                                            Home
+                                        </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="/"
-                                        aria-label="Our subjects"
-                                        title="Our subjects"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
-                                    >
-                                        Subjects
-                                    </a>
+                                    <Link href={"/subjects"}>
+                                        <a
+                                            href="/"
+                                            aria-label="Our subjects"
+                                            title="Our subjects"
+                                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
+                                        >
+                                            Subjects
+                                        </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="/"
-                                        aria-label="How it works"
-                                        title="How it works"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
-                                    >
-                                        How it Works
-                                    </a>
+                                    <Link href={"/how-it-works"}>
+                                        <a
+                                            href="/"
+                                            aria-label="How it works"
+                                            title="How it works"
+                                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
+                                        >
+                                            How it Works
+                                        </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="/"
-                                        aria-label="About us"
-                                        title="About us"
-                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
-                                    >
-                                        About us
-                                    </a>
+                                    <Link href={"/aboutus"}>
+                                        <a
+                                            href="/"
+                                            aria-label="About us"
+                                            title="About us"
+                                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
+                                        >
+                                            About us
+                                        </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <button
