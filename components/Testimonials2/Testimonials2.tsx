@@ -51,7 +51,7 @@ export const Testimonials2 = () => {
                             title="Visit the East"
                             className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-light-blue-500"
                         >
-                            4A's in my recent exam!
+                            4A&apos;s in my recent exam!
                         </a>
                         <p className="mb-2 text-gray-700">
                            With just 1 month of using MYTYS, I was able to excel in my subjects this school term. I believe it will help me in my grades in future terms as well!

@@ -56,7 +56,7 @@ export const HowItWorks1 = () => {
                             </span>
                         </h2>
                         <p className="text-base text-gray-700 md:text-lg">
-                            With MYTYS, you won't ever have to worry about not having sufficient practice for future examinations
+                            With MYTYS, you won&apos;t ever have to worry about not having sufficient practice for future examinations
                         </p>
                     </div>
                     <div>

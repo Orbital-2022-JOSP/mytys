@@ -54,7 +54,7 @@ export const Unauthenticated = () => {
                             Unauthenticated
                         </h2>
                         <p className="text-base text-gray-700 md:text-lg">
-                            Looks like you're not signed in, please do so to view this content!
+                            Looks like you&apos;re not signed in, please do so to view this content!
                         </p>
                     </div>
                     <div>
