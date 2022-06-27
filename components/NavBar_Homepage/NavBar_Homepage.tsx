@@ -18,24 +18,13 @@ export const NavBar_Homepage = () => {
                     title="Company"
                     className="inline-flex items-center"
                 >
-                    <svg
-                        className="w-8 text-light-blue-500"
-                        viewBox="0 0 24 24"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        stroke="currentColor"
-                        fill="none"
-                    >
-                        <circle cx="12" cy="12" r="10"/>
-                        <circle cx="12" cy="12" r="2"/>
-                        <circle cx="12" cy="12" r="0" />
-                        <circle cx="12" cy="12" r="6"/>
-                        
-                    </svg>
+                    <img
+                        src='/logo.svg'
+                        className="w-8 text-light-blue-accent-400"
+                    />
                 
                     <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
-                        My_TYS
+                        MYTYS
                     </span>
                 </a>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -133,24 +122,13 @@ export const NavBar_Homepage = () => {
                                             title="Company"
                                             className="inline-flex items-center"
                                         >
-                                            <svg
-                                                className="w-8 text-light-blue-500"
-                                                viewBox="0 0 24 24"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                stroke="currentColor"
-                                                fill="none"
-                                            >
-                                                <circle cx="12" cy="12" r="10"/>
-                                                <circle cx="12" cy="12" r="2"/>
-                                                <circle cx="12" cy="12" r="0" />
-                                                <circle cx="12" cy="12" r="6"/>
-                        
-                                            </svg>
+                                             <img
+                                                src='/logo.svg'
+                                                className="w-8 text-light-blue-accent-400"
+                                            />
                 
                                             <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
-                                                My_TYS
+                                                MYTYS
                                             </span>
                                         </a>
                

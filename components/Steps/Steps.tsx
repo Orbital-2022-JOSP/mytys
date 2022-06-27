@@ -74,7 +74,7 @@ export const Steps: React.FC = () => {
                         <div className="pt-1 pb-8">
                             <p className="mb-2 text-lg font-bold text-light-blue-500">Participate and practice</p>
                             <p className="text-gray-700">
-                                Participate in the challenges we have on the platform, and practice your way through exercises offered on our exclusive gamified MY_TYS platform
+                                Participate in the challenges we have on the platform, and practice your way through exercises offered on our exclusive gamified MYTYS platform
                             </p>
                         </div>
                     </div>

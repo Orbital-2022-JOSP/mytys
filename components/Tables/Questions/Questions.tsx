@@ -1,6 +1,7 @@
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { IQuestion } from '../../../models/Question.model';
 import { useState } from 'react';
+import { IQuestion } from '../../../models/Question.model';
 import { UpdateQuestionModal } from '../../Modals/UpdateQuestionModal';
 
 type QuestionTableProps = {
@@ -10,9 +11,10 @@ type QuestionTableProps = {
 export const QuestionsTable: React.FC<QuestionTableProps> = ({ questions }) => {
     const [questionId, setQuestionId] = useState("");
     const [shoQuestionTable, setShowQuestionTable] = useState(false);
+    const { data: session, status } = useSession();
 
     const handleDelete = () => {
-        if (questionId != "") {
+        if (questionId != "" && status == 'authenticated') {
             fetch(
                 `/api/questions/${questionId}`, {
                 method: 'DELETE',
