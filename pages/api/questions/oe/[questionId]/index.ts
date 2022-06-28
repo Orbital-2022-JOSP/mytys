@@ -14,7 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET':
             try {
                 const Questions = await OpenEndedQuestionModel
-                    .find({ questionId: questionId })
+                    .find({
+                        questionId: {
+                            $eq: questionId
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true })
                     .exec();
                 res.status(201).json({ success: true, data: Questions });
