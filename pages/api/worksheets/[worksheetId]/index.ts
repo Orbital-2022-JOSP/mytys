@@ -14,7 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET' /* Get a model by its ID */:
             try {
                 const worksheet = await WorksheetModel
-                    .findById(worksheetId)
+                    .find({
+                        _id: {
+                            $eq: worksheetId
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true });
                 if (!worksheet) {
                     return res.status(400).json({ success: false });
@@ -28,8 +32,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'PUT' /* Edit a model by its ID */:
             try {
                 const worksheet = await WorksheetModel
-                    .findByIdAndUpdate(
-                        worksheetId,
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: worksheetId
+                            }
+                        },
                         req.body,
                         {
                             new: true,
@@ -49,14 +57,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'DELETE' /* Delete a model by its ID */:
             try {
                 const worksheet = await WorksheetModel
-                    .findByIdAndUpdate(
-                        worksheetId,
+                    .findOneAndDelete(
                         {
-                            deleted: true
+                            _id: {
+                                $eq: worksheetId
+                            }
                         },
                         {
-                            new: true,
-                            runValidators: true,
+                            deleted: true
                         }
                     )
                     .setOptions({ sanitizeFilter: true });
