@@ -27,7 +27,7 @@ export interface IQuestionAnswerExtended {
 export interface IQuestionAnswer {
     _id?: Types.ObjectId;
     user: Types.ObjectId;
-    question: Types.ObjectId
+    question: Types.ObjectId;
     score: number;
     MCQAnswer?: Types.ObjectId;
     OpenEndedAnswer?: string;

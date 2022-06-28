@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../dbConnect";
 import QuestionTypeModel from "../../../models/QuestionType.model";
@@ -19,7 +20,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'POST':
             try {
-                const questionType = await QuestionTypeModel.create(req.body);
+                const questionType = await QuestionTypeModel.create(
+                    sanitize(req.body)
+                );
                 res.status(201).json({ success: true, data: questionType });
             } catch (error) {
                 res.status(400).json({ success: false });

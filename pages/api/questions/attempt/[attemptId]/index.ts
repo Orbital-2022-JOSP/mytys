@@ -1,6 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import QuestionAnswerModel from "../../../../../models/QuestionAnswer.model";
+import sanitize from 'mongo-sanitize';
+import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../../dbConnect';
+import QuestionAnswerModel from "../../../../../models/QuestionAnswer.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const {
@@ -38,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                                 $eq: attemptId
                             }
                         },
-                        req.body,
+                        sanitize(req.body),
                         {
                             new: true,
                             runValidators: true,

@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
 import QuestionAnswerModel from "../../../../models/QuestionAnswer.model";
@@ -38,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                                 $eq: questionAnswerId
                             }
                         },
-                        req.body,
+                        sanitize(sanitize(req.body)),
                         {
                             new: true,
                             runValidators: true

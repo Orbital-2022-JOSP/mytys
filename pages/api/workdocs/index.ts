@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../dbConnect";
 import WorkdocModel from "../../../models/Workdoc.model";
@@ -19,7 +20,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'POST':
             try {
-                const newWorkdoc = await WorkdocModel.create(req.body);
+                const newWorkdoc = await WorkdocModel.create(
+                    sanitize(req.body)
+                );
                 res.status(201).json({ success: true, data: newWorkdoc });
             } catch (error) {
                 res.status(400).json({ success: false });
