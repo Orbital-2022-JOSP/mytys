@@ -14,7 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET' /* Get a model by its ID */:
             try {
                 const questionAttempt = await QuestionAnswerModel
-                    .findById(attemptId)
+                    .findOne({
+                        _id: {
+                            $eq: attemptId
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true });
                 if (!questionAttempt) {
                     return res.status(400).json({ success: false });

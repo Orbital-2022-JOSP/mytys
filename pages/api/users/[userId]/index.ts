@@ -14,7 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET':
             try {
                 const User = await UserModel
-                    .findById(userId)
+                    .findOne({
+                        _id: {
+                            $eq: userId
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true })
                     .exec();
                 res.status(201).json({ success: true, data: User });

@@ -14,7 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET' /* Get a model by its ID */:
             try {
                 const questionAnswer = await QuestionAnswerModel
-                    .findById(questionAnswerId)
+                    .findOne({
+                        _id: {
+                            $eq: questionAnswerId
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true });
                 if (!QuestionAnswerModel) {
                     return res.status(400).json({ success: false });
@@ -52,7 +56,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'DELETE' /* Delete a model by its ID */:
             try {
                 const deletedQuestionAnswer = await QuestionAnswerModel
-                    .deleteOne({ _id: questionAnswerId })
+                    .deleteOne({
+                        _id: {
+                            $eq: questionAnswerId
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true });
                 if (!deletedQuestionAnswer) {
                     return res.status(400).json({ success: false });
