@@ -14,7 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET':
             try {
                 const Questions = await MCQQuestionModel
-                    .findOne({ questionType: questionType })
+                    .findOne({
+                        questionType: {
+                            $eq: questionType
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true })
                     .exec();
                 res.status(201).json({ success: true, data: Questions });

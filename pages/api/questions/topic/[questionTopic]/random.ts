@@ -14,7 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET':
             try {
                 const Questions = await QuestionModel
-                    .findOne({ questionTopic: questionTopic })
+                    .findOne({
+                        questionTopic: {
+                            $eq: questionTopic
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true })
                     .exec();
                 res.status(201).json({ success: true, data: Questions });
