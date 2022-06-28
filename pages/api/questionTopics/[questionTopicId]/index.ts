@@ -13,7 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET' /* Get a model by its ID */:
             try {
-                const questionTopic = await QuestionTopicModel.findById(questionTopicId);
+                const questionTopic = await QuestionTopicModel
+                    .findById(questionTopicId)
+                    .setOptions({ sanitizeFilter: true });
                 if (!QuestionTopicModel) {
                     return res.status(400).json({ success: false });
                 }
@@ -25,10 +27,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'PUT' /* Edit a model by its ID */:
             try {
-                const questionTopic = await QuestionTopicModel.findByIdAndUpdate(questionTopicId, req.body, {
-                    new: true,
-                    runValidators: true,
-                });
+                const questionTopic = await QuestionTopicModel
+                    .findByIdAndUpdate(
+                        questionTopicId,
+                        req.body,
+                        {
+                            new: true,
+                            runValidators: true,
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!questionTopic) {
                     return res.status(400).json({ success: false });
                 }
@@ -40,7 +48,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const deletedQuestionTopic = await QuestionTopicModel.deleteOne({ _id: questionTopicId });
+                const deletedQuestionTopic = await QuestionTopicModel
+                    .deleteOne({ _id: questionTopicId })
+                    .setOptions({ sanitizeFilter: true });
                 if (!deletedQuestionTopic) {
                     return res.status(400).json({ success: false });
                 }

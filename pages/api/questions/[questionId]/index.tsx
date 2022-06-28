@@ -40,7 +40,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                                 model: MCQQuestionOptionModel
                             }
                         ]
-                    });
+                    })
+                    .setOptions({ sanitizeFilter: true });
 
                 res.status(201).json({ success: true, data: question });
             } catch (error) {
@@ -51,7 +52,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const deletedQuestion = await QuestionModel.deleteOne({ _id: questionId });
+                const deletedQuestion = await QuestionModel
+                    .deleteOne({ _id: questionId })
+                    .setOptions({ sanitizeFilter: true });
                 if (!deletedQuestion) {
                     return res.status(400).json({ success: false });
                 }

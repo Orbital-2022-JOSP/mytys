@@ -13,7 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET' /* Get a model by its ID */:
             try {
-                const questionAttempt = await QuestionAnswerModel.findById(attemptId);
+                const questionAttempt = await QuestionAnswerModel
+                    .findById(attemptId)
+                    .setOptions({ sanitizeFilter: true });
                 if (!questionAttempt) {
                     return res.status(400).json({ success: false });
                 }
@@ -25,10 +27,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'PUT' /* Edit a model by its ID */:
             try {
-                const questionAttempt = await QuestionAnswerModel.findByIdAndUpdate(attemptId, req.body, {
-                    new: true,
-                    runValidators: true,
-                });
+                const questionAttempt = await QuestionAnswerModel
+                    .findByIdAndUpdate(
+                        attemptId,
+                        req.body,
+                        {
+                            new: true,
+                            runValidators: true,
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!questionAttempt) {
                     return res.status(400).json({ success: false });
                 }
@@ -40,12 +48,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const questionAttempt = await QuestionAnswerModel.findByIdAndUpdate(attemptId, {
-                    deleted: true
-                }, {
-                    new: true,
-                    runValidators: true,
-                });
+                const questionAttempt = await QuestionAnswerModel
+                    .findByIdAndUpdate(
+                        attemptId,
+                        {
+                            deleted: true
+                        },
+                        {
+                            new: true,
+                            runValidators: true,
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!questionAttempt) {
                     return res.status(400).json({ success: false });
                 }

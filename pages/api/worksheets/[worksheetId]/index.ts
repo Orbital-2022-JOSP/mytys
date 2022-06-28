@@ -13,7 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET' /* Get a model by its ID */:
             try {
-                const worksheet = await WorksheetModel.findById(worksheetId);
+                const worksheet = await WorksheetModel
+                    .findById(worksheetId)
+                    .setOptions({ sanitizeFilter: true });
                 if (!worksheet) {
                     return res.status(400).json({ success: false });
                 }
@@ -25,10 +27,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'PUT' /* Edit a model by its ID */:
             try {
-                const worksheet = await WorksheetModel.findByIdAndUpdate(worksheetId, req.body, {
-                    new: true,
-                    runValidators: true,
-                });
+                const worksheet = await WorksheetModel
+                    .findByIdAndUpdate(
+                        worksheetId,
+                        req.body,
+                        {
+                            new: true,
+                            runValidators: true,
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!worksheet) {
                     return res.status(400).json({ success: false });
                 }
@@ -40,12 +48,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const worksheet = await WorksheetModel.findByIdAndUpdate(worksheetId, {
-                    deleted: true
-                }, {
-                    new: true,
-                    runValidators: true,
-                });
+                const worksheet = await WorksheetModel
+                    .findByIdAndUpdate(
+                        worksheetId,
+                        {
+                            deleted: true
+                        },
+                        {
+                            new: true,
+                            runValidators: true,
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!worksheet) {
                     return res.status(400).json({ success: false });
                 }
