@@ -4,7 +4,7 @@ export const MailingList: React.FC = () => {
             <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
                 <div className="lg:flex-grow md:w-1/2 lg:items-center md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-light-blue-500">Join our mailing list</h1>
-                    <p className="mb-8 leading-relaxed">Receive weekly updates on exciting news or broadcasts on MY_TYS and begin this journey with us!</p>
+                    <p className="mb-8 leading-relaxed">Receive weekly updates on exciting news or broadcasts on MYTYS and begin this journey with us!</p>
                     <div className="flex w-full  justify-center items-end">
                         <div className="relative mr-10 lg:w-full xl:w-1/2 w-2/4">
                             <label htmlFor="hero-field" className="leading-7 text-sm text-gray-600">Your email here </label>

@@ -24,7 +24,7 @@ export const Testimonials2 = () => {
                             From C to A!
                         </a>
                         <p className="mb-2 text-gray-700">
-                           I never would have imagined to able to jump from a C grade to an A grade! Within 3 months of using MY_TYS, I could finally achieve my academic dreams!
+                           I never would have imagined to able to jump from a C grade to an A grade! Within 3 months of using MYTYS, I could finally achieve my academic dreams!
                         </p>
                         <a
                             href="/"
@@ -51,10 +51,10 @@ export const Testimonials2 = () => {
                             title="Visit the East"
                             className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-light-blue-500"
                         >
-                            4A's in my recent exam!
+                            4A&apos;s in my recent exam!
                         </a>
                         <p className="mb-2 text-gray-700">
-                           With just 1 month of using MY_TYS, I was able to excel in my subjects this school term. I believe it will help me in my grades in future terms as well!
+                           With just 1 month of using MYTYS, I was able to excel in my subjects this school term. I believe it will help me in my grades in future terms as well!
                         </p>
                         <a
                             href="/"
@@ -81,10 +81,10 @@ export const Testimonials2 = () => {
                             title="Visit the East"
                             className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-light-blue-500"
                         >
-                            Learning is Fun with MY_TYS
+                            Learning is Fun with MYTYS
                         </a>
                         <p className="mb-2 text-gray-700">
-                           I used to hate mathematics since Primary 1, but the gamified platform on MY_TYS enabled me to learn math and have fun at the same time!
+                           I used to hate mathematics since Primary 1, but the gamified platform on MYTYS enabled me to learn math and have fun at the same time!
                         </p>
                         <a
                             href="/"

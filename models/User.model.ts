@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 
 /**
  * The user interface
@@ -12,6 +12,7 @@ import mongoose from 'mongoose';
  */
 
 export interface IUser {
+    _id?: Types.ObjectId;
     email: string;
     name: string;
     image: string;
@@ -40,5 +41,11 @@ const UserSchema = new mongoose.Schema({
         type: String
     }
 })
+
+UserSchema.virtual('answeredQuestions', {
+    ref: 'QuestionAnswer',
+    localField: '_id',
+    foreignField: 'user'
+});
 
 export default mongoose.models.User || mongoose.model('User', UserSchema, 'users')

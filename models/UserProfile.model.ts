@@ -17,6 +17,7 @@ import { IQuestionType } from './QuestionType.model';
  */
 
 export interface IUserProfile {
+    _id?: Types.ObjectId;
     userId: Types.ObjectId;
     noOfPoints: number;
     dayStreaks: number;

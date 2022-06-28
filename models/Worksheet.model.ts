@@ -1,4 +1,4 @@
-import mongoose, { model, Schema } from 'mongoose';
+import mongoose, { model, Schema, Types } from 'mongoose';
 import { IQuestion } from './Question.model';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';
@@ -18,6 +18,7 @@ import { IUser } from './User.model';
  */
 
 export interface IWorksheet {
+    _id?: Types.ObjectId;
     questions: Array<IQuestion>;
     createdAt: Date;
     updatedAt: Date;
