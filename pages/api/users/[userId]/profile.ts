@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
 import UserProfileModel from "../../../../models/UserProfile.model";
@@ -36,7 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                                 $eq: userId
                             }
                         },
-                        req.body,
+                        sanitize(req.body),
                         {
                             new: true,
                             runValidators: true,

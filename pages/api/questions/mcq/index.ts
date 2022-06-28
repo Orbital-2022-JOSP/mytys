@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
 import MCQQuestionModel from "../../../../models/MCQQuestion.model";
@@ -29,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             break;
 
         case 'POST':
-            const { questionBody, mcqQuestionBody } = req.body;
+            const { questionBody, mcqQuestionBody } = sanitize(req.body);
             try {
                 const question = await QuestionModel.create(questionBody);
 

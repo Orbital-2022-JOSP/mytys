@@ -39,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                                 $eq: questionAnswerId
                             }
                         },
-                        sanitize(req.body),
+                        sanitize(sanitize(req.body)),
                         {
                             new: true,
                             runValidators: true
