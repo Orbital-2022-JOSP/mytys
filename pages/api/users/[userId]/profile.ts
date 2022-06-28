@@ -26,8 +26,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'POST':
             try {
                 const UserProfile = await UserProfileModel
-                    .findByIdAndUpdate(
-                        userId,
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: userId
+                            }
+                        },
                         req.body,
                         {
                             new: true,

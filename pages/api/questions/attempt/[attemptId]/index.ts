@@ -28,8 +28,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'PUT' /* Edit a model by its ID */:
             try {
                 const questionAttempt = await QuestionAnswerModel
-                    .findByIdAndUpdate(
-                        attemptId,
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: attemptId
+                            }
+                        },
                         req.body,
                         {
                             new: true,
@@ -49,14 +53,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'DELETE' /* Delete a model by its ID */:
             try {
                 const questionAttempt = await QuestionAnswerModel
-                    .findByIdAndUpdate(
-                        attemptId,
+                    .findOneAndDelete(
                         {
-                            deleted: true
+                            _id: {
+                                $eq: attemptId
+                            }
                         },
                         {
-                            new: true,
-                            runValidators: true,
+                            deleted: true
                         }
                     )
                     .setOptions({ sanitizeFilter: true });

@@ -32,8 +32,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'PUT' /* Edit a model by its ID */:
             try {
                 const workdoc = await WorkdocModel
-                    .findByIdAndUpdate(
-                        workdocId,
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: workdocId
+                            }
+                        },
                         req.body,
                         {
                             new: true,
@@ -53,15 +57,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'DELETE' /* Delete a model by its ID */:
             try {
                 const workdoc = await WorkdocModel
-                    .findByIdAndUpdate(
-                        workdocId,
+                    .findOneAndDelete(
+                        {
+                            _id: {
+                                $eq: workdocId
+                            }
+                        },
                         {
                             deleted: true
                         },
-                        {
-                            new: true,
-                            runValidators: true,
-                        }
                     )
                     .setOptions({ sanitizeFilter: true });
                 if (!workdoc) {

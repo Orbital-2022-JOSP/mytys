@@ -28,8 +28,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'PUT' /* Edit a model by its ID */:
             try {
                 const questionAnswer = await QuestionAnswerModel
-                    .findByIdAndUpdate(
-                        questionAnswerId,
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: questionAnswerId
+                            }
+                        },
                         req.body,
                         {
                             new: true,

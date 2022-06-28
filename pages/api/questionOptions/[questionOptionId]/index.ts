@@ -28,8 +28,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'PUT' /* Edit a model by its ID */:
             try {
                 const MCQQuestionOption = await MCQQuestionOptionModel
-                    .findByIdAndUpdate(
-                        questionOptionId,
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: questionOptionId
+                            }
+                        },
                         req.body,
                         {
                             new: true,
