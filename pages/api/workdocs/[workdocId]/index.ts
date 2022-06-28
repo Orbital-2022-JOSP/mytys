@@ -14,7 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET' /* Get a model by its ID */:
             try {
                 const workdoc = await WorkdocModel
-                    .findById(workdocId)
+                    .find({
+                        _id: {
+                            $eq: workdocId
+                        }
+                    })
                     .setOptions({ sanitizeFilter: true });
                 if (!workdoc) {
                     return res.status(400).json({ success: false });
