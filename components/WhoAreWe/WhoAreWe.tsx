@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export const WhoAreWe: React.FC = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -20,13 +22,14 @@ export const WhoAreWe: React.FC = () => {
                             perspiciatis unde omnis iste. Sed ut perspiciatis unde omnis iste
                             error sit voluptatem accusantium doloremque rem aperiam.
                         </p>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
