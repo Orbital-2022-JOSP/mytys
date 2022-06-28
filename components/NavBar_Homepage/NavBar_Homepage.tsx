@@ -12,82 +12,88 @@ export const NavBar_Homepage = () => {
     return (
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
-                <a
-                    href="/"
-                    aria-label="Company"
-                    title="Company"
-                    className="inline-flex items-center"
-                >
-                    <img
-                        src='/logo.svg'
-                        className="w-8 text-light-blue-accent-400"
-                    />
-                
-                    <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
-                        MYTYS
-                    </span>
-                </a>
+                <Link href={"/"}>
+                    <a
+                        aria-label="Company"
+                        title="Company"
+                        className="inline-flex items-center"
+                    >
+                        <img
+                            src='/logo.svg'
+                            className="w-8 text-light-blue-accent-400"
+                        />
+
+                        <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
+                            MYTYS
+                        </span>
+                    </a>
+                </Link>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
                     <li>
-                        <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
-                        >
-                            Home
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label="Our product"
+                                title="Our product"
+                                className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
+                            >
+                                Home
+                            </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                        >
-                            Subjects
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label="Our product"
+                                title="Our product"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                            >
+                                Subjects
+                            </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="/"
-                            aria-label="Quiz"
-                            title="Quiz"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                        >
-                            Quiz
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label="Quiz"
+                                title="Quiz"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                            >
+                                Quiz
+                            </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="/"
-                            aria-label="LeaderBoard"
-                            title="LeaderBoard"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                        >
-                            LeaderBoard
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label="LeaderBoard"
+                                title="LeaderBoard"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                            >
+                                LeaderBoard
+                            </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
-                            aria-label="Log Out"
-                            title="Log Out"
-                        >
-                            <span className="font-bold">
-                            Log Out
-                            </span>
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
+                                aria-label="Log Out"
+                                title="Log Out"
+                            >
+                                <span className="font-bold">
+                                    Log Out
+                                </span>
+                            </a>
+                        </Link>
                     </li>
-                     <li>
-                            <div className="ml-3 relative">
-                <button type="button" className="max-w-xs rounded-full flex items-center text-sm bg-light-blue-100 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-                </button>
-              </div>
-                     </li>
+                    <li>
+                        <div className="ml-3 relative">
+                            <button type="button" className="max-w-xs rounded-full flex items-center text-sm bg-light-blue-100 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <span className="sr-only">Open user menu</span>
+                                <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+                            </button>
+                        </div>
+                    </li>
                 </ul>
                 <div className="lg:hidden">
                     <button
@@ -116,22 +122,22 @@ export const NavBar_Homepage = () => {
                             <div className="p-5 bg-white border rounded shadow-sm">
                                 <div className="flex items-center justify-between mb-4">
                                     <div>
-                                        <a
-                                            href="/"
-                                            aria-label="Company"
-                                            title="Company"
-                                            className="inline-flex items-center"
-                                        >
-                                             <img
-                                                src='/logo.svg'
-                                                className="w-8 text-light-blue-accent-400"
-                                            />
-                
-                                            <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
-                                                MYTYS
-                                            </span>
-                                        </a>
-               
+                                        <Link href={"/"}>
+                                            <a
+                                                aria-label="Company"
+                                                title="Company"
+                                                className="inline-flex items-center"
+                                            >
+                                                <img
+                                                    src='/logo.svg'
+                                                    className="w-8 text-light-blue-accent-400"
+                                                />
+
+                                                <span className="ml-2 text-xl font-bold tracking-wide text-light-blue-500 uppercase">
+                                                    MYTYS
+                                                </span>
+                                            </a>
+                                        </Link>
                                     </div>
                                     <div>
                                         <button
@@ -152,54 +158,59 @@ export const NavBar_Homepage = () => {
                                 <nav>
                                     <ul className="space-y-4">
                                         <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Our product"
-                                                title="Our product"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                                            >
-                                                Home
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Our product"
-                                                title="Our product"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                                            >
-                                                Subjects
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Quiz"
-                                                title="Quiz"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                                            >
-                                                Quiz
-                                            </a>
-                                        </li>
-                                            <li>
+                                            <Link href={"/"}>
                                                 <a
-                                                    href="/"
+                                                    aria-label="Our product"
+                                                    title="Our product"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                                                >
+                                                    Home
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href={"/"}>
+                                                <a
+                                                    aria-label="Our product"
+                                                    title="Our product"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                                                >
+                                                    Subjects
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href={"/"}>
+                                                <a
+                                                    aria-label="Quiz"
+                                                    title="Quiz"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                                                >
+                                                    Quiz
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href={"/"}>
+                                                <a
                                                     aria-label="LeaderBoard"
                                                     title="LeaderBoard"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                                 >
                                                     LeaderBoard
                                                 </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Log Out"
-                                                title="Log Out"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-                                            >
-                                                Log Out
-                                            </a>
+                                            <Link href={"/"}>
+                                                <a
+                                                    aria-label="Log Out"
+                                                    title="Log Out"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
+                                                >
+                                                    Log Out
+                                                </a>
+                                            </Link>
                                         </li>
                                         <li>
                                             <div className="ml-3 relative">

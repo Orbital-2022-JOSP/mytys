@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const LandingPage_main = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -5,30 +7,26 @@ export const LandingPage_main = () => {
                 <div className="flex flex-col justify-center">
                     <div className="max-w-xl mb-6">
                         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                            Reach your academic 
+                            Reach your academic
                             <br className="hidden md:block" />
                             {' '}goals with{' '}
-                                <span className="text-light-blue-500">
-                                    MYTYS
-                                </span>
-                            
+                            <span className="text-light-blue-500">
+                                MYTYS
+                            </span>
+
                         </h2>
                         <p className="text-base text-gray-700 md:text-lg">
                             The MyTYS app provides a simple and convenient way to experience the benefits of private tuition
                         </p>
-                        <br />
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-300 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                        >
-                            Enroll For Free
-                        </a>
-                        <br/>
-                        <br/>
-                        
-
+                        <Link href={"/"}>
+                            <a
+                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-300 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
+                                aria-label="Sign up"
+                                title="Sign up"
+                            >
+                                Enroll For Free
+                            </a>
+                        </Link>
                     </div>
                     <p className="mb-4 text-sm font-bold tracking-widest uppercase">
                         What you can expect
