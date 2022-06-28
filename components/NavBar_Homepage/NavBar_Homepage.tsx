@@ -19,6 +19,7 @@ export const NavBar_Homepage = () => {
                         className="inline-flex items-center"
                     >
                         <img
+                            alt='MYTYS Logo'
                             src='/logo.svg'
                             className="w-8 text-light-blue-accent-400"
                         />
@@ -129,6 +130,7 @@ export const NavBar_Homepage = () => {
                                                 className="inline-flex items-center"
                                             >
                                                 <img
+                                                    alt='MYTYS Logo'
                                                     src='/logo.svg'
                                                     className="w-8 text-light-blue-accent-400"
                                                 />

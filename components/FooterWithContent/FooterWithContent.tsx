@@ -23,6 +23,7 @@ export const FooterWithContent: React.FC = () => {
                                 className="inline-flex items-center"
                             >
                                 <img
+                                    alt="MYTYS Logo"
                                     src='/logo.svg'
                                     className="w-8 text-light-blue-accent-400"
                                 />
