@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
-import QuestionAnswerModel from "../../../../models/QuestionAnswer.model";
+import QuestionAnswerModel, { IQuestionAnswer } from "../../../../models/QuestionAnswer.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const {
@@ -30,6 +30,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             break;
 
         case 'PUT' /* Edit a model by its ID */:
+            const data: IQuestionAnswer = {
+                user: req.body.user,
+                question: req.body.question,
+                score: req.body.question,
+                MCQAnswer: req.body.MCQAnswer,
+                OpenEndedAnswer: req.body.OpenEndedAnswer,
+            }
             try {
                 const questionAnswer = await QuestionAnswerModel
                     .findOneAndUpdate(
@@ -38,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                                 $eq: questionAnswerId
                             }
                         },
-                        req.body,
+                        data,
                         {
                             new: true,
                             runValidators: true
