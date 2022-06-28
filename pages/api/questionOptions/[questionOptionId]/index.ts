@@ -13,7 +13,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET' /* Get a model by its ID */:
             try {
-                const MCQQuestionOption = await MCQQuestionOptionModel.findById(questionOptionId);
+                const MCQQuestionOption = await MCQQuestionOptionModel
+                    .findOne({
+                        _id: {
+                            $eq: questionOptionId
+                        }
+                    })
+                    .setOptions({ sanitizeFilter: true });
                 if (!MCQQuestionOptionModel) {
                     return res.status(400).json({ success: false });
                 }
@@ -25,10 +31,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'PUT' /* Edit a model by its ID */:
             try {
-                const MCQQuestionOption = await MCQQuestionOptionModel.findByIdAndUpdate(questionOptionId, req.body, {
-                    new: true,
-                    runValidators: true,
-                });
+                const MCQQuestionOption = await MCQQuestionOptionModel
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: questionOptionId
+                            }
+                        },
+                        req.body,
+                        {
+                            new: true,
+                            runValidators: true,
+                        })
+                    .setOptions({ sanitizeFilter: true });
                 if (!MCQQuestionOption) {
                     return res.status(400).json({ success: false });
                 }
@@ -40,7 +55,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const deletedMCQQuestionOption = await MCQQuestionOptionModel.deleteOne({ _id: questionOptionId });
+                const deletedMCQQuestionOption = await MCQQuestionOptionModel
+                    .deleteOne({
+                        _id: {
+                            $eq: questionOptionId
+                        }
+                    })
+                    .setOptions({ sanitizeFilter: true });
                 if (!deletedMCQQuestionOption) {
                     return res.status(400).json({ success: false });
                 }
