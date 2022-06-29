@@ -1,4 +1,31 @@
+const SingleQuestion = () => {
+    return (
+        <div className="flex items-center p-2 transition-colors duration-200 border rounded shadow group hover:bg-light-blue-400 hover:border-light-blue-400">
+            <div className="mr-2">
+                <svg
+                    className="w-6 h-6 transition-colors duration-200 text-light-blue-400 group-hover:text-white sm:w-8 sm:h-8"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                >
+                    <polygon
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        fill="none"
+                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    />
+                </svg>
+            </div>
+            <span className="text-gray-800 transition-colors duration-200 group-hover:text-white">
+                Change the world by being yourself.
+            </span>
+        </div>
+    )
+}
+
 export const SingleCourse = () => {
+    const tags = ["De-engineered", "neural-net", "Fully-configurable", "Reactive", "Advanced"];
+
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col lg:flex-row">
@@ -18,16 +45,9 @@ export const SingleCourse = () => {
                         >
                             Get started
                         </button>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-blue-accent-400 hover:text-blue-800"
-                        >
-                            Learn more
-                        </a>
                     </div>
                 </div>
-                <div className="grid gap-5 row-gap-5 sm:grid-cols-2">
+                <div className="grid gap-5 row-gap-5 sm:grid-cols-2 w-full">
                     <div className="max-w-md">
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-light-blue-50">
                             <svg
@@ -44,11 +64,9 @@ export const SingleCourse = () => {
                                 />
                             </svg>
                         </div>
-                        <h6 className="mb-2 font-semibold leading-5">The deep ocean</h6>
+                        <h6 className="mb-2 font-semibold leading-5">Average Difficulty</h6>
                         <p className="text-sm text-gray-700">
-                            A flower in my garden, a mystery in my panties. Heart attack never
-                            stopped old Big Bear. I didn't even know we were calling him Big
-                            Bear.
+                            10
                         </p>
                     </div>
                     <div className="max-w-md">
@@ -67,12 +85,14 @@ export const SingleCourse = () => {
                                 />
                             </svg>
                         </div>
-                        <h6 className="mb-2 font-semibold leading-5">When has justice</h6>
-                        <p className="text-sm text-gray-700">
-                            Rough pomfret lemon shark plownose chimaera southern sandfish
-                            kokanee northern sea robin Antarctic cod. Yellow-and-black
-                            triplefin.
-                        </p>
+                        <h6 className="mb-2 font-semibold leading-5">Topics</h6>
+                        <div>
+                            {tags.map((tag, idx) => (
+                                <p key={idx} className="inline-block px-3 py-px mb-2 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 mr-2">
+                                    {tag}
+                                </p>
+                            ))}
+                        </div>
                     </div>
                     <div className="max-w-md">
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-light-blue-50">
