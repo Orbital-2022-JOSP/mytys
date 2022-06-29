@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type SingleCourseProps = {
     courseType: string;
     date: string;
@@ -15,23 +17,26 @@ const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, de
     return (
         <div className="p-8 bg-white border rounded shadow-sm flex flex-col">
             <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-                <a
-                    href="/"
-                    className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                    aria-label="Category"
-                >
-                    {courseType}
-                </a>{' '}
+                <Link href={"/"}>
+                    <a
+                        className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                        aria-label="Category"
+                    >
+                        {courseType}
+                    </a>
+                </Link>
+                {' '}
                 <span className="text-gray-600">— {date}</span>
             </p>
-            <a
-                href="/"
-                aria-label="Article"
-                title="Jingle Bells"
-                className="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-                {title}
-            </a>
+            <Link href={"/"}>
+                <a
+                    aria-label="Article"
+                    title="Jingle Bells"
+                    className="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                >
+                    {title}
+                </a>
+            </Link>
             <p className="flex-grow mb-5 text-gray-700">
                 {description}
             </p>
@@ -43,41 +48,44 @@ const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, de
                 ))}
             </div>
             <div className="flex items-center">
-                <a href="/" aria-label="Author" title="Author" className="mr-3">
-                    <img
-                        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                        alt="avatar"
-                        className="object-cover w-10 h-10 rounded-full shadow-sm"
-                    />
-                </a>
-                <div className="w-5/12">
-                    <a
-                        href="/"
-                        aria-label="Author"
-                        title="Author"
-                        className="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                    >
-                        {authorName}
+                <Link href={"/"}>
+                    <a aria-label="Author" title="Author" className="mr-3">
+                        <img
+                            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                            alt="avatar"
+                            className="object-cover w-10 h-10 rounded-full shadow-sm"
+                        />
                     </a>
+                </Link>
+                <div className="w-5/12">
+                    <Link href={"/"}>
+                        <a
+                            aria-label="Author"
+                            title="Author"
+                            className="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                            {authorName}
+                        </a>
+                    </Link>
                     <p className="text-sm font-medium leading-4 text-gray-600">
                         Author
                     </p>
                 </div>
                 <div className="ml-auto text-right">
                     <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                        <svg className="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                             <circle cx="12" cy="12" r="3"></circle>
                         </svg>{formatter.format(noOfViews)}
                     </span>
                     <span className="text-gray-400 inline-flex items-center leading-none text-sm">
-                        {/* <svg className="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        {/* <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                             <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                         </svg>6 */}
-                        <svg className="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                             <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>{formatter.format(noOfLikes)}
-                        {/* <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                             <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>6 */}
                     </span>

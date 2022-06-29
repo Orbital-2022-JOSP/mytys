@@ -5,13 +5,14 @@ import { IMCQQuestionOption } from './MCQQuestionOption.model';
  * The mcq question interface that extends from the generic question interface
  * 
  * @interface IMCQQuestion
- * @member {Types.ObjectId} title Title of the question
+ * @member {Types.ObjectId} questionId Id of the question
  * @member {string} questionType mcq
  * @member {IMCQQuestionOption} correctAnswer The correct answer of the mcq question
  * @member {Array<IMCQQuestionOption>} options The options of the mcq question
  */
 
 export interface IMCQQuestion {
+    _id?: Types.ObjectId;
     questionId: Types.ObjectId;
     questionType: "mcq";
     correctAnswer: IMCQQuestionOption;

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Features = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -63,16 +65,17 @@ export const Features = () => {
                         <h6 className="mb-3 text-xl font-bold leading-5">The deep ocean</h6>
                         <p className="mb-3 text-sm text-gray-900">
                             A flower in my garden, a mystery in my panties. Heart attack never
-                            stopped old Big Bear. I didn't even know we were calling him Big
+                            stopped old Big Bear. I didn&apos;t even know we were calling him Big
                             Bear. We never had the chance to.
                         </p>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
@@ -103,13 +106,14 @@ export const Features = () => {
                             triplefin gulper South American Lungfish mahi-mahi, butterflyfish
                             glass catfish soapfish ling gray mullet!
                         </p>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
@@ -140,13 +144,14 @@ export const Features = () => {
                             Hercules Morse, as big as a horse and Mrs Falani were up to no
                             good with a bunch of crook pikelets.
                         </p>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
@@ -177,13 +182,14 @@ export const Features = () => {
                             synergy capacity building, white paper; silo, unprecedented
                             challenge B-corp problem-solvers.
                         </p>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href={"/"}>
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>

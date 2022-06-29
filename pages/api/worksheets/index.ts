@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../dbConnect";
 import WorksheetModel from "../../../models/Worksheet.model";
@@ -19,7 +20,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'POST':
             try {
-                const newWorksheet = await WorksheetModel.create(req.body);
+                const newWorksheet = await WorksheetModel.create(
+                    sanitize(req.body)
+                );
                 res.status(201).json({ success: true, data: newWorksheet });
             } catch (error) {
                 res.status(400).json({ success: false });

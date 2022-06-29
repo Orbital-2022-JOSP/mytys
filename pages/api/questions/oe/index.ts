@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
 import OpenEndedQuestionModel from "../../../../models/OpenEndedQuestion.model";
@@ -19,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             break;
 
         case 'POST':
-            const { questionBody, openEndedQuestionBody } = req.body;
+            const { questionBody, openEndedQuestionBody } = sanitize(req.body);
             try {
                 const question = await QuestionModel.create(questionBody);
                 // Something might go wrong if the question model creates successfully but the mcq question doesn't 

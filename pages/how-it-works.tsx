@@ -1,14 +1,14 @@
 import React from "react";
 import { Steps } from "../components/Steps/Steps";
-import { Testimonials } from "../components/Testimonials/Testimonials";
-import { HowItWorks } from '../components/HowItWorks/HowItWorks';
+import { Testimonials2 } from "../components/Testimonials2/Testimonials2";
+import { HowItWorks1 } from '../components/HowItWorks1/HowItWorks1';
 
 const HowItWorksPage: React.FC = () => {
     return (
         <>
-            <HowItWorks />
+            <HowItWorks1 />
             <Steps />
-            <Testimonials />
+            <Testimonials2 />
         </>
     );
 };

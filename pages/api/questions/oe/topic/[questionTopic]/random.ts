@@ -13,7 +13,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const Questions = await OpenEndedQuestionModel.findOne({ questionTopic: questionTopic }).exec();
+                const Questions = await OpenEndedQuestionModel
+                    .findOne({
+                        questionTopic: {
+                            $eq: questionTopic
+                        }
+                    })
+                    .setOptions({ sanitizeFilter: true })
+                    .exec();
                 res.status(201).json({ success: true, data: Questions });
             } catch (error) {
                 res.status(400).json({ success: false });

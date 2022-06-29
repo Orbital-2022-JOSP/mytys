@@ -1,6 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import QuestionAnswerModel from "../../../../../models/QuestionAnswer.model";
+import sanitize from 'mongo-sanitize';
+import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../../dbConnect';
+import QuestionAnswerModel from "../../../../../models/QuestionAnswer.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const {
@@ -13,7 +14,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET' /* Get a model by its ID */:
             try {
-                const questionAttempt = await QuestionAnswerModel.findById(attemptId);
+                const questionAttempt = await QuestionAnswerModel
+                    .findOne({
+                        _id: {
+                            $eq: attemptId
+                        }
+                    })
+                    .setOptions({ sanitizeFilter: true });
                 if (!questionAttempt) {
                     return res.status(400).json({ success: false });
                 }
@@ -25,10 +32,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'PUT' /* Edit a model by its ID */:
             try {
-                const questionAttempt = await QuestionAnswerModel.findByIdAndUpdate(attemptId, req.body, {
-                    new: true,
-                    runValidators: true,
-                });
+                const questionAttempt = await QuestionAnswerModel
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: attemptId
+                            }
+                        },
+                        sanitize(req.body),
+                        {
+                            new: true,
+                            runValidators: true,
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!questionAttempt) {
                     return res.status(400).json({ success: false });
                 }
@@ -40,12 +57,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const questionAttempt = await QuestionAnswerModel.findByIdAndUpdate(attemptId, {
-                    deleted: true
-                }, {
-                    new: true,
-                    runValidators: true,
-                });
+                const questionAttempt = await QuestionAnswerModel
+                    .findOneAndDelete(
+                        {
+                            _id: {
+                                $eq: attemptId
+                            }
+                        },
+                        {
+                            deleted: true
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!questionAttempt) {
                     return res.status(400).json({ success: false });
                 }

@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
 import QuestionTypeModel from "../../../../models/QuestionType.model";
@@ -13,7 +14,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET' /* Get a model by its ID */:
             try {
-                const questionType = await QuestionTypeModel.findById(questionTypeId);
+                const questionType = await QuestionTypeModel
+                    .findOne({
+                        _id: {
+                            $eq: questionTypeId
+                        }
+                    })
+                    .setOptions({ sanitizeFilter: true });
                 if (!QuestionTypeModel) {
                     return res.status(400).json({ success: false });
                 }
@@ -25,10 +32,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'PUT' /* Edit a model by its ID */:
             try {
-                const questionType = await QuestionTypeModel.findByIdAndUpdate(questionTypeId, req.body, {
-                    new: true,
-                    runValidators: true,
-                });
+                const questionType = await QuestionTypeModel
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: questionTypeId
+                            }
+                        },
+                        sanitize(req.body),
+                        {
+                            new: true,
+                            runValidators: true,
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!questionType) {
                     return res.status(400).json({ success: false });
                 }
@@ -40,7 +57,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const deletedQuestionType = await QuestionTypeModel.deleteOne({ _id: questionTypeId });
+                const deletedQuestionType = await QuestionTypeModel
+                    .deleteOne({
+                        _id: {
+                            $eq: questionTypeId
+                        }
+                    })
+                    .setOptions({ sanitizeFilter: true });
                 if (!deletedQuestionType) {
                     return res.status(400).json({ success: false });
                 }

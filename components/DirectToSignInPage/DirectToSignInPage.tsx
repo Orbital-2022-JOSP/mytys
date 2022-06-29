@@ -18,7 +18,7 @@ export const DirectToSignInPage = () => {
                             <br className="hidden md:block" />
                             {' '}goals with{' '}
                                 <span className="text-light-blue-500">
-                                    MY_TYS
+                                    MYTYS
                                 </span>
                             
                         </h2>

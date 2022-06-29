@@ -1,3 +1,4 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
 import UserModel from "../../../../models/User.model";
@@ -13,7 +14,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const User = await UserModel.findById(userId).exec();
+                const User = await UserModel
+                    .findOne({
+                        _id: {
+                            $eq: userId
+                        }
+                    })
+                    .setOptions({ sanitizeFilter: true })
+                    .exec();
                 res.status(201).json({ success: true, data: User });
             } catch (error) {
                 res.status(400).json({ success: false });
@@ -22,10 +30,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'POST':
             try {
-                const User = await UserModel.findByIdAndUpdate(userId, req.body, {
-                    new: true,
-                    runValidators: true,
-                });
+                const User = await UserModel
+                    .findOneAndUpdate(
+                        {
+                            _id: {
+                                $eq: userId
+                            }
+                        },
+                        sanitize(req.body),
+                        {
+                            new: true,
+                            runValidators: true,
+                        }
+                    )
+                    .setOptions({ sanitizeFilter: true });
                 if (!User) {
                     return res.status(400).json({ success: false });
                 }

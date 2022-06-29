@@ -87,7 +87,7 @@ const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, p
                         </span>
                         Humans
                     </li>
-                </ul>
+                </ul>   
             </div>
         </div>
     )
@@ -128,7 +128,7 @@ export const LeaderBoard = () => {
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                        Our Leaderboard
+                        WEEKLY
                     </p>
                 </div>
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -155,9 +155,8 @@ export const LeaderBoard = () => {
                                 height="24"
                             />
                         </svg>
-                        <span className="relative">Transparent</span>
-                    </span>{' '}
-                    pricing. Pay as you grow.
+                        <span className="relative">LEADERBOARD</span>
+                    </span>
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem

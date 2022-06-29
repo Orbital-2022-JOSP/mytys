@@ -11,6 +11,7 @@ import mongoose, { model, Schema, Types } from 'mongoose';
  */
 
 export interface IOpenEndedQuestion {
+    _id?: Types.ObjectId;
     questionId: Types.ObjectId;
     questionType: "open ended";
     correctAnswer: string;
