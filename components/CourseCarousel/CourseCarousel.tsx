@@ -25,7 +25,7 @@ const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, de
     return (
         <div className="p-8 bg-white border rounded shadow-sm flex flex-col">
             <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-                <Link href={"/"}>
+                {/* <Link href={"/"}>
                     <a
                         className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
                         aria-label="Category"
@@ -34,7 +34,8 @@ const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, de
                     </a>
                 </Link>
                 {' '}
-                <span className="text-gray-600">— {date}</span>
+                <span className="text-gray-600">— {date}</span> */}
+                <span className="text-gray-600">{date}</span>
             </p>
             <Link href={"/"}>
                 <a
