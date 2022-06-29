@@ -16,6 +16,8 @@ const QuestionTopicSchema = new Schema<IQuestionTopic>({
     name: {
         type: String
     }
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.QuestionTopic || model<IQuestionTopic>('QuestionTopic', QuestionTopicSchema)

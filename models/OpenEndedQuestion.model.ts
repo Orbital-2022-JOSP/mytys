@@ -29,6 +29,8 @@ const OpenEndedQuestionSchema = new Schema<IOpenEndedQuestion>({
     correctAnswer: {
         type: String
     }
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.OpenEndedQuestion || model<IOpenEndedQuestion>('OpenEndedQuestion', OpenEndedQuestionSchema)

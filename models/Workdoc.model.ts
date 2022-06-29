@@ -56,6 +56,8 @@ const WorkdocSchema = new Schema<IWorkdoc>({
         type: Boolean,
         default: false
     }
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.Workdoc || model<IWorkdoc>('Workdoc', WorkdocSchema)

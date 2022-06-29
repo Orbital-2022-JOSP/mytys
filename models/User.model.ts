@@ -40,6 +40,8 @@ const UserSchema = new mongoose.Schema({
     userRole: {
         type: String
     }
+}, {
+    timestamps: true
 })
 
 UserSchema.virtual('answeredQuestions', {

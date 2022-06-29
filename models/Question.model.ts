@@ -54,6 +54,7 @@ const QuestionSchema = new Schema<IQuestion>({
         type: String
     },
 }, {
+    timestamps: true,
     toJSON: { virtuals: true }
 })
 

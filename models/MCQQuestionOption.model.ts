@@ -23,6 +23,8 @@ const MCQQuestionOptionSchema = new Schema<IMCQQuestionOption>({
     text: {
         type: String
     }
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.MCQQuestionOption || model<IMCQQuestionOption>('MCQQuestionOption', MCQQuestionOptionSchema)

@@ -16,6 +16,8 @@ const QuestionTypeSchema = new Schema<IQuestionType>({
     name: {
         type: String
     }
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.QuestionType || model<IQuestionType>('QuestionType', QuestionTypeSchema)

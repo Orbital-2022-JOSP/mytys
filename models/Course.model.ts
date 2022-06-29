@@ -40,6 +40,8 @@ const CourseSchema = new Schema<ICourse>({
         type: mongoose.Schema.Types.ObjectId,
         ref: "QuestionType"
     }],
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.Course || model<ICourse>('Course', CourseSchema)
