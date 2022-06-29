@@ -57,6 +57,8 @@ const WorksheetSchema = new Schema<IWorksheet>({
         type: Boolean,
         default: false
     }
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.Worksheet || model<IWorksheet>('Worksheet', WorksheetSchema)

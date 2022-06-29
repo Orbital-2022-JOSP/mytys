@@ -53,6 +53,8 @@ const QuestionAnswerSchema = new Schema<IQuestionAnswer>({
     OpenEndedAnswer: {
         type: String
     }
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.QuestionAnswer || model<IQuestionAnswer>('QuestionAnswer', QuestionAnswerSchema)

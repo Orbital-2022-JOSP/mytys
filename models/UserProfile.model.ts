@@ -60,6 +60,8 @@ const UserProfileSchema = new Schema<IUserProfile>({
         type: mongoose.Schema.Types.ObjectId,
         ref: "QuestionType"
     }]
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.UserProfile || model<IUserProfile>('UserProfile', UserProfileSchema)

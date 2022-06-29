@@ -4,7 +4,6 @@ import Head from "next/head";
 import { AdminLayout } from '../components/AdminLayout/AdminLayout';
 import { FooterWithContent } from "../components/FooterWithContent/FooterWithContent";
 import { Navbar } from '../components/Navbar/Navbar';
-import { NavBar_Homepage } from "../components/NavBar_Homepage/NavBar_Homepage";
 import '../styles/globals.css';
 
 const App = ({ Component, pageProps, router }: AppProps) => {
@@ -26,8 +25,10 @@ const App = ({ Component, pageProps, router }: AppProps) => {
                     </>
                     : <>
                         <Navbar />
-                        <Component {...pageProps} />
-                        <FooterWithContent /> 
+                        <main className="min-h-2/3-screen">
+                            <Component {...pageProps} />
+                        </main>
+                        <FooterWithContent />
                     </>
             }
         </SessionProvider>

@@ -17,7 +17,7 @@ export interface IMCQQuestion {
     questionType: "mcq";
     correctAnswer: IMCQQuestionOption;
     options: Array<IMCQQuestionOption>;
-    
+
 }
 
 const MCQQuestionSchema = new Schema<IMCQQuestion>({
@@ -37,6 +37,8 @@ const MCQQuestionSchema = new Schema<IMCQQuestion>({
         type: Schema.Types.ObjectId,
         ref: "MCQQuestionOption"
     }]
+}, {
+    timestamps: true
 })
 
 export default mongoose.models.MCQQuestion || model<IMCQQuestion>('MCQQuestion', MCQQuestionSchema)
