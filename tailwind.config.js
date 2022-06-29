@@ -321,6 +321,13 @@ module.exports = {
             boxShadow: {
                 outline: '0 0 0 3px rgba(0, 128, 255, 0.4)',
             },
+            minHeight: {
+                '1/4-screen': '25vh',
+                '1/3-screen': '33vh',
+                '1/2-screen': '50vh',
+                '2/3-screen': '67vh',
+                '3/4-screen': '75vh',
+            }
         },
     },
     variants: {
