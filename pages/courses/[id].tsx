@@ -6,11 +6,9 @@ const SingleCoursePage: React.FC = () => {
     const { id } = router.query
 
     return (
-        <div>
-            <p>Hello World</p>
-            <p>{id}</p>
+        <>
             <SingleCourse />
-        </div>
+        </>
     )
 }
 
