@@ -14,6 +14,14 @@ type SingleCourseProps = {
 const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, description, tags, authorName, noOfLikes, noOfViews }) => {
     let formatter = Intl.NumberFormat('en', { notation: 'compact' });
 
+    function truncateString(str, num) {
+        if (str.length > num) {
+            return str.slice(0, num) + "...";
+        } else {
+            return str;
+        }
+    }
+
     return (
         <div className="p-8 bg-white border rounded shadow-sm flex flex-col">
             <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
@@ -38,7 +46,9 @@ const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, de
                 </a>
             </Link>
             <p className="flex-grow mb-5 text-gray-700">
-                {description}
+                {
+                    truncateString(description, 100)
+                }
             </p>
             <div>
                 {tags.map((tag, idx) => (
@@ -57,7 +67,7 @@ const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, de
                         />
                     </a>
                 </Link>
-                <div className="w-5/12">
+                <div className="">
                     <Link href={"/"}>
                         <a
                             aria-label="Author"
@@ -71,7 +81,16 @@ const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, de
                         Author
                     </p>
                 </div>
-                <div className="ml-auto text-right">
+                <div className="ml-auto">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-light-blue-50">
+                        <p className="text-sm font-medium leading-4 text-gray-800">
+                            40
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="flex items-center">
+                <div className="w-full text-center mt-3">
                     <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                         <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -79,31 +98,13 @@ const SingleCourse: React.FC<SingleCourseProps> = ({ courseType, date, title, de
                         </svg>{formatter.format(noOfViews)}
                     </span>
                     <span className="text-gray-400 inline-flex items-center leading-none text-sm">
-                        {/* <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                        </svg>6 */}
                         <svg className="w-4 h-4 mr-1" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                             <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>{formatter.format(noOfLikes)}
-                        {/* <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>6 */}
                     </span>
-                    {/* <a
-                        href="/"
-                        aria-label="Author"
-                        title="Author"
-                        className="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                    >
-                        Vasile Melinte
-                    </a>
-                    <p className="text-sm font-medium leading-4 text-gray-600">
-                        Author
-                    </p> */}
                 </div>
             </div>
         </div>
-
     )
 }
 
@@ -121,6 +122,61 @@ export const CourseCarousel: React.FC = () => {
     ]
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
+                <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
+                    <a href="/" className="mb-6 sm:mx-auto">
+                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                            <svg
+                                className="w-10 h-10 text-deep-purple-accent-400"
+                                stroke="currentColor"
+                                viewBox="0 0 52 52"
+                            >
+                                <polygon
+                                    strokeWidth="3"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    fill="none"
+                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                            <span className="relative inline-block">
+                                <svg
+                                    viewBox="0 0 52 24"
+                                    fill="currentColor"
+                                    className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                                >
+                                    <defs>
+                                        <pattern
+                                            id="e77df901-b9d7-4b9b-822e-16b2d410795b"
+                                            x="0"
+                                            y="0"
+                                            width=".135"
+                                            height=".30"
+                                        >
+                                            <circle cx="1" cy="1" r=".7" />
+                                        </pattern>
+                                    </defs>
+                                    <rect
+                                        fill="url(#e77df901-b9d7-4b9b-822e-16b2d410795b)"
+                                        width="52"
+                                        height="24"
+                                    />
+                                </svg>
+                                <span className="relative">The</span>
+                            </span>{' '}
+                            quick, brown fox jumps over a lazy dog
+                        </h2>
+                        <p className="text-base text-gray-700 md:text-lg">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque rem aperiam, eaque ipsa quae.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
                 {
                     courses.map((course, idx) => (
