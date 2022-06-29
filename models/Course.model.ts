@@ -13,6 +13,8 @@ import { IQuestionType } from './QuestionType.model';
  * @member {Array<IQuestionTopic>} courseTopics The question topics covered by this course
  * @member {Array<IQuestionType>} courseTypes The question types covered by this course
  * @member {Array<IQuestion>} questions The questions covered by this course
+ * @member {number} noOfLikes The no of likes of this course
+ * @member {number} noOfViews The no of views of this course
  */
 
 export interface ICourse {
@@ -22,7 +24,9 @@ export interface ICourse {
     difficulty: number;
     courseTopics: Array<IQuestionTopic>;
     courseTypes: Array<IQuestionType>;
-    questions: Array<IQuestion>
+    questions: Array<IQuestion>;
+    noOfLikes: number;
+    noOfViews: number;
 }
 
 const CourseSchema = new Schema<ICourse>({
@@ -46,7 +50,15 @@ const CourseSchema = new Schema<ICourse>({
     questions: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Question"
-    }]
+    }],
+    noOfLikes: {
+        type: Number,
+        default: 0
+    },
+    noOfViews: {
+        type: Number,
+        default: 0
+    }
 }, {
     timestamps: true
 })
