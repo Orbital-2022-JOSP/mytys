@@ -1,4 +1,5 @@
 import mongoose, { model, Schema, Types } from 'mongoose';
+import { IQuestion } from './Question.model';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';
 
@@ -11,6 +12,7 @@ import { IQuestionType } from './QuestionType.model';
  * @member {number} difficulty The difficulty of the course, 0 to 100 based on user feedback, convert integer into out of 5 stars rating
  * @member {Array<IQuestionTopic>} courseTopics The question topics covered by this course
  * @member {Array<IQuestionType>} courseTypes The question types covered by this course
+ * @member {Array<IQuestion>} questions The questions covered by this course
  */
 
 export interface ICourse {
@@ -20,6 +22,7 @@ export interface ICourse {
     difficulty: number;
     courseTopics: Array<IQuestionTopic>;
     courseTypes: Array<IQuestionType>;
+    questions: Array<IQuestion>
 }
 
 const CourseSchema = new Schema<ICourse>({
@@ -40,6 +43,10 @@ const CourseSchema = new Schema<ICourse>({
         type: mongoose.Schema.Types.ObjectId,
         ref: "QuestionType"
     }],
+    questions: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Question"
+    }]
 }, {
     timestamps: true
 })
