@@ -25,7 +25,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
                     </>
                     : <>
                         <Navbar />
-                        <main className="min-h-2/3-screen">
+                        <main className="min-h-2/3-screen flex flex-col justify-center">
                             <Component {...pageProps} />
                         </main>
                         <FooterWithContent />
