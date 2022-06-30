@@ -21,8 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'POST':
             try {
                 const questionAnswer = await QuestionAnswerModel.create(
-                    sanitize(req.body))
-                    ;
+                    sanitize(req.body)
+                );
                 res.status(201).json({ success: true, data: questionAnswer });
             } catch (error) {
                 res.status(400).json({ success: false });

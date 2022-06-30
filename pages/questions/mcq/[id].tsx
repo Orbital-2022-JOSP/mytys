@@ -1,32 +1,39 @@
+import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { MCQQuestionAttempt } from '../../../components/MCQQuestionAttempt/MCQQuestionAttempt';
+import { Unauthenticated } from '../../../components/Unauthenticated/Unauthenticated';
 
 const MCQQuestionAnsweringPage: React.FC = () => {
     const router = useRouter();
+    const { data: session, status } = useSession();
+
     const { id } = router.query;
 
     const fetcher = (url: string) => fetch(url).then(r => r.json())
-    const { data, error } = useSWR(`/api/questions/${id}`, fetcher);
 
-    let questionData = data ? data.data : undefined;
+    const { data, error } = useSWR(id ? `/api/questions/${id}` : null, fetcher);
 
     return (
         <>
             {
-                questionData
-                    ?
-                    <MCQQuestionAttempt
-                        questionId={questionData._id}
-                        title={questionData.title}
-                        description={questionData.description}
-                        explanation={questionData.explanation}
-                        correctAnswer={questionData.mcqQuestions[0].correctAnswer}
-                        options={questionData.mcqQuestions[0].options}
-                        nextLink={"/questions/mcq/random"}
-                        prevLink={"/questions/mcq/random"}
-                    />
-                    : <p>Loading</p>
+                status == "loading"
+                    ? <p>Loading</p>
+                    : status == "unauthenticated"
+                        ? <Unauthenticated />
+                        : data && data.success
+                            ?
+                            <MCQQuestionAttempt
+                                questionId={data.data._id}
+                                title={data.data.title}
+                                description={data.data.description}
+                                explanation={data.data.explanation}
+                                correctAnswer={data.data.mcqQuestions[0].correctAnswer}
+                                options={data.data.mcqQuestions[0].options}
+                                nextLink={"/questions/mcq/random"}
+                                prevLink={"/questions/mcq/random"}
+                            />
+                            : <p>Loading</p>
             }
         </>
     )
