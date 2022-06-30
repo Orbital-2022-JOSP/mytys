@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { SingleCourse } from '../../components/SingleCourse/SingleCourse';
+import { SingleCourse } from '../../../components/SingleCourse/SingleCourse';
 
 const SingleCoursePage: React.FC = () => {
     const router = useRouter()
