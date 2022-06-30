@@ -1,7 +1,7 @@
 import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
-import MCQQuestionOptionModel from "../../../../models/MCQQuestionOption.model";
+import MCQOptionModel from "../../../../models/MCQOption.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const {
@@ -14,17 +14,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET' /* Get a model by its ID */:
             try {
-                const MCQQuestionOption = await MCQQuestionOptionModel
+                const mcqOption = await MCQOptionModel
                     .findOne({
                         _id: {
                             $eq: questionOptionId
                         }
                     })
                     .setOptions({ sanitizeFilter: true });
-                if (!MCQQuestionOptionModel) {
+                if (!mcqOption) {
                     return res.status(400).json({ success: false });
                 }
-                res.status(200).json({ success: true, data: MCQQuestionOption });
+                res.status(200).json({ success: true, data: mcqOption });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'PUT' /* Edit a model by its ID */:
             try {
-                const MCQQuestionOption = await MCQQuestionOptionModel
+                const mcqOption = await MCQOptionModel
                     .findOneAndUpdate(
                         {
                             _id: {
@@ -45,10 +45,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                             runValidators: true,
                         })
                     .setOptions({ sanitizeFilter: true });
-                if (!MCQQuestionOption) {
+                if (!mcqOption) {
                     return res.status(400).json({ success: false });
                 }
-                res.status(200).json({ success: true, data: MCQQuestionOption });
+                res.status(200).json({ success: true, data: mcqOption });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
@@ -56,14 +56,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         case 'DELETE' /* Delete a model by its ID */:
             try {
-                const deletedMCQQuestionOption = await MCQQuestionOptionModel
+                const deletedMCQOption = await MCQOptionModel
                     .deleteOne({
                         _id: {
                             $eq: questionOptionId
                         }
                     })
                     .setOptions({ sanitizeFilter: true });
-                if (!deletedMCQQuestionOption) {
+                if (!deletedMCQOption) {
                     return res.status(400).json({ success: false });
                 }
                 res.status(200).json({ success: true, data: {} });
