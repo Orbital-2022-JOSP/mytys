@@ -53,7 +53,7 @@ export const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/questions/mcq/random"}>
                                         <a
                                             aria-label="Quiz"
                                             title="Quiz"
@@ -230,7 +230,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/"}>
+                                                <Link href={"/subjects"}>
                                                     <a
                                                         aria-label="Our subjects"
                                                         title="Our subjects"
@@ -241,7 +241,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/"}>
+                                                <Link href={"/questions/mcq/random"}>
                                                     <a
                                                         aria-label="Quiz"
                                                         title="Quiz"
@@ -252,7 +252,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/"}>
+                                                <Link href={"/leaderboard"}>
                                                     <a
                                                         aria-label="LeaderBoard"
                                                         title="LeaderBoard"
@@ -263,17 +263,16 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/"}>
-                                                    <a
-                                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
-                                                        aria-label="Log Out"
-                                                        title="Log Out"
-                                                    >
-                                                        <span className="font-bold">
-                                                            Log Out
-                                                        </span>
-                                                    </a>
-                                                </Link>
+                                                <button
+                                                    onClick={() => signOut()}
+                                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
+                                                    aria-label="Log Out"
+                                                    title="Log Out"
+                                                >
+                                                    <span className="font-bold">
+                                                        Log Out
+                                                    </span>
+                                                </button>
                                             </li>
                                             <li>
                                                 <div className="ml-3 relative">
@@ -340,7 +339,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/"}>
+                                                <Link href={"/subjects"}>
                                                     <a
                                                         aria-label="Our Subjects"
                                                         title="Our Subjects"
@@ -351,7 +350,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/"}>
+                                                <Link href={"/how-it-works"}>
                                                     <a
                                                         aria-label="How it works"
                                                         title="How it works"
@@ -362,7 +361,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/"}>
+                                                <Link href={"/aboutus"}>
                                                     <a
                                                         aria-label="About us"
                                                         title="About us"
@@ -389,6 +388,6 @@ export const Navbar = () => {
                         )}
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
