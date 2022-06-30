@@ -10,10 +10,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "1:51"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "1:8"
             },
@@ -26,7 +28,8 @@
             {
                 "text": "1:60"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "Sarah is 2/3 as old as Philip. What is the ratio of Philip's age to Sarah's age?",
@@ -39,10 +42,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "3:2"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "2:3"
             },
@@ -55,7 +60,8 @@
             {
                 "text": "5:2"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "A rectangle has a perimeter of 40 cm. Its length is 12 cm. What is the ratio of its length to its breadth in the simplest form?",
@@ -68,10 +74,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "3:2"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "2:3"
             },
@@ -84,7 +92,8 @@
             {
                 "text": "4:1"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "There are 45 pupils on a bus. 30 of them are girls and the rest are boys. Find the ratio of the number of boys to the number of girls.",
@@ -95,10 +104,12 @@
             "62b5d378305eff87905d7c2d"
         ],
         "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "1:2"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "1:3"
             },
@@ -111,7 +122,8 @@
             {
                 "text": "2:3"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "Janet and Alicia shared 32 beads. Janet received 4 more beads than Alicia. Find the ratio of the number of Alicia's beads to Janet's.",
@@ -124,10 +136,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "7:9"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "9:7"
             },
@@ -140,7 +154,8 @@
             {
                 "text": "4:5"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "The ratio of Angela's pencils to Kelvin's is 3 : 7. If Kelvin has 28 more pencils than Angela, how many pencils do they have altogether?",
@@ -153,10 +168,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "70"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "12"
             },
@@ -169,7 +186,8 @@
             {
                 "text": "70"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "The ratio of the number of girls to the number of boys in a school is 9 : 8. There are 99 more girls than boys in the school. How many pupils are there in the school?",
@@ -182,10 +200,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "1683"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "792"
             },
@@ -198,7 +218,8 @@
             {
                 "text": "7128"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": " There are 2 red beads, 6 blue beads and 15 green beads in a box. Find the ratio of the number of red beads to the number of blue beads to the number of green beads in the box.",
@@ -211,10 +232,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "2:6:15"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "2:6:15"
             },
@@ -227,7 +250,8 @@
             {
                 "text": "1:3:5"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "A box contains 15 pencils. 9 of them are red and the rest are blue. The ratio of the number of blue pencils to that of the red pencils is ________________. ",
@@ -240,10 +264,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "2:3"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "2:3"
             },
@@ -256,7 +282,8 @@
             {
                 "text": "5:3"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "Maggie baked 195 fruit tarts and muffins in the ratio 5 : 8. How many more muffins did she bake than fruit tarts?",
@@ -269,10 +296,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "45"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "13"
             },
@@ -285,7 +314,8 @@
             {
                 "text": "75"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "There is a rectangle with an area of 72 cm² and breadth 4 cm. What is the ratio of its length to its perimeter?",
@@ -298,10 +328,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "9:22"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "1:4"
             },
@@ -314,7 +346,8 @@
             {
                 "text": "9:22"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": " Mr Tan is 24 years older than her daughter. 4 years ago, the ratio of Mrs Tan's age to her daughter's age is 5 : 1. What is the ratio of Mr Tan's age to her daughter's age in 2 years' time?",
@@ -327,10 +360,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "3:1"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "3:1"
             },
@@ -343,7 +378,8 @@
             {
                 "text": "17:5"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
     },
     {
         "title": "Mr Thiam gave 5/6 of his money to his wife. He used 2/5 of his remaining money on food. What was the ratio of the amount of money he had at first to the amount of money he had left?",
@@ -356,10 +392,12 @@
         "questionTypes": [
             "62b5d398305eff87905d7c2f"
         ],
+        "subject": "math",
+        "questionType": "mcq",
         "mcqCorrectAnswer": {
             "text": "10:1"
         },
-        "mcqoptions": [
+        "mcqOptions": [
             {
                 "text": "11:7"
             },
@@ -372,6 +410,1407 @@
             {
                 "text": "30:13"
             }
-        ]
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "6 U+00F7 1/3 =",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "18"
+        },
+        "mcqOptions": [
+            {
+                "text": "1/18"
+            },
+            {
+                "text": "2"
+            },
+            {
+                "text": "1/2"
+            },
+            {
+                "text": "18"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Express 6/8 as a percentage",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "75%"
+        },
+        "mcqOptions": [
+            {
+                "text": "20%"
+            },
+            {
+                "text": "25%"
+            },
+            {
+                "text": "50%"
+            },
+            {
+                "text": "75%"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "5/6 U+00F7 3/4",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "5/6 U+00D7 4/3"
+        },
+        "mcqOptions": [
+            {
+                "text": "5/6 U+00D7 3/4"
+            },
+            {
+                "text": "5/6 U+00D7 4/3"
+            },
+            {
+                "text": "6/5 U+00D7 3/4"
+            },
+            {
+                "text": "6/5 U+00D7 4/3"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "The mass of block A is 4/3 of the mass of block B. What is the ratio of the mass of block B to the total masses of block A and block B",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "3 : 7"
+        },
+        "mcqOptions": [
+            {
+                "text": "3 : 4"
+            },
+            {
+                "text": "4 : 3"
+            },
+            {
+                "text": "3 : 7"
+            },
+            {
+                "text": "7 : 3"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "There are 10 boys and 40 girls in the library. What fraction of the children are girls?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "4/5"
+        },
+        "mcqOptions": [
+            {
+                "text": "1/5"
+            },
+            {
+                "text": "1/4"
+            },
+            {
+                "text": "3/4"
+            },
+            {
+                "text": "4/5"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Kit and Daniel shared 90 sweets in the ratio 2:3 respectively. How many more sweets did Daniel have than Kit",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "18"
+        },
+        "mcqOptions": [
+            {
+                "text": "18"
+            },
+            {
+                "text": "36"
+            },
+            {
+                "text": "54"
+            },
+            {
+                "text": "60"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "The length of square X is 4 times the length of square Y. What is the ratio of the area of square X to the area of square Y?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "16 : 1"
+        },
+        "mcqOptions": [
+            {
+                "text": "1 : 4"
+            },
+            {
+                "text": "4 : 1"
+            },
+            {
+                "text": "1 : 16"
+            },
+            {
+                "text": "16 : 1"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Given that 30 : 45 = 20 : X,what is the value of X?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "30"
+        },
+        "mcqOptions": [
+            {
+                "text": "10"
+            },
+            {
+                "text": "15"
+            },
+            {
+                "text": "25"
+            },
+            {
+                "text": "30"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "The ratio of the number of apples to the number of mangoes to the number of oranges is 7 : 6 : 4. If there are 828 mare apples than oranges. how many mangoes are there?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "1656"
+        },
+        "mcqOptions": [
+            {
+                "text": "1656"
+            },
+            {
+                "text": "2484"
+            },
+            {
+                "text": "3312"
+            },
+            {
+                "text": "4692"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Aaron shared a sum of money equally with 4 friends, Bala, Carapa, Devi and Esther. After receiving his share, Carapa spent $49.90 and had $23.60 left. Find the sum of money.",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "$367.50"
+        },
+        "mcqOptions": [
+            {
+                "text": "$94.40"
+            },
+            {
+                "text": "$118"
+            },
+            {
+                "text": "$294"
+            },
+            {
+                "text": "$367.50"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Tom and Jerry shared a box of marbles. When Jerry gave some marbles to Tom, Tom's share increased from 120 to 360 marbles. As a result, the number of Jerry's marbles decreased by 20%. How many marbles did Jerry have at first?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "1200"
+        },
+        "mcqOptions": [
+            {
+                "text": "1200"
+            },
+            {
+                "text": "1440"
+            },
+            {
+                "text": "1560"
+            },
+            {
+                "text": "1800"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Each side of a square is increased by 20%. What is the percentage increase in its area?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "44%"
+        },
+        "mcqOptions": [
+            {
+                "text": "20%"
+            },
+            {
+                "text": "40%"
+            },
+            {
+                "text": "44%"
+            },
+            {
+                "text": "80%"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Simplify 15p U+00F7 9 - 2 - 2p U+00D7 4",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "7p + 7"
+        },
+        "mcqOptions": [
+            {
+                "text": "7p + 7"
+            },
+            {
+                "text": "7p - 11"
+            },
+            {
+                "text": "13p - 17"
+            },
+            {
+                "text": "52p + 7"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Find the value of 3/8 U+00F7 6",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "1/16"
+        },
+        "mcqOptions": [
+            {
+                "text": "1/16"
+            },
+            {
+                "text": "4/9"
+            },
+            {
+                "text": "9/4"
+            },
+            {
+                "text": "16"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "20% of the pupils in a class are gir1s and the rest are boys. What is the ratio of the number of girls to the number of boys?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "1 : 4"
+        },
+        "mcqOptions": [
+            {
+                "text": "1 : 4"
+            },
+            {
+                "text": "1 : 5"
+            },
+            {
+                "text": "4 : 1"
+            },
+            {
+                "text": "5 : 1"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Express 1.03 as a percentage",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "103%"
+        },
+        "mcqOptions": [
+            {
+                "text": "0.103%"
+            },
+            {
+                "text": "1.03%"
+            },
+            {
+                "text": "10.3%"
+            },
+            {
+                "text": "103%"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "John had a meal at a restaurant, The total bill was $330 which included a 10% service charge. What was the original cost of the meal?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "$300"
+        },
+        "mcqOptions": [
+            {
+                "text": "$33"
+            },
+            {
+                "text": "$297"
+            },
+            {
+                "text": "$300"
+            },
+            {
+                "text": "$363"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "In a primary school, 1/4 of the pupils take public transport to school. Of the pupils who take public transport to school, 1/3 of them take the SBS buses and the rest take the MRT.  What fraction of the total number of pupils takes the MRT to school?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "1/6"
+        },
+        "mcqOptions": [
+            {
+                "text": "1/12"
+            },
+            {
+                "text": "1/6"
+            },
+            {
+                "text": "1/4"
+            },
+            {
+                "text": "3/4"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "The ratio of the number of red marbles to the number of green marbles that Ben had was 5 : 2. After he bought another 15 red marbles, the ratio of the number of red marbles to the number of green marbles became 4 : 1. How many more red marbles than green marbles.did Ben have in the end?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "30"
+        },
+        "mcqOptions": [
+            {
+                "text": "19"
+            },
+            {
+                "text": "20"
+            },
+            {
+                "text": "30"
+            },
+            {
+                "text": "60"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "There were 4 more gir1s than boys in a Music class. Mrs Kumar gave each girl 4 pencils and each boy 6 pencils. A total of 116 pencils were given to the children. How many girls were there in the class?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "14"
+        },
+        "mcqOptions": [
+            {
+                "text": "10"
+            },
+            {
+                "text": "13"
+            },
+            {
+                "text": "14"
+            },
+            {
+                "text": "29"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Which one of the following algebraic expressions is the same as 6w / 5 ?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "6 x w + 5"
+        },
+        "mcqOptions": [
+            {
+                "text": "6 + w + 5"
+            },
+            {
+                "text": "6 x w + 5"
+            },
+            {
+                "text": "6 + 5 + w"
+            },
+            {
+                "text": "w + 5 + 6"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "8 thousands + 12 hundreds + 36 tens + 25 ones = __________",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "9585"
+        },
+        "mcqOptions": [
+            {
+                "text": "8073"
+            },
+            {
+                "text": "8181"
+            },
+            {
+                "text": "8505"
+            },
+            {
+                "text": "9585"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "1/4 + 0.01 + 1/20 = __________",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "0.31"
+        },
+        "mcqOptions": [
+            {
+                "text": "0.21"
+            },
+            {
+                "text": "0.31"
+            },
+            {
+                "text": "0.36"
+            },
+            {
+                "text": "0.75"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Siti bought a cake. She kept 2/5 of it for herself and divided the remaining cake equally among her 4 children. What fraction of the cake did each child receive?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "3/20"
+        },
+        "mcqOptions": [
+            {
+                "text": "1/10"
+            },
+            {
+                "text": "3/20"
+            },
+            {
+                "text": "1 3/5"
+            },
+            {
+                "text": "2 2/5"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Jerry and Su Ling shared $280 in the ratio 2 : 5. How much money did Su Ling receive?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "$200"
+        },
+        "mcqOptions": [
+            {
+                "text": "$40"
+            },
+            {
+                "text": "$80"
+            },
+            {
+                "text": "$120"
+            },
+            {
+                "text": "$200"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "There are 60 marbles In a jar. There are 38 blue marbles. The rest are red marbles. What is the ratio of the number of red marbles to the number of blue marbles in the jar?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "11 : 19"
+        },
+        "mcqOptions": [
+            {
+                "text": "11 : 19"
+            },
+            {
+                "text": "11 : 30"
+            },
+            {
+                "text": "19 : 11"
+            },
+            {
+                "text": "19 : 30"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "On a book shelf, 5/9 of the books were English books. The rest of the books were Chinese books. The ratio of English fiction books to English non-fiction books was 3 : 7. There were 24 English fiction books. How many Chinese books were there on the book shelf?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "64"
+        },
+        "mcqOptions": [
+            {
+                "text": "56"
+            },
+            {
+                "text": "64"
+            },
+            {
+                "text": "80"
+            },
+            {
+                "text": "144"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Mr Tan had 80 stamps. He gave 20% of his stamps to·his son and 25% of the remaining stamps to his daughter. What percentage of his stamps was left?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "60%"
+        },
+        "mcqOptions": [
+            {
+                "text": "45%"
+            },
+            {
+                "text": "48%"
+            },
+            {
+                "text": "55%"
+            },
+            {
+                "text": "60%"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Mary walks her dog once every two days. while Bala walks his dog once every five days. Both Mary and Bala met each other for the first time on 6 January. How many more times will they meet each other in January when they take their dogs for a walk?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "2"
+        },
+        "mcqOptions": [
+            {
+                "text": "1"
+            },
+            {
+                "text": "2"
+            },
+            {
+                "text": "3"
+            },
+            {
+                "text": "4"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Look at the set of numbers below. 17, 32, 27, 20, x. What number must be added to this set of numbers to increase the average to 26?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "34"
+        },
+        "mcqOptions": [
+            {
+                "text": "8"
+            },
+            {
+                "text": "24"
+            },
+            {
+                "text": "34"
+            },
+            {
+                "text": "122"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "In 8 413 297, which digit is in the hundred thousands place?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "4"
+        },
+        "mcqOptions": [
+            {
+                "text": "1"
+            },
+            {
+                "text": "2"
+            },
+            {
+                "text": "3"
+            },
+            {
+                "text": "4"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Which one of the following numbers is 60 000, when rounded off to the nearest hundred and when rounded off to the nearest thousand?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "59950"
+        },
+        "mcqOptions": [
+            {
+                "text": "59599"
+            },
+            {
+                "text": "59950"
+            },
+            {
+                "text": "60050"
+            },
+            {
+                "text": "60499"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "What is the value of 10 + 5000?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "0.002"
+        },
+        "mcqOptions": [
+            {
+                "text": "0.002"
+            },
+            {
+                "text": "0.02"
+            },
+            {
+                "text": "50"
+            },
+            {
+                "text": "500"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Which of the following is equivalent to 3 + 7/9",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": ""
+        },
+        "mcqOptions": [
+            {
+                "text": "1/3 x 9/7"
+            },
+            {
+                "text": "7/9 x 3"
+            },
+            {
+                "text": "2 + 1/3"
+            },
+            {
+                "text": "3 + 6/7"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "A 4/5 kg of honeydew was cut into 8 equal pieces. What is the mass of each piece of honeydew?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "1/10 kg"
+        },
+        "mcqOptions": [
+            {
+                "text": "1/10 kg"
+            },
+            {
+                "text": "5/32 kg"
+            },
+            {
+                "text": "6 2/5 kg"
+            },
+            {
+                "text": "7 1/5 kg"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "What is the volume of a cube of edge 8 cam?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "512 cm3"
+        },
+        "mcqOptions": [
+            {
+                "text": "24 cm3"
+            },
+            {
+                "text": "64 cm3"
+            },
+            {
+                "text": "128 cm3"
+            },
+            {
+                "text": "512 cm3"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "A kg of dried mushrooms costs $28. What is the cost of 200 g of the dried mushrooms?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "$5.60"
+        },
+        "mcqOptions": [
+            {
+                "text": "$5.60"
+            },
+            {
+                "text": "$11.20"
+            },
+            {
+                "text": "$14.00"
+            },
+            {
+                "text": "$56.00"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "The usual price of a power bank was $75. During a sale, it was sold at a discount of 20%. How much was the discount?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "$15"
+        },
+        "mcqOptions": [
+            {
+                "text": "$60"
+            },
+            {
+                "text": "$55"
+            },
+            {
+                "text": "$15"
+            },
+            {
+                "text": "$11"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "The length of stick U is 5/2 of the length of stick T. Stick U is 18 cm longer than stick T. Find the length of stick T.",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "12 cm"
+        },
+        "mcqOptions": [
+            {
+                "text": "2 cm"
+            },
+            {
+                "text": "6 cm"
+            },
+            {
+                "text": "10 cm"
+            },
+            {
+                "text": "12 cm"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "6 children shared a pizza equally at a party. One of them gave away 1/2 of his share to his sister. What fraction of the pizza had he left?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "1/12"
+        },
+        "mcqOptions": [
+            {
+                "text": "1/12"
+            },
+            {
+                "text": "1/6"
+            },
+            {
+                "text": "1/3"
+            },
+            {
+                "text": "1/2"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Mrs Smith baked 32 pies and 40 puffs. She sold all the pies at $w each and all the puffs at $2 each. How much money did she collect altogether?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "$(32w + 80)"
+        },
+        "mcqOptions": [
+            {
+                "text": "$104w"
+            },
+            {
+                "text": "$112w"
+            },
+            {
+                "text": "$(32w + 80)"
+            },
+            {
+                "text": "$(40w + 60)"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "10 similar pens cost $14. Helix paid $30 for 30 pens. How big of discount was he given?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "$12"
+        },
+        "mcqOptions": [
+            {
+                "text": "$10"
+            },
+            {
+                "text": "$12"
+            },
+            {
+                "text": "$16"
+            },
+            {
+                "text": "$28"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Anthony had a 10m long string. He cut 5 pieces of string, each measuring 4/5 m, to tie some boxes. He then cut the remaining string into·s.ome pieces each of length 5/8 m to tie some parcels. How many pieces of string, each 6/8 min length, did Anthony cut altogether?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "9"
+        },
+        "mcqOptions": [
+            {
+                "text": "7"
+            },
+            {
+                "text": "8"
+            },
+            {
+                "text": "9"
+            },
+            {
+                "text": "10"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "In 724 506, the value of the digit 4 is ____",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "4000"
+        },
+        "mcqOptions": [
+            {
+                "text": "40"
+            },
+            {
+                "text": "400"
+            },
+            {
+                "text": "4000"
+            },
+            {
+                "text": "40000"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Arrange the following fractions from the greatest to the smallest 3/4, 4/5, 5/6",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "5/6, 4/5, 3/4"
+        },
+        "mcqOptions": [
+            {
+                "text": "4/5, 3/4, 5/6"
+            },
+            {
+                "text": "5/6, 4/5, 3/4"
+            },
+            {
+                "text": "3/4, 5/6, 4/5"
+            },
+            {
+                "text": "4/5, 5/6, 3/4"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Which of the following is the same as 3050 m?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "3 km 50 m"
+        },
+        "mcqOptions": [
+            {
+                "text": "3 km 5m"
+            },
+            {
+                "text": "3 km 50 m"
+            },
+            {
+                "text": "30 km 5 m"
+            },
+            {
+                "text": "30 km 50 m"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "What does the digit 3 in 1.32 stand for?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "3 tenths"
+        },
+        "mcqOptions": [
+            {
+                "text": "3 hundredths"
+            },
+            {
+                "text": "3 tenths"
+            },
+            {
+                "text": "3 ones"
+            },
+            {
+                "text": "3 tens"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "5/8 of the diners in a restaurant were adults and the rest were children. There was an equal number of boys and girls. What was the ratio of the number of girls to the number of adults?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "3 : 10"
+        },
+        "mcqOptions": [
+            {
+                "text": "10 : 3"
+            },
+            {
+                "text": "5 : 3"
+            },
+            {
+                "text": "3 : 10"
+            },
+            {
+                "text": "3 : 5"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Express 8 5/6 as an improper fraction",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "53/6"
+        },
+        "mcqOptions": [
+            {
+                "text": "19/6"
+            },
+            {
+                "text": "46/6"
+            },
+            {
+                "text": "48/6"
+            },
+            {
+                "text": "53/6"
+            }
+        ],
+        "oeCorrectAnswer": ""
+    },
+    {
+        "title": "Express 1 2/25 as a decimal",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "mcq",
+        "mcqCorrectAnswer": {
+            "text": "1.08"
+        },
+        "mcqOptions": [
+            {
+                "text": "1.02"
+            },
+            {
+                "text": "1.08"
+            },
+            {
+                "text": "1.2"
+            },
+            {
+                "text": "1.8"
+            }
+        ],
+        "oeCorrectAnswer": ""
     }
 ]
