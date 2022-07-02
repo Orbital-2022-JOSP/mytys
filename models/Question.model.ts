@@ -18,7 +18,7 @@ import { IQuestionType } from './QuestionType.model';
  * @member {string} questionType The question type of the question
  * @member {IMCQOption} mcqCorrectAnswer The correct answer of the mcq question
  * @member {Array<IMCQOption>} mcqOptions The options of the mcq question
- * @member {string} oeCorrectAnswer The correct answer of the open ended question
+ * @member {string} oeCorrectAnswers The correct answer of the open ended question
  */
 
 export interface IQuestion {
@@ -33,7 +33,7 @@ export interface IQuestion {
     questionType: "mcq" | "oe";
     mcqCorrectAnswer: IMCQOption;
     mcqOptions: Array<IMCQOption>;
-    oeCorrectAnswer: string;
+    oeCorrectAnswers: [string];
 }
 
 const QuestionSchema = new Schema<IQuestion>({
@@ -72,9 +72,9 @@ const QuestionSchema = new Schema<IQuestion>({
         type: mongoose.Schema.Types.ObjectId,
         ref: "MCQOption"
     }],
-    oeCorrectAnswer: {
+    oeCorrectAnswers: [{
         type: String
-    }
+    }]
 }, {
     timestamps: true
 })
