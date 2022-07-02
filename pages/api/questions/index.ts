@@ -4,6 +4,7 @@ import QuestionModel from "../../../models/Question.model";
 import QuestionTopicModel from "../../../models/QuestionTopic.model";
 import QuestionTypeModel from "../../../models/QuestionType.model";
 import sanitize from 'mongo-sanitize';
+import MCQOptionModel from "../../../models/MCQOption.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { method } = req;
@@ -30,40 +31,48 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             break;
 
         case 'POST':
-            const { questionBody, mcqQuestionBody } = sanitize(req.body);
-            try {
-                const question = await QuestionModel.create(questionBody);
+            const { body } = sanitize(req.body);
 
-                const mcqQuestionBodyTypeSafe: mcqQuestionBodySchema = mcqQuestionBody
-                const options = mcqQuestionBodyTypeSafe.options;
-                const correctOption = mcqQuestionBodyTypeSafe.correctAnswer;
+            if (body.mcqCorrectAnswer && body.mcqOptions) {
+                try {
+                    const mcqCorrectAnswer = body.mcqCorrectAnswer;
+                    const mcqOptions = body.mcqOptions;
 
-                const asd = await MCQQuestionOptionModel.create({
-                    questionId: question._id,
-                    text: correctOption.text
-                })
+                    delete body.mcqCorrectAnswer;
+                    delete body.mcqOptions;
 
-                const filteredOptions = options.filter((x) => x.text != correctOption.text).map((x) => ({
-                    ...x,
-                    questionId: question._id
-                }));
+                    const newQuestion = new QuestionModel(body)
+                    const newCorrectMCQOption = await MCQOptionModel.create({
+                        questionId: newQuestion._id,
+                        text: mcqCorrectAnswer.text
+                    })
 
-                const qwe = await MCQQuestionOptionModel.insertMany(filteredOptions)
+                    const filteredOptions = mcqOptions.filter((x) => x.text != newCorrectMCQOption.text).map((x) => ({
+                        ...x,
+                        questionId: newQuestion._id
+                    }));
 
-                const allOptionsId = qwe.map(x => x._id)
-                allOptionsId.push(asd._id);
+                    const newOtherOptions = await MCQOptionModel.insertMany(filteredOptions)
+                    const optionsIds = newOtherOptions.map((x) => x._id)
+                    optionsIds.push(newCorrectMCQOption._id);
 
-                // Something might go wrong if the question model creates successfully but the mcq question doesn't 
-                // Then you have a floating question object in db.
-                const mcqQuestion = await MCQQuestionModel.create({
-                    questionId: question._id,
-                    correctAnswer: asd._id,
-                    options: allOptionsId
-                })
-                res.status(201).json({ success: true, data: mcqQuestion });
-            } catch (error) {
-                console.log(error)
-                res.status(400).json({ success: false });
+                    newQuestion.mcqCorrectAnswer = newCorrectMCQOption._id;
+                    newQuestion.mcqOptions = optionsIds;
+                    newQuestion.save();
+
+                    res.status(201).json({ success: true, data: newQuestion });
+                } catch (error) {
+                    res.status(400).json({ success: false });
+                }
+            } else {
+                try {
+                    const newQuestion = await QuestionModel.create(
+                        sanitize(req.body)
+                    );
+                    res.status(201).json({ success: true, data: newQuestion });
+                } catch (error) {
+                    res.status(400).json({ success: false });
+                }
             }
             break;
 
