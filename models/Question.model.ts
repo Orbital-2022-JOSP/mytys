@@ -64,10 +64,14 @@ const QuestionSchema = new Schema<IQuestion>({
         type: String,
         default: "mcq"
     },
-    mcqCorrectAnswer: MCQOptionSchema,
-    mcqOptions: [
-        MCQOptionSchema
-    ],
+    mcqCorrectAnswer: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "MCQOption"
+    },
+    mcqOptions: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "MCQOption"
+    }],
     oeCorrectAnswer: {
         type: String
     }
