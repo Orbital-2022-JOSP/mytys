@@ -2484,5 +2484,18 @@
             }
         ],
         "oeCorrectAnswer": [""]
+    },
+    {
+        "title": "How many quarters are there in 5 wholes?",
+        "description": "",
+        "difficulty": 40,
+        "explanation": "",
+        "questionTopics": [],
+        "questionTypes": [],
+        "subject": "math",
+        "questionType": "oe",
+        "mcqCorrectAnswer": null,
+        "mcqOptions": [],
+        "oeCorrectAnswers": ["20", "twenty"]
     }
 ]
