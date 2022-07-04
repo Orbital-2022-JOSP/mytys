@@ -51,7 +51,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                         ]
                     })
                     .setOptions({ sanitizeFilter: true });
-                console.log(course)
                 if (!course) {
                     return res.status(400).json({ success: false });
                 }
