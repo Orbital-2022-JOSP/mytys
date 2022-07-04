@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     if (err) throw err;
                     let questions = JSON.parse(data);
                     questions.forEach(async questionData => {
-                        if (questionData.mcqCorrectAnswer && questionData.mcqOptions) {
+                        if (questionData.questionType == "mcq") {
                             const mcqCorrectAnswer = questionData.mcqCorrectAnswer;
                             const mcqOptions = questionData.mcqOptions;
                             delete questionData.mcqCorrectAnswer;
