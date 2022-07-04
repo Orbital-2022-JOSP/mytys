@@ -2,6 +2,10 @@ import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
 import CourseModel from '../../../../models/Course.model';
+import MCQOptionModel from '../../../../models/MCQOption.model';
+import QuestionModel from '../../../../models/Question.model';
+import QuestionTopicModel from '../../../../models/QuestionTopic.model';
+import QuestionTypeModel from '../../../../models/QuestionType.model';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const {
@@ -20,7 +24,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                             $eq: courseId
                         }
                     })
+                    .populate({
+                        path: "courseTopics",
+                        model: QuestionTopicModel
+                    })
+                    .populate({
+                        path: "questions",
+                        model: QuestionModel,
+                        populate: [
+                            {
+                                path: "mcqOptions",
+                                model: MCQOptionModel
+                            },
+                            {
+                                path: "questionTopics",
+                                model: QuestionTopicModel
+                            },
+                            {
+                                path: "questionTypes",
+                                model: QuestionTypeModel
+                            },
+                            {
+                                path: 'mcqCorrectAnswer',
+                                model: MCQOptionModel
+                            }
+                        ]
+                    })
                     .setOptions({ sanitizeFilter: true });
+                console.log(course)
                 if (!course) {
                     return res.status(400).json({ success: false });
                 }
