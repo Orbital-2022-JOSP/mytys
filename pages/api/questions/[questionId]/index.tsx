@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from '../../../../dbConnect';
+import MCQOptionModel from "../../../../models/MCQOption.model";
 import QuestionModel from "../../../../models/Question.model";
 import QuestionTopicModel from "../../../../models/QuestionTopic.model";
 import QuestionTypeModel from "../../../../models/QuestionType.model";
@@ -28,6 +29,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     .populate({
                         path: 'questionTypes',
                         model: QuestionTypeModel
+                    })
+                    .populate({
+                        path: 'mcqCorrectAnswer',
+                        model: MCQOptionModel
+                    })
+                    .populate({
+                        path: 'mcqOptions',
+                        model: MCQOptionModel
                     })
                     .setOptions({ sanitizeFilter: true });
 
