@@ -1,9 +1,9 @@
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import useSWR from 'swr';
-import { Question } from '../../../../components/Question/Question';
-import { useState, useEffect } from 'react';
 import LoadingComponent from '../../../../components/LoadingComponent/LoadingComponent';
+import { Question } from '../../../../components/Question/Question';
 import { Unauthenticated } from '../../../../components/Unauthenticated/Unauthenticated';
 
 const CourseQuestionPage: React.FC = () => {
@@ -29,7 +29,7 @@ const CourseQuestionPage: React.FC = () => {
         <>
             {
                 status == "loading"
-                    ? <p>Loading</p>
+                    ? <LoadingComponent />
                     : status == "unauthenticated"
                         ? <Unauthenticated />
                         : courseData && validQn
