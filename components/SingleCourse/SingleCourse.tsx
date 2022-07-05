@@ -1,3 +1,6 @@
+import { ICourse } from "../../models/Course.model";
+import Link from 'next/link';
+
 const SingleQuestion = () => {
     return (
         <div className="flex items-center p-2 transition-colors duration-200 border rounded shadow group hover:bg-light-blue-400 hover:border-light-blue-400">
@@ -23,31 +26,34 @@ const SingleQuestion = () => {
     )
 }
 
-export const SingleCourse = () => {
+export const SingleCourse: React.FC<ICourse> = ({ _id, title, description, difficulty, courseTopics, courseTypes, questions, noOfLikes, noOfViews }) => {
     const tags = ["De-engineered", "neural-net", "Fully-configurable", "Reactive", "Advanced"];
 
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="flex flex-col lg:flex-row">
-                <div className="max-w-xl pr-16 mx-auto mb-10">
+                <div className="max-w-xl pr-16 mx-auto mb-10 w-5/12 mt-5">
                     <h5 className="mb-6 text-3xl font-extrabold leading-none">
-                        The quick, brown fox jumps over a lazy dog
+                        {title ? title : "The quick, brown fox jumps over a lazy dog"}
                     </h5>
                     <p className="mb-6 text-gray-900">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut unde
-                        omnis iste natus.
+                        {
+                            description
+                                ? description
+                                : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut undeomnis iste natus."
+                        }
                     </p>
                     <div className="flex items-center">
-                        <button
-                            type="submit"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-accent-400 hover:bg-blue-accent-700 focus:shadow-outline focus:outline-none"
-                        >
-                            Get started
-                        </button>
+                        <Link href={`/courses/${_id}/question/1`}>
+                            <a
+                                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-accent-400 hover:bg-blue-accent-700 focus:shadow-outline focus:outline-none"
+                            >
+                                Get started
+                            </a>
+                        </Link>
                     </div>
                 </div>
-                <div className="grid gap-5 row-gap-5 sm:grid-cols-2 w-full">
+                <div className="grid gap-5 row-gap-5 sm:grid-cols-2 w-7/12">
                     <div className="max-w-md">
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-light-blue-50">
                             <svg
@@ -66,7 +72,7 @@ export const SingleCourse = () => {
                         </div>
                         <h6 className="mb-2 font-semibold leading-5">Average Difficulty</h6>
                         <p className="text-sm text-gray-700">
-                            10
+                            {difficulty ? difficulty : 10}
                         </p>
                     </div>
                     <div className="max-w-md">
