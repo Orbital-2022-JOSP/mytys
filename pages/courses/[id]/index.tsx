@@ -13,7 +13,7 @@ const SingleCoursePage: React.FC = () => {
     return (
         <>
             {
-                courseError.status == 404
+                courseError && courseError.status == 404
                     ? <NotFound />
                     : courseData
                         ? <SingleCourse {...courseData.data} />
