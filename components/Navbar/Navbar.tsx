@@ -42,13 +42,13 @@ export const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/subjects"}>
+                                    <Link href={"/courses"}>
                                         <a
-                                            aria-label="Our subjects"
-                                            title="Our subjects"
+                                            aria-label="Our courses"
+                                            title="Our courses"
                                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                         >
-                                            Subjects
+                                            Courses
                                         </a>
                                     </Link>
                                 </li>
@@ -108,13 +108,13 @@ export const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/subjects"}>
+                                    <Link href={"/courses"}>
                                         <a
-                                            aria-label="Our subjects"
-                                            title="Our subjects"
+                                            aria-label="Our courses"
+                                            title="Our courses"
                                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                         >
-                                            Subjects
+                                            Courses
                                         </a>
                                     </Link>
                                 </li>
@@ -230,13 +230,13 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/subjects"}>
+                                                <Link href={"/courses"}>
                                                     <a
-                                                        aria-label="Our subjects"
-                                                        title="Our subjects"
+                                                        aria-label="Our courses"
+                                                        title="Our courses"
                                                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                                     >
-                                                        Subjects
+                                                        Courses
                                                     </a>
                                                 </Link>
                                             </li>
@@ -339,13 +339,13 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/subjects"}>
+                                                <Link href={"/courses"}>
                                                     <a
-                                                        aria-label="Our Subjects"
-                                                        title="Our Subjects"
+                                                        aria-label="Our courses"
+                                                        title="Our courses"
                                                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                                     >
-                                                        Subjects
+                                                        Courses
                                                     </a>
                                                 </Link>
                                             </li>
