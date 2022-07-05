@@ -1,5 +1,4 @@
 import mongoose, { model, Schema, Types } from 'mongoose';
-import { IMCQQuestionOption } from './MCQQuestionOption.model';
 import { IQuestion } from './Question.model';
 import { IUser } from './User.model';
 
@@ -7,8 +6,6 @@ export interface IQuestionAnswerExtended {
     user: IUser;
     question: IQuestion;
     score: number;
-    MCQAnswer?: IMCQQuestionOption;
-    OpenEndedAnswer?: string;
 }
 
 /**
@@ -18,8 +15,6 @@ export interface IQuestionAnswerExtended {
  * @member {Types.ObjectId} user The user id that answered the question
  * @member {Types.ObjectId} question The question id
  * @member {number} score The score that the user receive for their answer, most likely 0 or 1
- * @member {Types.ObjectId} MCQAnswer The answer if the question is a MCQ question
- * @member {string} OpenEndedAnswer The answer if the question is an open ended question
  */
 
 
@@ -29,8 +24,6 @@ export interface IQuestionAnswer {
     user: Types.ObjectId;
     question: Types.ObjectId;
     score: number;
-    MCQAnswer?: Types.ObjectId;
-    OpenEndedAnswer?: string;
 }
 
 const QuestionAnswerSchema = new Schema<IQuestionAnswer>({
@@ -45,13 +38,6 @@ const QuestionAnswerSchema = new Schema<IQuestionAnswer>({
     score: {
         type: Number,
         min: 0
-    },
-    MCQAnswer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "MCQQuestionOption"
-    },
-    OpenEndedAnswer: {
-        type: String
     }
 }, {
     timestamps: true

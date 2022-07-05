@@ -1,9 +1,9 @@
 import { Types } from 'mongoose';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import useSWR from 'swr';
-import { IMCQQuestionOption } from '../../models/MCQQuestionOption.model';
+import { IMCQOption } from '../../models/MCQOption.model';
 import { IQuestionAnswer } from '../../models/QuestionAnswer.model';
 
 export type MCQQuestionAttemptProps = {
@@ -11,8 +11,8 @@ export type MCQQuestionAttemptProps = {
     title: string,
     description?: string,
     explanation: string,
-    correctAnswer: IMCQQuestionOption,
-    options: Array<IMCQQuestionOption>,
+    correctAnswer: IMCQOption,
+    options: Array<IMCQOption>,
     nextLink: string,
     prevLink: string
 }
@@ -36,7 +36,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
         }
     }, [qnAnswerData])
 
-    const handleOptionSelect = (chosenOption: IMCQQuestionOption) => {
+    const handleOptionSelect = (chosenOption: IMCQOption) => {
         if (status == "authenticated") {
             setCompleted(true);
             setCorrect(chosenOption._id == correctAnswer._id)

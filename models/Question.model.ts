@@ -1,11 +1,10 @@
 import mongoose, { model, Schema, Types } from 'mongoose';
-import MCQQuestionModel from './MCQQuestion.model';
-import OpenEndedQuestionModel from './OpenEndedQuestion.model';
+import { IMCQOption, MCQOptionSchema } from './MCQOption.model';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';
 
 /**
- * The generic question interface
+ * The mcq question interface that extends from the generic question interface
  * 
  * @interface IQuestion
  * @member {Types.ObjectId} id Id of the question
@@ -16,6 +15,10 @@ import { IQuestionType } from './QuestionType.model';
  * @member {Array<IQuestionTopic>} questionTopics The question topics covered by this question
  * @member {Array<IQuestionType>} questionTypes The question types covered by this question
  * @member {string} subject The subject of the question
+ * @member {string} questionType The question type of the question
+ * @member {IMCQOption} mcqCorrectAnswer The correct answer of the mcq question
+ * @member {Array<IMCQOption>} mcqOptions The options of the mcq question
+ * @member {string} oeCorrectAnswers The correct answer of the open ended question
  */
 
 export interface IQuestion {
@@ -27,6 +30,10 @@ export interface IQuestion {
     questionTopics: Array<IQuestionTopic>;
     questionTypes: Array<IQuestionType>;
     subject: string;
+    questionType: "mcq" | "oe";
+    mcqCorrectAnswer: IMCQOption;
+    mcqOptions: Array<IMCQOption>;
+    oeCorrectAnswers: [string];
 }
 
 const QuestionSchema = new Schema<IQuestion>({
@@ -53,21 +60,23 @@ const QuestionSchema = new Schema<IQuestion>({
     subject: {
         type: String
     },
+    questionType: {
+        type: String,
+        default: "mcq"
+    },
+    mcqCorrectAnswer: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "MCQOption"
+    },
+    mcqOptions: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "MCQOption"
+    }],
+    oeCorrectAnswers: [{
+        type: String
+    }]
 }, {
-    timestamps: true,
-    toJSON: { virtuals: true }
-})
-
-QuestionSchema.virtual('mcqQuestions', {
-    ref: 'MCQQuestion',
-    localField: '_id',
-    foreignField: 'questionId'
-});
-
-QuestionSchema.pre('remove', function (next) {
-    MCQQuestionModel.remove({ questionId: this._id }).exec();
-    OpenEndedQuestionModel.remove({ questionId: this._id }).exec();
-    next();
+    timestamps: true
 })
 
 export default mongoose.models.Question || model<IQuestion>('Question', QuestionSchema)
