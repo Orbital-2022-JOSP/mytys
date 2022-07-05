@@ -2,6 +2,7 @@ import mongoose, { model, Schema, Types } from 'mongoose';
 import { IQuestion } from './Question.model';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';
+import { IUser } from './User.model';
 
 /**
  * The generic course interface
@@ -27,6 +28,8 @@ export interface ICourse {
     questions: Array<IQuestion>;
     noOfLikes: number;
     noOfViews: number;
+    createdAt: string | Date;
+    author: IUser;
 }
 
 const CourseSchema = new Schema<ICourse>({
@@ -58,6 +61,10 @@ const CourseSchema = new Schema<ICourse>({
     noOfViews: {
         type: Number,
         default: 0
+    },
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
     }
 }, {
     timestamps: true
