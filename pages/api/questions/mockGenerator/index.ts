@@ -18,42 +18,47 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                         throw err;
                     } else {
                         let questions = JSON.parse(data);
-                        questions.forEach(async questionData => {
-                            if (questionData.questionType == "mcq") {
-                                const mcqCorrectAnswer = questionData.mcqCorrectAnswer;
-                                const mcqOptions = questionData.mcqOptions;
-                                delete questionData.mcqCorrectAnswer;
-                                delete questionData.mcqOptions;
+                        try {
+                            questions.forEach(async questionData => {
+                                if (questionData.questionType == "mcq") {
+                                    const mcqCorrectAnswer = questionData.mcqCorrectAnswer;
+                                    const mcqOptions = questionData.mcqOptions;
+                                    delete questionData.mcqCorrectAnswer;
+                                    delete questionData.mcqOptions;
 
-                                const newQuestion = new QuestionModel(questionData)
-                                const newCorrectMCQOption = await MCQOptionModel.create({
-                                    questionId: newQuestion._id,
-                                    text: mcqCorrectAnswer.text
-                                })
+                                    const newQuestion = new QuestionModel(questionData)
+                                    const newCorrectMCQOption = await MCQOptionModel.create({
+                                        questionId: newQuestion._id,
+                                        text: mcqCorrectAnswer.text
+                                    })
 
-                                const filteredOptions = mcqOptions.filter((x) => x.text != newCorrectMCQOption.text).map((x) => ({
-                                    ...x,
-                                    questionId: newQuestion._id
-                                }));
+                                    const filteredOptions = mcqOptions.filter((x) => x.text != newCorrectMCQOption.text).map((x) => ({
+                                        ...x,
+                                        questionId: newQuestion._id
+                                    }));
 
-                                const newOtherOptions = await MCQOptionModel.insertMany(filteredOptions)
-                                const optionsIds = newOtherOptions.map((x) => x._id)
-                                optionsIds.push(newCorrectMCQOption._id);
+                                    const newOtherOptions = await MCQOptionModel.insertMany(filteredOptions)
+                                    const optionsIds = newOtherOptions.map((x) => x._id)
+                                    optionsIds.push(newCorrectMCQOption._id);
 
-                                newQuestion.mcqCorrectAnswer = newCorrectMCQOption._id;
-                                newQuestion.mcqOptions = optionsIds;
-                                newQuestion.save();
-                            } else {
-                                QuestionModel.create(questionData);
-                            }
-                        });
+                                    newQuestion.mcqCorrectAnswer = newCorrectMCQOption._id;
+                                    newQuestion.mcqOptions = optionsIds;
+                                    newQuestion.save();
+                                    res.status(200).end();
+                                } else {
+                                    QuestionModel.create(questionData);
+                                    res.status(200).end();
+                                }
+                            });
+                        } catch (error) {
+                            res.status(500).end();
+                        }
                     }
                 });
             } catch (error) {
                 res.status(400).end();
             }
 
-            res.status(200).end();
             break;
 
         default:
