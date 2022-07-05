@@ -23,7 +23,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({ courseType, date, title,
     }
 
     return (
-        <div className="p-8 bg-white border rounded shadow-sm flex flex-col">
+        <div className="p-8 bg-white border rounded shadow-sm flex flex-col w-full">
             <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
                 {/* <Link href={"/"}>
                     <a
@@ -52,11 +52,11 @@ export const CourseCard: React.FC<CourseCardProps> = ({ courseType, date, title,
                 }
             </p>
             <div>
-                {tags.map((tag, idx) => (
+                {/* {tags.map((tag, idx) => (
                     <p key={idx} className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 mr-2">
                         {tag}
                     </p>
-                ))}
+                ))} */}
             </div>
             <div className="flex items-center">
                 <Link href={"/"}>
@@ -68,7 +68,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({ courseType, date, title,
                         />
                     </a>
                 </Link>
-                <div className="">
+                <div>
                     <Link href={"/"}>
                         <a
                             aria-label="Author"
