@@ -38,7 +38,7 @@ export const NotFound: React.FC = () => {
                             Not Found
                         </h2>
                         <p className="text-base text-gray-700 md:text-lg">
-                            Sorry we can't find that page
+                            Sorry we can&apos;t find that page
                         </p>
                     </div>
                     <div>
