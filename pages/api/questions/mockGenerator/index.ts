@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             try {
                 fs.readFile('./lib/mytys_mock_question.json', (err, data) => {
                     if (err) {
-                        res.status(500).end();
+                        return res.status(500).end();
                     } else {
                         let questions = JSON.parse(data);
                         try {
