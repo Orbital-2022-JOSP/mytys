@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 export const ServerError: React.FC = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                 <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
                     <div className="flex items-center justify-center w-120 rounded-full">
-                        <img src="/images/server-error.svg" alt="Photo of Server" className="w-full" />
+                        <img src="/images/server-error.svg" alt="Picture of Books" className="w-full" />
                     </div>
-                    <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                    <div className="max-w-xl mt-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
                             <span className="relative inline-block">
                                 <svg
@@ -35,6 +37,18 @@ export const ServerError: React.FC = () => {
                             </span>{' '}
                             Error
                         </h2>
+                        <p className="text-base text-gray-700 md:text-lg">
+                            Oops something went wrong!
+                        </p>
+                    </div>
+                    <div>
+                        <Link href={"/"}>
+                            <a
+                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-400 hover:bg-light-blue-700 focus:shadow-outline focus:outline-none"
+                            >
+                                Return Home
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
