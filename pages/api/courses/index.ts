@@ -2,6 +2,7 @@ import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../dbConnect";
 import CourseModel from "../../../models/Course.model";
+import UserModel from '../../../models/User.model';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { method } = req;
@@ -11,7 +12,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                const courses = await CourseModel.find({});
+                const courses = await CourseModel
+                .find({})
+                .populate({
+                    path: "author",
+                    model: UserModel
+                });
                 res.status(201).json({ success: true, data: courses });
             } catch (error) {
                 res.status(400).json({ success: false });
