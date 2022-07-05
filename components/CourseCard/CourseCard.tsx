@@ -1,19 +1,7 @@
-import { Types } from "mongoose";
 import Link from "next/link";
+import { ICourse } from '../../models/Course.model';
 
-type CourseCardProps = {
-    _id?: Types.ObjectId;
-    courseType: string;
-    createdAt: string;
-    title: string;
-    description: string;
-    tags: string[];
-    authorName: string;
-    noOfViews: number;
-    noOfLikes: number;
-}
-
-export const CourseCard: React.FC<CourseCardProps> = ({ _id, courseType, createdAt, title, description, tags, authorName, noOfLikes, noOfViews }) => {
+export const CourseCard: React.FC<ICourse> = ({ _id, title, description, difficulty, courseTopics, courseTypes, questions, noOfLikes, noOfViews, createdAt, author }) => {
     let formatter = Intl.NumberFormat('en', { notation: 'compact' });
     let f = new Intl.DateTimeFormat('en');
 
@@ -90,7 +78,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({ _id, courseType, created
                         <p
                             className="font-semibold text-gray-800 transition-colors duration-200 text-light-blue-400"
                         >
-                            {authorName}
+                            {author.name}
                         </p>
                         <p className="text-sm font-medium leading-4 text-gray-600">
                             Author
@@ -98,8 +86,8 @@ export const CourseCard: React.FC<CourseCardProps> = ({ _id, courseType, created
                     </div>
                     <div className="ml-auto">
                         <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-light-blue-50">
-                            <p className="text-sm font-medium leading-4 text-gray-800">
-                                40
+                            <p className="text-sm font-medium leading-4 text-light-blue-700">
+                                {difficulty ? difficulty : 40}
                             </p>
                         </div>
                     </div>
