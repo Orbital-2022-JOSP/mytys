@@ -24,7 +24,7 @@ const CourseQuestionPage: React.FC = () => {
         if (questionIdx) {
             setValidQn(+(questionIdx as string) >= 0 && +(questionIdx as string) <= courseData.data.questions.length);
         }
-    }, [questionIdx]);
+    }, [questionIdx, courseData.data.questions.length]);
 
     return (
         <>

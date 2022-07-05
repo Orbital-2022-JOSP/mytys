@@ -44,7 +44,7 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
             setCompleted(true);
             setCorrect(qnAnswerData.data.score == 1)
         }
-    }, [qnAnswerData])
+    }, [qnAnswerData, status])
 
     const handleOptionSelect = (chosenOption: IMCQOption) => {
         if (status == "authenticated") {
