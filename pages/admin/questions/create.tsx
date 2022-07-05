@@ -1,9 +1,9 @@
 import React from "react";
-import { QuestionForm } from '../../../components/Forms/QuestionForm/QuestionForm';
 import useSWR from 'swr';
+import { QuestionForm } from '../../../components/Forms/QuestionForm/QuestionForm';
+import { fetcher } from "../../../lib/fetcher";
 
 const AdminQuestionsCreatePage: React.FC = () => {
-    const fetcher = (url: string) => fetch(url).then(r => r.json())
     const { data: questionTopics, error: questionTopicsError } = useSWR('/api/questionTopics', fetcher);
     const { data: questionTypes, error: questionTypesError } = useSWR('/api/questionTypes', fetcher);
     

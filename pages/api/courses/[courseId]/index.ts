@@ -6,6 +6,7 @@ import MCQOptionModel from '../../../../models/MCQOption.model';
 import QuestionModel from '../../../../models/Question.model';
 import QuestionTopicModel from '../../../../models/QuestionTopic.model';
 import QuestionTypeModel from '../../../../models/QuestionType.model';
+import UserModel from '../../../../models/User.model';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const {
@@ -50,9 +51,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                             }
                         ]
                     })
+                    .populate({
+                        path: "author",
+                        model: UserModel
+                    })
                     .setOptions({ sanitizeFilter: true });
                 if (!course) {
-                    return res.status(400).json({ success: false });
+                    return res.status(404).json({ success: false });
                 }
                 res.status(200).json({ success: true, data: course });
             } catch (error) {

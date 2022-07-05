@@ -5,12 +5,13 @@ import useSWR from 'swr';
 import LoadingComponent from '../../../../components/LoadingComponent/LoadingComponent';
 import { Question } from '../../../../components/Question/Question';
 import { Unauthenticated } from '../../../../components/Unauthenticated/Unauthenticated';
+import { fetcher } from '../../../../lib/fetcher';
 
 const CourseQuestionPage: React.FC = () => {
     const router = useRouter()
     const { id, questionIdx } = router.query
     const { data: session, status } = useSession();
-    const fetcher = (url: string) => fetch(url).then(r => r.json());
+    
     const { data: courseData, error } = useSWR(
         id
             ? `/api/courses/${id}`
