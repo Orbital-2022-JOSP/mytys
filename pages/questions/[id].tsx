@@ -5,7 +5,7 @@ import { NotFound } from '../../components/NotFound/NotFound';
 import { Question } from '../../components/Question/Question';
 import { fetcher } from '../../lib/fetcher';
 
-const MCQQuestionAnsweringPage: React.FC = () => {
+const QuestionAnsweringPage: React.FC = () => {
     const router = useRouter();
     const { id } = router.query;
     const { data: questionData, error: questionError } = useSWR(id ? `/api/questions/${id}` : null, fetcher);
@@ -23,4 +23,4 @@ const MCQQuestionAnsweringPage: React.FC = () => {
     )
 }
 
-export default MCQQuestionAnsweringPage;
+export default QuestionAnsweringPage;
