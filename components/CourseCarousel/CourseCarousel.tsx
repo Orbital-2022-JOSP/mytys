@@ -11,9 +11,9 @@ export const CourseCarousel: React.FC = () => {
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                 <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
                     <div className="mb-6 sm:mx-auto">
-                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-light-blue-50">
                             <svg
-                                className="w-10 h-10 text-deep-purple-accent-400"
+                                className="w-10 h-10 text-light-blue-400"
                                 stroke="currentColor"
                                 viewBox="0 0 52 52"
                             >
