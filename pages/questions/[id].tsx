@@ -2,17 +2,15 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { Question } from '../../components/Question/Question';
-import { Unauthenticated } from '../../components/Unauthenticated/Unauthenticated';
 // import { MCQQuestionAttempt } from '../../../components/MCQQuestionAttempt/MCQQuestionAttempt';
 // import { Unauthenticated } from '../../../components/Unauthenticated/Unauthenticated';
+import { fetcher } from '../../lib/fetcher';
 
 const MCQQuestionAnsweringPage: React.FC = () => {
     const router = useRouter();
     const { data: session, status } = useSession();
 
     const { id } = router.query;
-
-    const fetcher = (url: string) => fetch(url).then(r => r.json())
 
     const { data, error } = useSWR(id ? `/api/questions/${id}` : null, fetcher);
     console.log(data)

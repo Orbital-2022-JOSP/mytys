@@ -10,7 +10,7 @@ const CourseQuestionPage: React.FC = () => {
     const router = useRouter()
     const { id, questionIdx } = router.query
     const { data: session, status } = useSession();
-    const fetcher = (url: string) => fetch(url).then(r => r.json());
+    
     const { data: courseData, error } = useSWR(
         id
             ? `/api/courses/${id}`

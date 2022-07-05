@@ -3,6 +3,7 @@ import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
+import { fetcher } from '../../lib/fetcher';
 import { IMCQOption } from '../../models/MCQOption.model';
 import { IQuestionAnswer } from '../../models/QuestionAnswer.model';
 import { IQuestionTopic } from '../../models/QuestionTopic.model';
@@ -30,7 +31,7 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
     const [correct, setCorrect] = useState(false);
     const [oeAnswer, setOeAnswer] = useState("");
     const { data: session, status } = useSession();
-    const fetcher = (url: string) => fetch(url).then(r => r.json());
+    
     const { data: qnAnswerData, error } = useSWR(
         status == "authenticated" && id
             ? `/api/questionAnswers/user/${session.user.id}/question/${id}/`
