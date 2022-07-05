@@ -63,15 +63,18 @@ export const CourseCarousel: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-                {
-                    courses && courses.data
-                        ? courses.data.map((course, idx) => (
-                            <CourseCard {...course} key={idx} />
-                        ))
-                        : <LoadingComponent />
-                }
-            </div>
+            {
+                courses && courses.data
+                    ? <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full mx-auto">
+                        {
+                            courses.data.map((course, idx) => (
+                                <CourseCard {...course} key={idx} />
+                            ))
+                        }
+                    </div>
+                    : <LoadingComponent />
+            }
+
         </div>
     );
 };
