@@ -87,11 +87,11 @@ export const SingleCourse: React.FC<ICourse> = ({ _id, title, description, diffi
                         </div>
                         <h6 className="mb-2 font-semibold leading-5">Course Topics</h6>
                         <div>
-                            {courseTopics.map((topic, idx) => (
+                            {courseTopics ? courseTopics.map((topic, idx) => (
                                 <p key={"courseTopic" + idx} className="inline-block px-3 py-px mb-2 text-xs font-semibold tracking-wider text-light-blue-900 uppercase rounded-full bg-light-blue-accent-400 mr-2">
                                     {topic.name}
                                 </p>
-                            ))}
+                            )) : null}
                         </div>
                     </div>
                     <div className="max-w-md">
@@ -112,11 +112,11 @@ export const SingleCourse: React.FC<ICourse> = ({ _id, title, description, diffi
                         </div>
                         <h6 className="mb-2 font-semibold leading-5">Course Types</h6>
                         <div>
-                            {courseTypes.map((type, idx) => (
+                            {courseTypes ? courseTypes.map((type, idx) => (
                                 <p key={"courseType" + idx} className="inline-block px-3 py-px mb-2 text-xs font-semibold tracking-wider text-light-blue-900 uppercase rounded-full bg-light-blue-accent-400 mr-2">
                                     {type.name}
                                 </p>
-                            ))}
+                            )) : null}
                         </div>
                     </div>
                 </div>
