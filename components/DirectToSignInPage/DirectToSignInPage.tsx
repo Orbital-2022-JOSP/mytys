@@ -1,16 +1,16 @@
+import { GenericContainer } from '../GenericContainer/GenericContainer';
 
 export const DirectToSignInPage = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            
+        <GenericContainer>
             <div className="grid gap-10 row-gap-10 lg:grid-cols-2">
-                 <article className="relative h-full overflow-hidden">
-                 <div className="flex flex-col justify-center rounded shadow-lg sm:h-96">
-      <img className="flex flex-col" style = {{borderRadius:"2.5%", opacity: "0.65"}} src="/images/mytys_landing_bg_2.jpg" alt="background" />
-      </div>
-      <h1 className="text-4xl text-light-blue-500 text-center absolute top-0 bottom-0 left-0 right-0 h-fit m-auto" >
-          React Is Awesome</h1>
-    </article>
+                <article className="relative h-full overflow-hidden">
+                    <div className="flex flex-col justify-center rounded shadow-lg sm:h-96">
+                        <img className="flex flex-col" style={{ borderRadius: "2.5%", opacity: "0.65" }} src="/images/mytys_landing_bg_2.jpg" alt="background" />
+                    </div>
+                    <h1 className="text-4xl text-light-blue-500 text-center absolute top-0 bottom-0 left-0 right-0 h-fit m-auto" >
+                        React Is Awesome</h1>
+                </article>
                 {/* <div className="flex flex-col justify-center rounded shadow-lg sm:h-96" style={{ backgroundImage: "url(/images/mytys_landing_bg_2.jpg)", opacity: "0.5"}}>
                     <div className="max-w-xl mb-6">
                         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
@@ -129,7 +129,7 @@ export const DirectToSignInPage = () => {
                     />
                 </div>
             </div>
-        </div>
+        </GenericContainer>
     );
 };
 

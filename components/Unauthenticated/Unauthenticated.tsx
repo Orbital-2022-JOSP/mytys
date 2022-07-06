@@ -1,12 +1,13 @@
 import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { GenericContainer } from '../GenericContainer/GenericContainer';
 
 export const Unauthenticated = () => {
     const router = useRouter();
 
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <GenericContainer>
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                 <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
                     <Link href={"/"}>
@@ -70,6 +71,6 @@ export const Unauthenticated = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </GenericContainer>
     );
 };

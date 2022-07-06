@@ -1,6 +1,8 @@
+import { GenericContainer } from '../GenericContainer/GenericContainer';
+
 export const Steps: React.FC = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <GenericContainer>
             <p className ="mb-2 text-3xl gap-0 font-bold text-light-blue-500">Our Simple Learning Process</p>
             <div className="grid gap-6 row-gap-10 lg:grid-cols-2">
                 <div className="lg:py-6 lg:pr-16">
@@ -187,6 +189,6 @@ export const Steps: React.FC = () => {
                     />
                 </div>
             </div>
-        </div>
+        </GenericContainer>
     );
 };

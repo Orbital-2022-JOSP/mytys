@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { GenericContainer } from '../GenericContainer/GenericContainer';
 
 export const Testimonials2 = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <GenericContainer>
             <h2 className="max-w-xl mb-10 font-sans text-3xl font-bold leading-none text-center text-light-blue-500 tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
                 What Our Students Say
             </h2>
@@ -104,6 +105,6 @@ export const Testimonials2 = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </GenericContainer>
     );
 };

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { GenericContainer } from '../GenericContainer/GenericContainer';
 
 type SingleCourseProps = {
     courseType: string;
@@ -115,7 +116,7 @@ export const CourseCarousel1: React.FC = () => {
         { "courseType": "Scondary 4 Express", "date": "01.01.2022", "title": "S4E Chemistry", "description": "This set of quizzes will challenge your knowledge of the first few chapters in S4E Chemistry. By going through topic by topic, you will be able to master these topics by the end of the course!", "tags": ["Secondary 4", "Express", "Chemistry", "Atomic bonding", "Separation techniques", "Periodic table"], "authorName": "Samuel Pang", "noOfViews": 3672, "noOfLikes": 8498 },
     ]
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <GenericContainer>
             <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
                 {
                     courses.map((course, idx) => (
@@ -123,6 +124,6 @@ export const CourseCarousel1: React.FC = () => {
                     ))
                 }
             </div>
-        </div>
+        </GenericContainer>
     );
 };
