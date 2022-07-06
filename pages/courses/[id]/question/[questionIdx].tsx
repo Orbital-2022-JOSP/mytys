@@ -21,10 +21,12 @@ const CourseQuestionPage: React.FC = () => {
     const [validQn, setValidQn] = useState(false);
 
     useEffect(() => {
-        if (questionIdx) {
-            setValidQn(+(questionIdx as string) >= 0 && +(questionIdx as string) <= courseData.data.questions.length);
+        if (questionIdx && courseData) {
+            if(courseData.data) {
+                setValidQn(+(questionIdx as string) >= 0 && +(questionIdx as string) <= courseData.data.questions.length);
+            }
         }
-    }, [questionIdx, courseData.data.questions.length]);
+    }, [questionIdx, courseData]);
 
     return (
         <>
