@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { GenericContainer } from '../GenericContainer/GenericContainer';
 
 export const NotFound: React.FC = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <GenericContainer>
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                 <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
                     <div className="flex items-center justify-center w-120 rounded-full">
@@ -52,6 +53,6 @@ export const NotFound: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </GenericContainer>
     )
 }
