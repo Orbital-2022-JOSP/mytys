@@ -1,6 +1,5 @@
 import { SessionProvider } from "next-auth/react";
 import { AppProps } from "next/app";
-import Head from "next/head";
 import { AdminLayout } from '../components/AdminLayout/AdminLayout';
 import { FooterWithContent } from "../components/FooterWithContent/FooterWithContent";
 import { Navbar } from '../components/Navbar/Navbar';
