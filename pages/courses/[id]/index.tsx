@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import LoadingComponent from '../../../components/LoadingComponent/LoadingComponent';
@@ -12,6 +13,9 @@ const SingleCoursePage: React.FC = () => {
 
     return (
         <>
+            <Head>
+                <title>Course - MYTYS</title>
+            </Head>
             {
                 courseError && courseError.status == 404
                     ? <NotFound />

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from "react";
 import { ContactUs } from "../components/ContactUs/ContactUs";
 import { JoinUsCTA } from "../components/JoinUsCTA/JoinUsCTA";
@@ -8,6 +9,9 @@ import { WhoAreWe } from "../components/WhoAreWe/WhoAreWe";
 const AboutUsPage: React.FC = () => {
     return (
         <>
+            <Head>
+                <title>About Us - MYTYS</title>
+            </Head>
             <WhoAreWe />
             <Team />
             <Stats />

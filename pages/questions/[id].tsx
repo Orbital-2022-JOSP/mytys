@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
@@ -12,6 +13,9 @@ const QuestionAnsweringPage: React.FC = () => {
 
     return (
         <>
+            <Head>
+                <title>Question - MYTYS</title>
+            </Head>
             {
                 questionError && questionError.status == 404
                     ? <NotFound />

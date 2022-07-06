@@ -1,11 +1,15 @@
+import Head from 'next/head';
 import { LeaderBoard1 } from "../components/Leaderboard1/Leaderboard1";
 
-const SubjectsPage: React.FC = () => {
+const LeaderboardPage: React.FC = () => {
     return (
         <>
-           <LeaderBoard1/>
+            <Head>
+                <title>Leaderboard - MYTYS</title>
+            </Head>
+            <LeaderBoard1 />
         </>
     );
 };
 
-export default SubjectsPage;
+export default LeaderboardPage;
