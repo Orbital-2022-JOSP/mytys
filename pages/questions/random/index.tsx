@@ -1,6 +1,7 @@
 import Router from 'next/router';
 import { useEffect } from 'react';
 import useSWR from 'swr';
+import LoadingComponent from '../../../components/LoadingComponent/LoadingComponent';
 import { fetcher } from '../../../lib/fetcher';
 
 const RandomMCQQuestionAnsweringPage: React.FC = () => {
@@ -14,11 +15,7 @@ const RandomMCQQuestionAnsweringPage: React.FC = () => {
         }
     }, [questionData]);
 
-    return (
-        <>
-            <p>Hello</p>
-        </>
-    )
+    return <LoadingComponent />
 }
 
 export default RandomMCQQuestionAnsweringPage;
