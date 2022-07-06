@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GenericContainer } from "../GenericContainer/GenericContainer";
 
 export const Blog = () => {
     return (
@@ -131,6 +132,6 @@ export const Blog = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </GenericContainer>
     );
 };
