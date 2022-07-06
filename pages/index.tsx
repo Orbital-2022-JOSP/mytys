@@ -1,15 +1,11 @@
 import { useSession } from "next-auth/react";
+import Head from 'next/head';
 import { useRouter } from "next/router";
 import React from "react";
-import { FAQ } from "../components/FAQ/FAQ";
-import { Features } from "../components/Features/Features";
-import { Hero } from '../components/Hero/Hero';
-import { Hero3 } from "../components/Hero3/Hero3";
-import { Stats } from "../components/Stats/Stats";
-import { Steps } from "../components/Steps/Steps";
-
 import { LandingPage_main } from "../components/LandingPage_main/LandingPage_main";
 import { MailingList } from "../components/MailingList/MailingList";
+import { Stats } from "../components/Stats/Stats";
+import { Steps } from "../components/Steps/Steps";
 
 const Home: React.FC = () => {
     const router = useRouter();
@@ -20,6 +16,9 @@ const Home: React.FC = () => {
 
     return (
         <>
+            <Head>
+                <title>Home - MYTYS</title>
+            </Head>
             <LandingPage_main />
             <MailingList />
             <Steps />

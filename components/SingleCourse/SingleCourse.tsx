@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { ICourse } from "../../models/Course.model";
+import { GenericContainer } from '../GenericContainer/GenericContainer';
 
 export const SingleCourse: React.FC<ICourse> = ({ _id, title, description, difficulty, courseTopics, courseTypes, questions, noOfLikes, noOfViews }) => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:min-w-xl md:min-w-full lg:min-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <GenericContainer>
             <div className="flex flex-col lg:flex-row">
                 <div className="max-w-xl pr-16 mx-auto mb-10 w-1/2 mt-5">
                     <h5 className="mb-6 text-3xl font-extrabold leading-none">
@@ -121,6 +122,6 @@ export const SingleCourse: React.FC<ICourse> = ({ _id, title, description, diffi
                     </div>
                 </div>
             </div>
-        </div>
+        </GenericContainer>
     );
 };

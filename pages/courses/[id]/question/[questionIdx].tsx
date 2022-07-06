@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
@@ -11,7 +12,7 @@ const CourseQuestionPage: React.FC = () => {
     const router = useRouter()
     const { id, questionIdx } = router.query
     const { data: session, status } = useSession();
-    
+
     const { data: courseData, error } = useSWR(
         id
             ? `/api/courses/${id}`
@@ -22,7 +23,7 @@ const CourseQuestionPage: React.FC = () => {
 
     useEffect(() => {
         if (questionIdx && courseData) {
-            if(courseData.data) {
+            if (courseData.data) {
                 setValidQn(+(questionIdx as string) >= 0 && +(questionIdx as string) <= courseData.data.questions.length);
             }
         }
@@ -30,6 +31,9 @@ const CourseQuestionPage: React.FC = () => {
 
     return (
         <>
+            <Head>
+                <title>Question - MYTYS</title>
+            </Head>
             {
                 status == "loading"
                     ? <LoadingComponent />
