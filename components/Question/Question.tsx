@@ -40,7 +40,7 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
     );
 
     useEffect(() => {
-        if (status == "authenticated" && qnAnswerData.success) {
+        if (status == "authenticated" && qnAnswerData && qnAnswerData.success) {
             setCompleted(true);
             setCorrect(qnAnswerData.data.score == 1)
         }
