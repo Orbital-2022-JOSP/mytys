@@ -6,7 +6,7 @@ export const NotFound: React.FC = () => {
         <GenericContainer>
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                 <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
-                    <div className="flex items-center justify-center w-120 rounded-full">
+                    <div className="flex items-center justify-center w-1/2 mx-auto rounded-full">
                         <img src="/images/not-found.svg" alt="Picture of Books" className="w-full" />
                     </div>
                     <div className="max-w-xl mt-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
