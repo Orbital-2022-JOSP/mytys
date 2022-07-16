@@ -2,7 +2,9 @@
     "title": "Ratio Course",
     "description": "Course about ratios",
     "difficulty": 40,
-    "courseTopics": ["62c2d9294f226059702694a0"],
+    "courseTopics": [
+        "62c2d9294f226059702694a0"
+    ],
     "courseTypes": [],
     "questions": [
         "62c2d9804f226059702694aa",
@@ -13,4 +15,3 @@
     "noOfLikes": 0,
     "noOfViews": 0
 }
-

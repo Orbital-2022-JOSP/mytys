@@ -22,7 +22,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
     const [completed, setCompleted] = useState(false);
     const [correct, setCorrect] = useState(false);
     const { data: session, status } = useSession();
-    
+
     const { data: qnAnswerData, error } = useSWR(
         status == "authenticated" && questionId
             ? `/api/questionAnswers/user/${session.user.id}/question/${questionId}/`

@@ -63,20 +63,20 @@ export const HowItWorks1 = () => {
                         </p>
                     </div>
                     <div>
-                    <Link href={"/"}>
-                        <a
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
-                        >
-                            Learn more
-                            <svg
-                                className="inline-block w-3 ml-2"
-                                fill="currentColor"
-                                viewBox="0 0 12 12"
+                        <Link href={"/"}>
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                             >
-                                <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                            </svg>
-                        </a>
+                                Learn more
+                                <svg
+                                    className="inline-block w-3 ml-2"
+                                    fill="currentColor"
+                                    viewBox="0 0 12 12"
+                                >
+                                    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
+                                </svg>
+                            </a>
                         </Link>
                     </div>
                 </div>

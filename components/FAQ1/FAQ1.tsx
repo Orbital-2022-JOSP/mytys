@@ -55,16 +55,16 @@ export const FAQ1 = () => {
                 </div>
                 <div className="space-y-4">
                     <Item title="How much is the subscription fee for MYTYS?">
-                       As a pilot project, we are currently monitoring at the interest level of the internet community. As of now, our platform services and functionalities are completely <span className = "text-light-blue-500">FREE</span>
+                        As a pilot project, we are currently monitoring at the interest level of the internet community. As of now, our platform services and functionalities are completely <span className="text-light-blue-500">FREE</span>
                     </Item>
                     <Item title="How can a student benefit from MYTYS">
-                       By using our gamified question and answer platform, students can practice questions on a more interactive interface than conventional pen and paper, helping them enjoy the learning process while improving their grades simultaneously
+                        By using our gamified question and answer platform, students can practice questions on a more interactive interface than conventional pen and paper, helping them enjoy the learning process while improving their grades simultaneously
                     </Item>
                     <Item title="What subjects do we offer?">
-                       We specialise in Mathematics and Science at the primary and seondary school levels, and we are gradually looking into implementing English and Chinese subjects as well in time to come. For more information, please visit the subjects tab at the navigation panel
+                        We specialise in Mathematics and Science at the primary and seondary school levels, and we are gradually looking into implementing English and Chinese subjects as well in time to come. For more information, please visit the subjects tab at the navigation panel
                     </Item>
                     <Item title="How can I be sure that MYTYS will be able to supplement a student's academic needs?">
-                       For more information regarding this, do visit the About us tab at the navigation panel, where there are testimonials available
+                        For more information regarding this, do visit the About us tab at the navigation panel, where there are testimonials available
                     </Item>
                 </div>
             </div>
