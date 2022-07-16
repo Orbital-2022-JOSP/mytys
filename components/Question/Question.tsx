@@ -8,6 +8,7 @@ import { IMCQOption } from '../../models/MCQOption.model';
 import { IQuestionAnswer } from '../../models/QuestionAnswer.model';
 import { IQuestionTopic } from '../../models/QuestionTopic.model';
 import { IQuestionType } from '../../models/QuestionType.model';
+import { GenericContainer } from '../GenericContainer/GenericContainer';
 
 export type QuestionProps = {
     id: Types.ObjectId;
@@ -87,17 +88,17 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
     }
 
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:min-w-screen-lg lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <GenericContainer>
             <div className="flex flex-col lg:flex-row">
                 <>
-                    <div className="max-w-xl w-full pr-16 mx-auto md:mt-8 mb-10">
-                        <h5 className="mb-6 text-3xl font-extrabold leading-none">
+                    <div className="max-w-xl w-full lg:pr-16 mx-auto md:mt-8 md:mb-10">
+                        <h5 className="mb-6 text-3xl font-semibold leading-none">
                             {title}
                         </h5>
                         <p className="mb-6 text-gray-900">
                             {description}
                         </p>
-                        <div className="flex items-center">
+                        <div className="hidden lg:flex items-center">
                             <Link href={nextLink} replace={true}>
                                 <a
                                     aria-label="Next Question Link"
@@ -160,8 +161,26 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
                                     </div>
                                 </div>
                     }
+                    <div className="lg:hidden items-center mt-10">
+                        <Link href={nextLink} replace={true}>
+                            <a
+                                aria-label="Next Question Link"
+                                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none disabled"
+                            >
+                                Next Question
+                            </a>
+                        </Link>
+                        <Link href={prevLink} replace={true}>
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
+                            >
+                                Previous Question
+                            </a>
+                        </Link>
+                    </div>
                 </>
             </div>
-        </div>
+        </GenericContainer>
     );
 };
