@@ -89,7 +89,7 @@ const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, p
                         </span>
                         Humans
                     </li>
-                </ul>
+                </ul>   
             </div>
         </div>
     )

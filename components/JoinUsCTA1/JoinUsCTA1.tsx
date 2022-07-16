@@ -1,8 +1,8 @@
 export const JoinUsCTA1: React.FC = () => {
     return (
-
+        
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-7">
-            <h1 className="text-5xl text-light-blue-500 text-center pb-7 font-medium"> Join Us </h1>
+            <h1 className = "text-5xl text-light-blue-500 text-center pb-7 font-medium"> Join Us </h1>
             <div className="grid max-w-screen-lg gap-8 row-gap-5 md:row-gap-8 sm:mx-auto lg:grid-cols-2">
                 <div className="transition duration-300 transform bg-white rounded shadow-sm hover:-translate-y-1 hover:shadow md:text-center">
                     <div className="relative">
@@ -42,7 +42,7 @@ export const JoinUsCTA1: React.FC = () => {
                             As a Tutor
                         </h5>
                         <p className="mb-5 text-gray-700">
-                            As a tutor at MYTYS, you would play a key role in helping students achieve their academic results and in improving their quality of education
+                           As a tutor at MYTYS, you would play a key role in helping students achieve their academic results and in improving their quality of education
                         </p>
                         <button
                             type="submit"

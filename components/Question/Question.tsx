@@ -31,7 +31,7 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
     const [correct, setCorrect] = useState(false);
     const [oeAnswer, setOeAnswer] = useState("");
     const { data: session, status } = useSession();
-
+    
     const { data: qnAnswerData, error } = useSWR(
         status == "authenticated" && id
             ? `/api/questionAnswers/user/${session.user.id}/question/${id}/`

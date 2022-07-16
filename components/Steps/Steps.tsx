@@ -3,7 +3,7 @@ import { GenericContainer } from '../GenericContainer/GenericContainer';
 export const Steps: React.FC = () => {
     return (
         <GenericContainer>
-            <p className="mb-2 text-3xl gap-0 font-bold text-light-blue-500">Our Simple Learning Process</p>
+            <p className ="mb-2 text-3xl gap-0 font-bold text-light-blue-500">Our Simple Learning Process</p>
             <div className="grid gap-6 row-gap-10 lg:grid-cols-2">
                 <div className="lg:py-6 lg:pr-16">
                     <div className="flex">
