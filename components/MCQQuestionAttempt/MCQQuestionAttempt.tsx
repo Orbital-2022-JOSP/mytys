@@ -45,6 +45,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
                 user: new Types.ObjectId(session.user.id),
                 question: questionId,
                 score: chosenOption._id == correctAnswer._id ? 1 : 0,
+                points: 100
             }
             fetch('/api/questionAnswers/', {
                 method: 'POST',
