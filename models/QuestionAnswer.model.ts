@@ -6,6 +6,7 @@ export interface IQuestionAnswerExtended {
     user: IUser;
     question: IQuestion;
     score: number;
+    points: number;
 }
 
 /**
@@ -15,6 +16,7 @@ export interface IQuestionAnswerExtended {
  * @member {Types.ObjectId} user The user id that answered the question
  * @member {Types.ObjectId} question The question id
  * @member {number} score The score that the user receive for their answer, most likely 0 or 1
+ * @member {number} points The points associated with the question
  */
 
 
@@ -24,6 +26,7 @@ export interface IQuestionAnswer {
     user: Types.ObjectId;
     question: Types.ObjectId;
     score: number;
+    points: number;
 }
 
 const QuestionAnswerSchema = new Schema<IQuestionAnswer>({
@@ -38,7 +41,12 @@ const QuestionAnswerSchema = new Schema<IQuestionAnswer>({
     score: {
         type: Number,
         min: 0
-    }
+    },
+    points: {
+        type: Number,
+        min: 0,
+        default: 0
+    },
 }, {
     timestamps: true
 })

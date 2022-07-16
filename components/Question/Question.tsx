@@ -54,6 +54,7 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
                 user: new Types.ObjectId(session.user.id),
                 question: id,
                 score: correct ? 1 : 0,
+                points: correct ? 100 : 0
             }
             fetch('/api/questionAnswers/', {
                 method: 'POST',
@@ -74,6 +75,7 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
                 user: new Types.ObjectId(session.user.id),
                 question: id,
                 score: correct ? 1 : 0,
+                points: correct ? 100 : 0
             }
             fetch('/api/questionAnswers/', {
                 method: 'POST',
