@@ -1,5 +1,6 @@
 import { SessionProvider } from "next-auth/react";
 import { AppProps } from "next/app";
+import Head from 'next/head';
 import { AdminLayout } from '../components/AdminLayout/AdminLayout';
 import { FooterWithContent } from "../components/FooterWithContent/FooterWithContent";
 import { Navbar } from '../components/Navbar/Navbar';
@@ -8,6 +9,9 @@ import '../styles/globals.css';
 const App = ({ Component, pageProps, router }: AppProps) => {
     return (
         <SessionProvider session={pageProps.session}>
+            <Head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             {
                 router.pathname.startsWith("/admin")
                     ?
