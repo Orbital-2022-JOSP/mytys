@@ -6,6 +6,7 @@ import useSWR from 'swr';
 import { fetcher } from '../../lib/fetcher';
 import { IMCQOption } from '../../models/MCQOption.model';
 import { IQuestionAnswer } from '../../models/QuestionAnswer.model';
+import { GenericContainer } from '../GenericContainer/GenericContainer';
 
 export type MCQQuestionAttemptProps = {
     questionId: Types.ObjectId,
@@ -22,7 +23,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
     const [completed, setCompleted] = useState(false);
     const [correct, setCorrect] = useState(false);
     const { data: session, status } = useSession();
-    
+
     const { data: qnAnswerData, error } = useSWR(
         status == "authenticated" && questionId
             ? `/api/questionAnswers/user/${session.user.id}/question/${questionId}/`
@@ -59,7 +60,7 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
     }
 
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:min-w-screen-lg lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <GenericContainer>
             <div className="flex flex-col lg:flex-row">
                 <>
                     <div className="max-w-xl w-full pr-16 mx-auto md:mt-8 mb-10">
@@ -126,6 +127,6 @@ export const MCQQuestionAttempt: React.FC<MCQQuestionAttemptProps> = ({ question
                     }
                 </>
             </div>
-        </div>
+        </GenericContainer>
     );
 };

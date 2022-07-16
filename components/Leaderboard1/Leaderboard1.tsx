@@ -7,19 +7,19 @@ type LeaderBoardCardProps = {
     subjects: string[]
 }
 
-const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, points, subjects}) => {
+const LeaderBoardCard: React.FC<LeaderBoardCardProps> = ({ position, username, points, subjects }) => {
     let cardStyle = "";
 
     cardStyle = position == "1st"
-        ? " scale-110"
+        ? " lg:scale-110"
         : position == "3rd"
-            ? " scale-90"
+            ? " lg:scale-90"
             : ""
 
     return (
         <div className={"flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow" + cardStyle}>
             {position == "1st" && (
-                <div className="absolute inset-x-0 top-0 flex justify-center -mt-3">
+                <div className="absolute inset-x-0 lg:top-0 flex justify-center -mt-11 lg:-mt-3">
                     <div className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-light-blue-500">
                         Leader
                     </div>
@@ -162,13 +162,18 @@ export const LeaderBoard1 = () => {
                     </span>
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
-                   Here are our top few performers of the week!
+                    Here are our top few performers of the week!
                 </p>
             </div>
-            <div className="grid max-w-md gap-10 row-gap-10 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-                <LeaderBoardCard position="2nd" username="John" points="2000" subjects={["Chemistry", "Math", "Physics"]}/>
-                <LeaderBoardCard position="1st" username="Josh" points="2109" subjects={["Chemistry", "Math"]}/>
-                <LeaderBoardCard position="3rd" username="Sam" points="1809" subjects={["Chemistry", "Math", "Physics"]}/>
+            <div className="grid max-w-md gap-10 row-gap-10 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto lg:hidden">
+                <LeaderBoardCard position="1st" username="Josh" points="2109" subjects={["Chemistry", "Math"]} />
+                <LeaderBoardCard position="2nd" username="John" points="2000" subjects={["Chemistry", "Math", "Physics"]} />
+                <LeaderBoardCard position="3rd" username="Sam" points="1809" subjects={["Chemistry", "Math", "Physics"]} />
+            </div>
+            <div className="hidden lg:grid max-w-md gap-10 row-gap-10 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
+                <LeaderBoardCard position="2nd" username="John" points="2000" subjects={["Chemistry", "Math", "Physics"]} />
+                <LeaderBoardCard position="1st" username="Josh" points="2109" subjects={["Chemistry", "Math"]} />
+                <LeaderBoardCard position="3rd" username="Sam" points="1809" subjects={["Chemistry", "Math", "Physics"]} />
             </div>
             <div className="max-w-lg space-y-6 sm:mx-auto lg:max-w-xl mt-16">
                 <MiniLeaderBoardCard text="Try to participate actively in the quizzes to get a chance to be on the leaderboard!" />
