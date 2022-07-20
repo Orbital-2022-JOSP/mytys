@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from "react";
 import { HowItWorks1 } from '../components/HowItWorks1/HowItWorks1';
 import { Steps } from "../components/Steps/Steps";
-import { Testimonials2 } from "../components/Testimonials2/Testimonials2";
+import { Testimonials } from "../components/Testimonials/Testimonials";
 
 const HowItWorksPage: React.FC = () => {
     return (
@@ -12,7 +12,7 @@ const HowItWorksPage: React.FC = () => {
             </Head>
             <HowItWorks1 />
             <Steps />
-            <Testimonials2 />
+            <Testimonials />
         </>
     );
 };
