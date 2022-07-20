@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Hero4 Component Should render correctly 1`] = `
+<div>
+  <div
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:min-w-xl md:min-w-full lg:min-w-screen-lg xl:min-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
+    <div
+      class="grid gap-10 row-gap-10 lg:grid-cols-2"
+    >
+      <div
+        class="flex flex-col justify-center"
+      >
+        <div
+          class="max-w-xl mb-6"
+        >
+          <h2
+            class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+          >
+            Reach your academic
+            <br
+              class="hidden md:block"
+            />
+             
+            goals with
+             
+            <span
+              class="text-light-blue-500"
+            >
+              MYTYS
+            </span>
+          </h2>
+          <p
+            class="text-base text-gray-700 md:text-lg"
+          >
+            The MyTYS app provides a simple and convenient way to experience the benefits of private tuition
+          </p>
+          <a
+            aria-label="Enroll For Free"
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-300 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
+            href="/"
+            title="Enroll For Free"
+          >
+            Enroll For Free
+          </a>
+        </div>
+        <p
+          class="mb-4 text-sm font-bold tracking-widest uppercase"
+        >
+          What you can expect
+        </p>
+        <div
+          class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0"
+        >
+          <ul
+            class="space-y-3"
+          >
+            <li
+              class="flex"
+            >
+              <span
+                class="mr-1"
+              >
+                <svg
+                  class="w-5 h-5 mt-px text-light-blue-500"
+                  stroke="currentColor"
+                  viewBox="0 0 52 52"
+                >
+                  <polygon
+                    fill="none"
+                    points="1 50 25 13 25 36 50 1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                  />
+                </svg>
+              </span>
+              Learning in a fun and engaging way
+            </li>
+            <li
+              class="flex"
+            >
+              <span
+                class="mr-1"
+              >
+                <svg
+                  class="w-5 h-5 mt-px text-light-blue-500"
+                  stroke="currentColor"
+                  viewBox="0 0 52 52"
+                >
+                  <polygon
+                    fill="none"
+                    points="1 50 25 13 25 36 50 1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                  />
+                </svg>
+              </span>
+              Receive updates on weaker topics
+            </li>
+          </ul>
+          <ul
+            class="space-y-3"
+          >
+            <li
+              class="flex"
+            >
+              <span
+                class="mr-1"
+              >
+                <svg
+                  class="w-5 h-5 mt-px text-light-blue-500"
+                  stroke="currentColor"
+                  viewBox="0 0 52 52"
+                >
+                  <polygon
+                    fill="none"
+                    points="1 50 25 13 25 36 50 1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                  />
+                </svg>
+              </span>
+              Marked assessments and comments
+            </li>
+            <li
+              class="flex"
+            >
+              <span
+                class="mr-1"
+              >
+                <svg
+                  class="w-5 h-5 mt-px text-light-blue-500"
+                  stroke="currentColor"
+                  viewBox="0 0 52 52"
+                >
+                  <polygon
+                    fill="none"
+                    points="1 50 25 13 25 36 50 1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                  />
+                </svg>
+              </span>
+              A free tuition experience
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img
+          alt="image"
+          class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+          src="/images/mytys_landing_bg_2.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
