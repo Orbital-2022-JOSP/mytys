@@ -33,7 +33,7 @@ describe("The Hero4 Component", () => {
         })
 })
 
-describe("The Enroll For Free Component", () => {
+describe("The Enroll For Free Link", () => {
 
     it('Should render correctly',
         async () => {
