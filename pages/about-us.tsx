@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from "react";
-import { ContactUs } from "../components/ContactUs/ContactUs";
 import { JoinUsCTA } from "../components/JoinUsCTA/JoinUsCTA";
 import { Stats } from "../components/Stats/Stats";
 import { Team } from "../components/Team/Team";
