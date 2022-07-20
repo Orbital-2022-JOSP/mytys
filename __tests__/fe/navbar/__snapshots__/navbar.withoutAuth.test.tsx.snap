@@ -62,7 +62,7 @@ exports[`The Navbar Component Should render correctly 1`] = `
           <a
             aria-label="About us"
             class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
-            href="/aboutus"
+            href="/about-us"
             title="About us"
           >
             About us

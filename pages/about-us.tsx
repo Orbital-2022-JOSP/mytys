@@ -16,7 +16,6 @@ const AboutUsPage: React.FC = () => {
             <Team />
             <Stats />
             <JoinUsCTA />
-            <ContactUs />
         </>
     );
 };

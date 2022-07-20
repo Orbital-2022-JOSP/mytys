@@ -130,7 +130,7 @@ export const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/aboutus"}>
+                                    <Link href={"/about-us"}>
                                         <a
                                             aria-label="About us"
                                             title="About us"
@@ -361,7 +361,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/aboutus"}>
+                                                <Link href={"/about-us"}>
                                                     <a
                                                         aria-label="About us"
                                                         title="About us"

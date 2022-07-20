@@ -103,7 +103,7 @@ describe("The Aboutus Link", () => {
             const { container } = render(<Navbar />);
 
             expect(screen.getByRole('link', { name: "About us" }))
-                .toHaveAttribute('href', '/aboutus');
+                .toHaveAttribute('href', '/about-us');
         })
 })
 
