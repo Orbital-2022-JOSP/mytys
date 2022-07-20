@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GenericContainer } from '../GenericContainer/GenericContainer';
 
-export const LandingPage_main = () => {
+export const Hero4 = () => {
     return (
         <GenericContainer>
             <div className="grid gap-10 row-gap-10 lg:grid-cols-2">
