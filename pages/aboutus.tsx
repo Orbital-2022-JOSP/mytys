@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import React from "react";
-import { JoinUsCTA1 } from "../components/JoinUsCTA1/JoinUsCTA1";
+import { JoinUsCTA } from '../components/JoinUsCTA/JoinUsCTA';
 import { Stats } from "../components/Stats/Stats";
-import { Team1 } from "../components/Team1/Team1";
+import { Team } from '../components/Team/Team';
 import { WhoAreWe } from '../components/WhoAreWe/WhoAreWe';
 
 const AboutUsPage1: React.FC = () => {
@@ -12,9 +12,9 @@ const AboutUsPage1: React.FC = () => {
                 <title>About Us - MYTYS</title>
             </Head>
             <WhoAreWe />
-            <Team1 />
+            <Team />
             <Stats />
-            <JoinUsCTA1 />
+            <JoinUsCTA />
         </>
     );
 };
