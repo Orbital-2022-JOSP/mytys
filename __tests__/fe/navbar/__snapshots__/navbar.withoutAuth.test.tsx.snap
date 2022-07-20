@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar Component Should render correctly 1`] = `
+exports[`The Navbar Component Should render correctly 1`] = `
 <div>
   <div
     class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
@@ -30,20 +30,20 @@ exports[`Navbar Component Should render correctly 1`] = `
       >
         <li>
           <a
-            aria-label="Our product"
+            aria-label="Home"
             class="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
             href="/"
-            title="Our product"
+            title="Home"
           >
             Home
           </a>
         </li>
         <li>
           <a
-            aria-label="Our courses"
+            aria-label="Courses"
             class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
             href="/courses"
-            title="Our courses"
+            title="Courses"
           >
             Courses
           </a>
@@ -70,11 +70,11 @@ exports[`Navbar Component Should render correctly 1`] = `
         </li>
         <li>
           <button
-            aria-label="Sign up"
+            aria-label="Sign In"
             class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none"
-            title="Sign up"
+            title="Sign In"
           >
-            Log In
+            Sign In
           </button>
         </li>
       </ul>

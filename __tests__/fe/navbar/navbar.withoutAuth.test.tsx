@@ -21,7 +21,7 @@ jest.mock("next-auth/react", () => {
     };
 });
 
-describe("Navbar Component", () => {
+describe("The Navbar Component", () => {
 
     it('Should render correctly',
         async () => {
@@ -29,12 +29,91 @@ describe("Navbar Component", () => {
 
             expect(container).toMatchSnapshot()
         })
-        
-    it('Show Log Out Button when has session',
+})
+
+describe("The Home Link", () => {
+
+    it('Should render correctly',
         async () => {
             const { container } = render(<Navbar />);
 
-            // expect(container).toMatchSnapshot()
-            expect(screen.getByText("Log In")).toBeInTheDocument();
+            expect(screen.getByRole('link', { name: "Home" }))
+                .toBeInTheDocument();
+        })
+
+    it('Should have the correct link',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "Home" }))
+                .toHaveAttribute('href', '/');
+        })
+})
+
+describe("The Courses Link", () => {
+
+    it('Should render correctly',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "Courses" }))
+                .toBeInTheDocument();
+        })
+
+    it('Should have the correct link',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "Courses" }))
+                .toHaveAttribute('href', '/courses');
+        })
+})
+
+describe("The How It Works Link", () => {
+
+    it('Should render correctly',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "How it works" }))
+                .toBeInTheDocument();
+        })
+
+    it('Should have the correct link',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "How it works" }))
+                .toHaveAttribute('href', '/how-it-works');
+        })
+})
+
+describe("The Aboutus Link", () => {
+
+    it('Should render correctly',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "About us" }))
+                .toBeInTheDocument();
+        })
+
+    it('Should have the correct link',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "About us" }))
+                .toHaveAttribute('href', '/aboutus');
+        })
+})
+
+describe("The Sign In Button", () => {
+
+    it('Should render correctly',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('button', { name: "Sign In" }))
+                .toBeInTheDocument();
         })
 })
