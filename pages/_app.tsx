@@ -2,7 +2,7 @@ import { SessionProvider } from "next-auth/react";
 import { AppProps } from "next/app";
 import Head from 'next/head';
 import { AdminLayout } from '../components/AdminLayout/AdminLayout';
-import { FooterWithContent } from "../components/FooterWithContent/FooterWithContent";
+import { Footer } from '../components/Footer/Footer';
 import { Navbar } from '../components/Navbar/Navbar';
 import '../styles/globals.css';
 
@@ -25,7 +25,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
                         <main className="min-h-2/3-screen flex flex-col justify-center">
                             <Component {...pageProps} />
                         </main>
-                        <FooterWithContent />
+                        <Footer />
                     </>
             }
         </SessionProvider>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export const Footer: React.FC = () => {
     return (
@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
                 />
             </svg>
             <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-                <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+                <div className="grid gap-20 row-gap-10 mb-8 lg:grid-cols-6">
                     <div className="md:max-w-md lg:col-span-2">
                         <Link href={"/"}>
                             <a
@@ -22,41 +22,29 @@ export const Footer: React.FC = () => {
                                 title="Company"
                                 className="inline-flex items-center"
                             >
-                                <svg
-                                    className="w-8 text-cyan-accent-400"
-                                    viewBox="0 0 24 24"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeMiterlimit="10"
-                                    stroke="currentColor"
-                                    fill="none"
-                                >
-                                    <rect x="3" y="1" width="7" height="12" />
-                                    <rect x="3" y="17" width="7" height="6" />
-                                    <rect x="14" y="1" width="7" height="6" />
-                                    <rect x="14" y="11" width="7" height="12" />
-                                </svg>
+                                <img
+                                    alt="MYTYS Logo"
+                                    src='/logo.svg'
+                                    className="w-8 text-light-blue-accent-400"
+                                />
                                 <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                                    Company
+                                    MYTYS
                                 </span>
                             </a>
                         </Link>
                         <div className="mt-4 lg:max-w-sm">
                             <p className="text-sm text-light-blue-50">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudantium, totam rem aperiam.
+                                As an education-tech company, we are committed to offer a tuition-like experience to students who find conventional tuition sessions too expensive.
                             </p>
                             <p className="mt-4 text-sm text-light-blue-50">
-                                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                                beatae vitae dicta sunt explicabo.
+                                We hope that through our personalised and gamified curriculum, students can once again rediscover the joy of learning and excel in their studies simultaneously.
                             </p>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+                    <div className="grid grid-cols-2 gap-8 row-gap-8 lg:col-span-4 md:grid-cols-4">
                         <div>
                             <p className="font-semibold tracking-wide text-cyan-accent-400">
-                                Category
+                                Our company
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
@@ -64,7 +52,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            News
+                                            Our goals
                                         </a>
                                     </Link>
                                 </li>
@@ -73,7 +61,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            World
+                                            Our staff
                                         </a>
                                     </Link>
                                 </li>
@@ -82,7 +70,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            Games
+                                            Our educational roadmap
                                         </a>
                                     </Link>
                                 </li>
@@ -91,7 +79,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            References
+                                            Our History
                                         </a>
                                     </Link>
                                 </li>
@@ -99,7 +87,7 @@ export const Footer: React.FC = () => {
                         </div>
                         <div>
                             <p className="font-semibold tracking-wide text-cyan-accent-400">
-                                Cherry
+                                Our subjects offered
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
@@ -107,7 +95,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            Web
+                                            Mathematics
                                         </a>
                                     </Link>
                                 </li>
@@ -116,7 +104,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            eCommerce
+                                            Science(generic)
                                         </a>
                                     </Link>
                                 </li>
@@ -125,7 +113,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            Business
+                                            Chemistry
                                         </a>
                                     </Link>
                                 </li>
@@ -134,7 +122,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            Entertainment
+                                            Physics
                                         </a>
                                     </Link>
                                 </li>
@@ -143,7 +131,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            Portfolio
+                                            Biology
                                         </a>
                                     </Link>
                                 </li>
@@ -151,7 +139,7 @@ export const Footer: React.FC = () => {
                         </div>
                         <div>
                             <p className="font-semibold tracking-wide text-cyan-accent-400">
-                                Apples
+                                Our platform
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
@@ -159,7 +147,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            Media
+                                            Testimonials
                                         </a>
                                     </Link>
                                 </li>
@@ -168,68 +156,7 @@ export const Footer: React.FC = () => {
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
-                                            Brochure
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={"/"}>
-                                        <a
-                                            className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                                        >
-                                            Nonprofit
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={"/"}>
-                                        <a
-                                            className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                                        >
-                                            Educational
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={"/"}>
-                                        <a
-                                            className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                                        >
-                                            Projects
-                                        </a>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p className="font-semibold tracking-wide text-cyan-accent-400">
-                                Business
-                            </p>
-                            <ul className="mt-2 space-y-2">
-                                <li>
-                                    <Link href={"/"}>
-                                        <a
-                                            className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                                        >
-                                            Infopreneur
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={"/"}>
-                                        <a
-                                            className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                                        >
-                                            Personal
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={"/"}>
-                                        <a
-                                            className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                                        >
-                                            Wiki
+                                            Blog
                                         </a>
                                     </Link>
                                 </li>
@@ -248,7 +175,7 @@ export const Footer: React.FC = () => {
                 </div>
                 <div className="flex flex-col justify-between pt-5 pb-10 border-t border-light-blue-accent-200 sm:flex-row">
                     <p className="text-sm text-gray-100">
-                        © Copyright 2020 Lorem Inc. All rights reserved.
+                        © Copyright 2022 MYTYS inc. All rights reserved.
                     </p>
                     <div className="flex items-center mt-4 space-x-4 sm:mt-0">
                         <Link href={"/"}>
