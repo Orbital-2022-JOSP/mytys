@@ -1,6 +1,6 @@
 import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from '../../../../dbConnect';
+import dbConnect from '../../../../lib/dbConnect';
 import QuestionTypeModel from "../../../../models/QuestionType.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

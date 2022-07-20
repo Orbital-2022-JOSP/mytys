@@ -1,6 +1,6 @@
 import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from '../../../../dbConnect';
+import dbConnect from '../../../../lib/dbConnect';
 import CourseModel from '../../../../models/Course.model';
 import MCQOptionModel from '../../../../models/MCQOption.model';
 import QuestionModel from '../../../../models/Question.model';

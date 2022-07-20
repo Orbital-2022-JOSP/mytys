@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from '../../../../dbConnect';
+import dbConnect from '../../../../lib/dbConnect';
 import MCQOptionModel from "../../../../models/MCQOption.model";
 import QuestionModel from "../../../../models/Question.model";
 import QuestionTopicModel from "../../../../models/QuestionTopic.model";
