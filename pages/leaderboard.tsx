@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { LeaderBoard1 } from "../components/Leaderboard1/Leaderboard1";
+import { LeaderBoard } from "../components/Leaderboard/Leaderboard";
 
 const LeaderboardPage: React.FC = () => {
     return (
@@ -7,7 +7,7 @@ const LeaderboardPage: React.FC = () => {
             <Head>
                 <title>Leaderboard - MYTYS</title>
             </Head>
-            <LeaderBoard1 />
+            <LeaderBoard />
         </>
     );
 };

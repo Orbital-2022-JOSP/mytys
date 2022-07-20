@@ -29,64 +29,91 @@ describe("The Navbar Component", () => {
 
             expect(container).toMatchSnapshot()
         })
-
-    it('Should render the home link correctly',
-        async () => {
-            const { container } = render(<Navbar />);
-
-            expect(screen.getByRole('link', { name: "Home" })).toBeInTheDocument();
-        })
-
-    it('Should render the courses link correctly',
-        async () => {
-            const { container } = render(<Navbar />);
-
-            expect(screen.getByText('Courses')).toBeInTheDocument();
-        })
-
-    it('Should render the quiz link correctly',
-        async () => {
-            const { container } = render(<Navbar />);
-
-            expect(screen.getByText('Quiz')).toBeInTheDocument();
-        })
-
-    it('Should render the leaderboard link correctly',
-        async () => {
-            const { container } = render(<Navbar />);
-
-            expect(screen.getByText('LeaderBoard')).toBeInTheDocument();
-        })
-
-    it('Show Log Out Button when has session',
-        async () => {
-            const { container } = render(<Navbar />);
-
-            expect(screen.getByText("Log Out")).toBeInTheDocument();
-        })
 })
 
 describe("The Home Link", () => {
+
+    it('Should render correctly',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "Home" }))
+                .toBeInTheDocument();
+        })
 
     it('Should have the correct link',
         async () => {
             const { container } = render(<Navbar />);
 
-            expect(container).toMatchSnapshot()
+            expect(screen.getByRole('link', { name: "Home" }))
+                .toHaveAttribute('href', '/');
         })
+})
 
-    it('Should be clickable',
+describe("The Courses Link", () => {
+
+    it('Should render correctly',
         async () => {
             const { container } = render(<Navbar />);
 
-            expect(screen.getByText('Home')).toBeInTheDocument();
+            expect(screen.getByRole('link', { name: "Courses" }))
+                .toBeInTheDocument();
         })
 
-    it('Should go to the right ',
+    it('Should have the correct link',
         async () => {
             const { container } = render(<Navbar />);
 
-            expect(screen.getByText('Home')).toBeInTheDocument();
+            expect(screen.getByRole('link', { name: "Courses" }))
+                .toHaveAttribute('href', '/courses');
+        })
+})
+
+describe("The Quiz Link", () => {
+
+    it('Should render correctly',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "Quiz" }))
+                .toBeInTheDocument();
         })
 
+    it('Should have the correct link',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "Quiz" }))
+                .toHaveAttribute('href', '/questions/mcq/random');
+        })
+})
+
+describe("The LeaderBoard Link", () => {
+
+    it('Should render correctly',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "LeaderBoard" }))
+                .toBeInTheDocument();
+        })
+
+    it('Should have the correct link',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('link', { name: "LeaderBoard" }))
+                .toHaveAttribute('href', '/leaderboard');
+        })
+})
+
+describe("The Sign Out Button", () => {
+
+    it('Should render correctly',
+        async () => {
+            const { container } = render(<Navbar />);
+
+            expect(screen.getByRole('button', { name: "Sign Out" }))
+                .toBeInTheDocument();
+        })
 })

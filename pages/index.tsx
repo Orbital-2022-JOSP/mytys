@@ -2,7 +2,7 @@ import { useSession } from "next-auth/react";
 import Head from 'next/head';
 import { useRouter } from "next/router";
 import React from "react";
-import { LandingPage_main } from "../components/LandingPage_main/LandingPage_main";
+import { Hero4 } from "../components/Hero4/Hero4";
 import { MailingList } from "../components/MailingList/MailingList";
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
             <Head>
                 <title>Home - MYTYS</title>
             </Head>
-            <LandingPage_main />
+            <Hero4 />
             <MailingList />
             <Steps />
             <Stats />
