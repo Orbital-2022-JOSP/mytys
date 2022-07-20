@@ -22,8 +22,8 @@ export const Hero4 = () => {
                         <Link href={"/"}>
                             <a
                                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-300 rounded shadow-md bg-light-blue-500 hover:bg-light-blue-800 focus:shadow-outline focus:outline-none"
-                                aria-label="Sign up"
-                                title="Sign up"
+                                aria-label="Enroll For Free"
+                                title="Enroll For Free"
                             >
                                 Enroll For Free
                             </a>
