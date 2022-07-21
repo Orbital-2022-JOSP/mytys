@@ -1,10 +1,10 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../lib/dbConnect";
+import MCQOptionModel from "../../../models/MCQOption.model";
 import QuestionModel from "../../../models/Question.model";
 import QuestionTopicModel from "../../../models/QuestionTopic.model";
 import QuestionTypeModel from "../../../models/QuestionType.model";
-import sanitize from 'mongo-sanitize';
-import MCQOptionModel from "../../../models/MCQOption.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { method } = req;
@@ -31,17 +31,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             break;
 
         case 'POST':
-            const { body } = sanitize(req.body);
+            const questionData = sanitize(req.body);
 
-            if (body.mcqCorrectAnswer && body.mcqOptions) {
+            if (questionData.questionType == "mcq") {
+                const mcqCorrectAnswer = questionData.mcqCorrectAnswer;
+                const mcqOptions = questionData.mcqOptions;
+                delete questionData.mcqCorrectAnswer;
+                delete questionData.mcqOptions;
+
                 try {
-                    const mcqCorrectAnswer = body.mcqCorrectAnswer;
-                    const mcqOptions = body.mcqOptions;
-
-                    delete body.mcqCorrectAnswer;
-                    delete body.mcqOptions;
-
-                    const newQuestion = new QuestionModel(body)
+                    const newQuestion = new QuestionModel(questionData)
                     const newCorrectMCQOption = await MCQOptionModel.create({
                         questionId: newQuestion._id,
                         text: mcqCorrectAnswer.text
@@ -67,7 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             } else {
                 try {
                     const newQuestion = await QuestionModel.create(
-                        sanitize(req.body)
+                        questionData
                     );
                     res.status(201).json({ success: true, data: newQuestion });
                 } catch (error) {
