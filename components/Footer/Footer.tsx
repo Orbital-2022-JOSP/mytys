@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/about-us"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/about-us"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
@@ -66,20 +66,11 @@ export const Footer: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/how-it-works"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
                                             Our educational roadmap
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={"/"}>
-                                        <a
-                                            className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                                        >
-                                            Our History
                                         </a>
                                     </Link>
                                 </li>
@@ -91,7 +82,7 @@ export const Footer: React.FC = () => {
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/courses"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
@@ -100,7 +91,7 @@ export const Footer: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/courses"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
@@ -109,7 +100,7 @@ export const Footer: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/courses"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
@@ -118,7 +109,7 @@ export const Footer: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/courses"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
@@ -127,7 +118,7 @@ export const Footer: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/courses"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
@@ -143,7 +134,7 @@ export const Footer: React.FC = () => {
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/how-it-works"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
@@ -152,16 +143,7 @@ export const Footer: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>
-                                        <a
-                                            className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                                        >
-                                            Blog
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={"/"}>
+                                    <Link href={"/how-it-works"}>
                                         <a
                                             className="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
                                         >
