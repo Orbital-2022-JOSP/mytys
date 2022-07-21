@@ -12,7 +12,8 @@ const createJestConfig = nextJest({
 const customJestConfig: Config.InitialOptions = {
     setupFilesAfterEnv: [
         '<rootDir>/jest.setup.js',
-        // '<rootDir>/test/setupFile.ts'
+        // '<rootDir>/test/setupFile.ts',
+        'jest-canvas-mock'
     ],
     moduleNameMapper: {
         // Handle module aliases (this will be automatically configured for you soon)
