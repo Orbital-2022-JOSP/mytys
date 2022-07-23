@@ -1,4 +1,5 @@
-name: Jest Tester and Code Coverage
+# name: Jest Tester and Code Coverage
+name: Jest Tester
 
 on:
   pull_request:
@@ -21,6 +22,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        # cache: 'npm'
     - run: yarn install
     - run: yarn run test:ci
