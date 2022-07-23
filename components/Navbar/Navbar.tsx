@@ -53,7 +53,7 @@ export const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/questions/mcq/random"}>
+                                    <Link href={"/questions/random"}>
                                         <a
                                             aria-label="Quiz"
                                             title="Quiz"
@@ -241,7 +241,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/questions/mcq/random"}>
+                                                <Link href={"/questions/random"}>
                                                     <a
                                                         aria-label="Quiz"
                                                         title="Quiz"
