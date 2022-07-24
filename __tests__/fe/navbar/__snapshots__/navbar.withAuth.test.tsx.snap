@@ -52,7 +52,7 @@ exports[`The Navbar Component Should render correctly 1`] = `
           <a
             aria-label="Quiz"
             class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
-            href="/questions/mcq/random"
+            href="/questions/random"
             title="Quiz"
           >
             Quiz
