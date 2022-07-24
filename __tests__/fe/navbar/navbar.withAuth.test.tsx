@@ -84,7 +84,7 @@ describe("The Quiz Link", () => {
             const { container } = render(<Navbar />);
 
             expect(screen.getByRole('link', { name: "Quiz" }))
-                .toHaveAttribute('href', '/questions/mcq/random');
+                .toHaveAttribute('href', '/questions/random');
         })
 })
 
