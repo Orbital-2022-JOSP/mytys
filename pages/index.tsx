@@ -6,7 +6,7 @@ import { Hero4 } from "../components/Hero4/Hero4";
 import { MailingList } from "../components/MailingList/MailingList";
 import { Stats } from "../components/Stats/Stats";
 import { Steps } from "../components/Steps/Steps";
-
+import { CourseCarousel } from "../components/CourseCarousel/CourseCarousel";
 const Home: React.FC = () => {
     const router = useRouter();
     const isActive: (pathname: string) => boolean = (pathname) =>
@@ -16,13 +16,7 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <Head>
-                <title>Home - MYTYS</title>
-            </Head>
-            <Hero4 />
-            <MailingList />
-            <Steps />
-            <Stats />
+           <CourseCarousel/>
         </>
     );
 };
