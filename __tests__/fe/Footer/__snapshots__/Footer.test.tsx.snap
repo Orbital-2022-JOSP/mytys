@@ -71,7 +71,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/about-us"
                 >
                   Our goals
                 </a>
@@ -79,7 +79,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/about-us"
                 >
                   Our staff
                 </a>
@@ -87,17 +87,9 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/how-it-works"
                 >
                   Our educational roadmap
-                </a>
-              </li>
-              <li>
-                <a
-                  class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
-                >
-                  Our History
                 </a>
               </li>
             </ul>
@@ -114,7 +106,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/courses"
                 >
                   Mathematics
                 </a>
@@ -122,7 +114,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/courses"
                 >
                   Science(generic)
                 </a>
@@ -130,7 +122,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/courses"
                 >
                   Chemistry
                 </a>
@@ -138,7 +130,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/courses"
                 >
                   Physics
                 </a>
@@ -146,7 +138,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/courses"
                 >
                   Biology
                 </a>
@@ -165,7 +157,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/how-it-works"
                 >
                   Testimonials
                 </a>
@@ -173,15 +165,7 @@ exports[`The Footer Component Should render correctly 1`] = `
               <li>
                 <a
                   class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  class="transition-colors duration-300 text-light-blue-50 hover:text-cyan-accent-400"
-                  href="/"
+                  href="/how-it-works"
                 >
                   Forum
                 </a>
