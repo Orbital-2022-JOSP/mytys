@@ -56,13 +56,12 @@ export const CourseCarousel: React.FC = () => {
                                                     height="24"
                                                 />
                                             </svg>
-                                            <span className="relative">The</span>
+                                            <span className="relative">Our</span>
                                         </span>{' '}
-                                        quick, brown fox jumps over a lazy dog
+                                        available courses
                                     </h2>
                                     <p className="text-base text-gray-700 md:text-lg">
-                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                                        Feel free to explore our courses and selct those that suit your needs!
                                     </p>
                                 </div>
                             </div>
