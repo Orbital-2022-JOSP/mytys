@@ -21,7 +21,11 @@ export const MCQOptionSchema = new Schema<IMCQOption>({
         ref: 'MCQ'
     },
     text: {
-        type: String
+        type: String,
+        required: [
+            function () { return this.text != null; },
+            'MCQ Option text is required'
+        ]
     }
 }, {
     timestamps: true

@@ -32,11 +32,19 @@ export interface IQuestionAnswer {
 const QuestionAnswerSchema = new Schema<IQuestionAnswer>({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+        ref: "User",
+        required: [
+            function () { return this.user != null; },
+            'User is required'
+        ]
     },
     question: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Question"
+        ref: "Question",
+        required: [
+            function () { return this.question != null; },
+            'Question is required'
+        ]
     },
     score: {
         type: Number,

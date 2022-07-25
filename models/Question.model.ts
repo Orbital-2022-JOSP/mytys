@@ -38,16 +38,28 @@ export interface IQuestion {
 
 const QuestionSchema = new Schema<IQuestion>({
     title: {
-        type: String
+        type: String,
+        required: [
+            function () { return this.title != null; },
+            'Title is required'
+        ]
     },
     description: {
         type: String
     },
     difficulty: {
-        type: Number
+        type: Number,
+        required: [
+            function () { return this.difficulty != null; },
+            'Difficulty is required'
+        ]
     },
     explanation: {
-        type: String
+        type: String,
+        required: [
+            function () { return this.explanation != null; },
+            'Explanation is required'
+        ]
     },
     questionTopics: [{
         type: mongoose.Schema.Types.ObjectId,
@@ -58,7 +70,11 @@ const QuestionSchema = new Schema<IQuestion>({
         ref: "QuestionType"
     }],
     subject: {
-        type: String
+        type: String,
+        required: [
+            function () { return this.subject != null; },
+            'Subject is required'
+        ]
     },
     questionType: {
         type: String,

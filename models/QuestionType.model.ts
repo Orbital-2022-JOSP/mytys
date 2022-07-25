@@ -14,7 +14,11 @@ export interface IQuestionType {
 
 const QuestionTypeSchema = new Schema<IQuestionType>({
     name: {
-        type: String
+        type: String,
+        required: [
+            function () { return this.name != null; },
+            'Name is required'
+        ]
     }
 }, {
     timestamps: true
