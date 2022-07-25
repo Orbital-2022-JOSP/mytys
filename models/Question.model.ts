@@ -49,10 +49,7 @@ const QuestionSchema = new Schema<IQuestion>({
     },
     difficulty: {
         type: Number,
-        required: [
-            function () { return this.difficulty != null; },
-            'Difficulty is required'
-        ]
+        required: true
     },
     explanation: {
         type: String,

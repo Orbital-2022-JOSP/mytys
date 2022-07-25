@@ -49,10 +49,7 @@ const CourseSchema = new Schema<ICourse>({
     },
     difficulty: {
         type: Number,
-        required: [
-            function () { return this.difficulty != null; },
-            'Difficulty is required'
-        ]
+        required: true
     },
     courseTopics: [{
         type: mongoose.Schema.Types.ObjectId,
@@ -76,7 +73,8 @@ const CourseSchema = new Schema<ICourse>({
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+        ref: "User",
+        required: true
     }
 }, {
     timestamps: true
