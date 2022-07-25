@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from "react";
-import { ContactUs } from "../components/ContactUs/ContactUs";
+import { Features } from '../components/Features/Features';
 import { JoinUsCTA } from "../components/JoinUsCTA/JoinUsCTA";
 import { Stats } from "../components/Stats/Stats";
 import { Team } from "../components/Team/Team";
@@ -13,10 +13,10 @@ const AboutUsPage: React.FC = () => {
                 <title>About Us - MYTYS</title>
             </Head>
             <WhoAreWe />
+            <Features />
             <Team />
             <Stats />
             <JoinUsCTA />
-            <ContactUs />
         </>
     );
 };
