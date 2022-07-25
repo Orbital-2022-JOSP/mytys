@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { IQuestionTopic } from '../../../models/QuestionTopic.model';
 import { IQuestionType } from '../../../models/QuestionType.model';
+import { useRouter } from 'next/router';
 
 type QuestionFormProps = {
     questionTopics: Array<IQuestionTopic>;
@@ -43,7 +44,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, ques
         setQnTypes(value);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const data = {
             "title": title,
@@ -61,7 +62,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, ques
             "oeCorrectAnswer": [typeOfQn == "mcq" ? "" : openEndedAnswer]
         }
 
-        fetch('/api/questions/mcq/', {
+        let res = await fetch('/api/questions/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -69,6 +70,12 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, ques
             },
             body: JSON.stringify(data)
         });
+
+        const router = useRouter();
+
+        if(res.status == 201) {
+            router.push('/admin/questions')
+        }
     }
 
     return (
