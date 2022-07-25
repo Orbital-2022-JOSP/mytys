@@ -14,7 +14,8 @@ String.prototype.toTitleCase = function () {
 
 export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, questionTypes }) => {
     const questionDifficulties = [10, 20, 30, 40, 50, 60, 70, 80, 90];
-    const subjects = ["math"]
+    const subjects = ["math"];
+    const router = useRouter();
 
     const [title, setTitle] = useState("");
     const [openEndedAnswer, setOpenEndedAnswer] = useState("");
@@ -70,8 +71,6 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, ques
             },
             body: JSON.stringify(data)
         });
-
-        const router = useRouter();
 
         if(res.status == 201) {
             router.push('/admin/questions')
