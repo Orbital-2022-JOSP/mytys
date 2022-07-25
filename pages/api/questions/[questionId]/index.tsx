@@ -40,7 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     })
                     .setOptions({ sanitizeFilter: true });
 
-                res.status(201).json({ success: true, data: question });
+                res.status(200).json({ success: true, data: question });
             } catch (error) {
                 console.log(error)
                 res.status(400).json({ success: false });
@@ -57,7 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     })
                     .setOptions({ sanitizeFilter: true });
                 if (!deletedQuestion) {
-                    return res.status(400).json({ success: false });
+                    return res.status(404).json({ success: false });
                 }
                 res.status(200).json({ success: true, data: {} });
             } catch (error) {

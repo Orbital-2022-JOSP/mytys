@@ -15,14 +15,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             try {
                 const Questions = await QuestionModel
                     .find({
-                        questionTopic: {
+                        questionTopics: {
                             $eq: questionTopic
                         }
                     })
                     .setOptions({ sanitizeFilter: true })
                     .exec();
-                res.status(201).json({ success: true, data: Questions });
+                res.status(200).json({ success: true, data: Questions });
             } catch (error) {
+                console.log(error)
                 res.status(400).json({ success: false });
             }
             break;

@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     .select("_id")
                     .skip(randomOffset)
                     .exec();
-                res.status(201).json({ success: true, data: question });
+                res.status(200).json({ success: true, data: question });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
