@@ -13,12 +13,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET':
             try {
                 const courses = await CourseModel
-                .find({})
-                .populate({
-                    path: "author",
-                    model: UserModel
-                });
-                res.status(201).json({ success: true, data: courses });
+                    .find({})
+                    .populate({
+                        path: "author",
+                        model: UserModel
+                    });
+                res.status(200).json({ success: true, data: courses });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
@@ -31,7 +31,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 );
                 res.status(201).json({ success: true, data: newCourse });
             } catch (error) {
-                res.status(400).json({ success: false });
+                let errors = {};
+                if (error.name === "ValidationError") {
+                    Object.keys(error.errors).forEach((key) => {
+                        errors[key] = error.errors[key].message;
+                    });
+                }
+                res.status(400).json({ success: false, errors: errors });
             }
             break;
 

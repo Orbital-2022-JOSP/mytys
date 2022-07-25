@@ -14,7 +14,11 @@ export interface IQuestionTopic {
 
 const QuestionTopicSchema = new Schema<IQuestionTopic>({
     name: {
-        type: String
+        type: String,
+        required: [
+            function () { return this.name != null; },
+            'Name is required'
+        ]
     }
 }, {
     timestamps: true

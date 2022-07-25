@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         case 'GET':
             try {
                 const Parents = await UserModel.find({ userRole: "PARENTS" }).exec();
-                res.status(201).json({ success: true, data: Parents });
+                res.status(200).json({ success: true, data: Parents });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
