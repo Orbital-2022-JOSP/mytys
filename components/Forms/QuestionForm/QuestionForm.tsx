@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { IQuestionTopic } from '../../../models/QuestionTopic.model';
 import { IQuestionType } from '../../../models/QuestionType.model';
+import { useRouter } from 'next/router';
 
 type QuestionFormProps = {
     questionTopics: Array<IQuestionTopic>;
@@ -13,7 +14,8 @@ String.prototype.toTitleCase = function () {
 
 export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, questionTypes }) => {
     const questionDifficulties = [10, 20, 30, 40, 50, 60, 70, 80, 90];
-    const subjects = ["math"]
+    const subjects = ["math"];
+    const router = useRouter();
 
     const [title, setTitle] = useState("");
     const [openEndedAnswer, setOpenEndedAnswer] = useState("");
@@ -43,7 +45,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, ques
         setQnTypes(value);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const data = {
             "title": title,
@@ -61,7 +63,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, ques
             "oeCorrectAnswer": [typeOfQn == "mcq" ? "" : openEndedAnswer]
         }
 
-        fetch('/api/questions/mcq/', {
+        let res = await fetch('/api/questions/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -69,6 +71,10 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ questionTopics, ques
             },
             body: JSON.stringify(data)
         });
+
+        if(res.status == 201) {
+            router.push('/admin/questions')
+        }
     }
 
     return (
