@@ -25,9 +25,10 @@ export type QuestionProps = {
     oeCorrectAnswers: Array<String>;
     nextLink: string;
     prevLink: string;
+    nextQuestionFunc: () => void;
 }
 
-export const Question: React.FC<QuestionProps> = ({ id, title, description, explanation, questionTopics, questionTypes, subject, questionType, mcqCorrectAnswer, mcqOptions, oeCorrectAnswers, nextLink, prevLink }) => {
+export const Question: React.FC<QuestionProps> = ({ id, title, description, explanation, questionTopics, questionTypes, subject, questionType, mcqCorrectAnswer, mcqOptions, oeCorrectAnswers, nextLink, prevLink, nextQuestionFunc }) => {
     const [completed, setCompleted] = useState(false);
     const [correct, setCorrect] = useState(false);
     const [oeAnswer, setOeAnswer] = useState("");
@@ -101,22 +102,23 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
                             {description}
                         </p>
                         <div className="hidden lg:flex items-center">
-                            <Link href={nextLink} replace={true}>
-                                <a
-                                    aria-label="Next Question Link"
-                                    className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none disabled"
-                                >
-                                    Next Question
-                                </a>
-                            </Link>
-                            <Link href={prevLink} replace={true}>
+                            {/* <Link href={nextLink} replace={true}> */}
+                            <a
+                                aria-label="Next Question Link"
+                                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none disabled"
+                                onClick={nextQuestionFunc}
+                            >
+                                Next Question
+                            </a>
+                            {/* </Link> */}
+                            {/* <Link href={prevLink} replace={true}>
                                 <a
                                     aria-label=""
                                     className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                                 >
                                     Previous Question
                                 </a>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                     {
@@ -164,22 +166,23 @@ export const Question: React.FC<QuestionProps> = ({ id, title, description, expl
                                 </div>
                     }
                     <div className="lg:hidden items-center mt-10">
-                        <Link href={nextLink} replace={true}>
-                            <a
-                                aria-label="Next Question Link"
-                                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none disabled"
-                            >
-                                Next Question
-                            </a>
-                        </Link>
-                        <Link href={prevLink} replace={true}>
+                        {/* <Link href={nextLink} replace={true}> */}
+                        <a
+                            aria-label="Next Question Link"
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none disabled"
+                            onClick={nextQuestionFunc}
+                        >
+                            Next Question
+                        </a>
+                        {/* </Link> */}
+                        {/* <Link href={prevLink} replace={true}>
                             <a
                                 aria-label=""
                                 className="inline-flex items-center font-semibold transition-colors duration-200 text-light-blue-accent-400 hover:text-light-blue-800"
                             >
                                 Previous Question
                             </a>
-                        </Link>
+                        </Link> */}
                     </div>
                 </>
             </div>

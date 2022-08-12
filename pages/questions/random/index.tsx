@@ -10,6 +10,16 @@ const RandomMCQQuestionAnsweringPage: React.FC = () => {
     const [questionId, setQuestionId] = useState("");
     const { data: questionIdData, error: questionIdDataError } = useSWR(`/api/questions/random`, fetcher);
     const { data: questionData, error: questionError } = useSWR(questionId ? `/api/questions/${questionId}` : null, fetcher);
+    
+    const nextQuestionFunc = () => {
+        fetch(
+            '/api/questions/random',
+        )
+            .then(res => res.json())
+            .then(res => {
+                setQuestionId(res.data._id);
+            })
+    }
 
     useEffect(() => {
         if (questionIdData) {
@@ -26,7 +36,7 @@ const RandomMCQQuestionAnsweringPage: React.FC = () => {
                 questionError && questionError.status == 404
                     ? <NotFound />
                     : questionData
-                        ? <Question {...questionData.data} prevLink={""} nextLink={""} />
+                        ? <Question {...questionData.data} prevLink={""} nextLink={""} nextQuestionFunc={nextQuestionFunc} />
                         : <LoadingComponent />
             }
         </>
