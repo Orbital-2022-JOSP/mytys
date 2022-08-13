@@ -5,11 +5,12 @@ import LoadingComponent from '../../components/LoadingComponent/LoadingComponent
 import { NotFound } from '../../components/NotFound/NotFound';
 import { Question } from '../../components/Question/Question';
 import { fetcher } from '../../lib/fetcher';
+import { isValidObjectId } from '../../lib/isValidObjectId';
 
 const QuestionAnsweringPage: React.FC = () => {
     const router = useRouter();
     const { id } = router.query;
-    const { data: questionData, error: questionError } = useSWR(id ? `/api/questions/${id}` : null, fetcher);
+    const { data: questionData, error: questionError } = useSWR(isValidObjectId(id as string) ? `/api/questions/${id}` : null, fetcher);
 
     return (
         <>
@@ -17,7 +18,7 @@ const QuestionAnsweringPage: React.FC = () => {
                 <title>Question - MYTYS</title>
             </Head>
             {
-                questionError && questionError.status == 404
+                !isValidObjectId(id as string) || (questionError && questionError.status == 404)
                     ? <NotFound />
                     : questionData
                         ? <Question {...questionData.data} prevLink={""} nextLink={""} />
