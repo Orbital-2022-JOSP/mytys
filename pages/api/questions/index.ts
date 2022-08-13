@@ -1,10 +1,10 @@
+import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from "../../../dbConnect";
+import dbConnect from "../../../lib/dbConnect";
+import MCQOptionModel from "../../../models/MCQOption.model";
 import QuestionModel from "../../../models/Question.model";
 import QuestionTopicModel from "../../../models/QuestionTopic.model";
 import QuestionTypeModel from "../../../models/QuestionType.model";
-import sanitize from 'mongo-sanitize';
-import MCQOptionModel from "../../../models/MCQOption.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { method } = req;
@@ -24,24 +24,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                         path: 'questionTypes',
                         model: QuestionTypeModel
                     })
-                res.status(201).json({ success: true, data: questions });
+                res.status(200).json({ success: true, data: questions });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
             break;
 
         case 'POST':
-            const { body } = sanitize(req.body);
+            const questionData = sanitize(req.body);
 
-            if (body.mcqCorrectAnswer && body.mcqOptions) {
+            if (questionData.questionType == "mcq") {
+                const mcqCorrectAnswer = questionData.mcqCorrectAnswer;
+                const mcqOptions = questionData.mcqOptions;
+                delete questionData.mcqCorrectAnswer;
+                delete questionData.mcqOptions;
+
                 try {
-                    const mcqCorrectAnswer = body.mcqCorrectAnswer;
-                    const mcqOptions = body.mcqOptions;
-
-                    delete body.mcqCorrectAnswer;
-                    delete body.mcqOptions;
-
-                    const newQuestion = new QuestionModel(body)
+                    const newQuestion = new QuestionModel(questionData)
                     const newCorrectMCQOption = await MCQOptionModel.create({
                         questionId: newQuestion._id,
                         text: mcqCorrectAnswer.text
@@ -58,20 +57,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
                     newQuestion.mcqCorrectAnswer = newCorrectMCQOption._id;
                     newQuestion.mcqOptions = optionsIds;
-                    newQuestion.save();
+                    await newQuestion.save();
 
                     res.status(201).json({ success: true, data: newQuestion });
                 } catch (error) {
-                    res.status(400).json({ success: false });
+                    console.log(error)
+                    let errors = {};
+                    if (error.name === "ValidationError") {
+                        Object.keys(error.errors).forEach((key) => {
+                            errors[key] = error.errors[key].message;
+                        });
+                    }
+                    res.status(400).json({ success: false, errors: errors });
                 }
             } else {
                 try {
                     const newQuestion = await QuestionModel.create(
-                        sanitize(req.body)
+                        questionData
                     );
                     res.status(201).json({ success: true, data: newQuestion });
                 } catch (error) {
-                    res.status(400).json({ success: false });
+                    let errors = {};
+                    if (error.name === "ValidationError") {
+                        Object.keys(error.errors).forEach((key) => {
+                            errors[key] = error.errors[key].message;
+                        });
+                    }
+                    res.status(400).json({ success: false, errors: errors });
                 }
             }
             break;

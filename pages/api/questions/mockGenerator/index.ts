@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from "../../../../dbConnect";
+import dbConnect from "../../../../lib/dbConnect";
 import MCQOptionModel from "../../../../models/MCQOption.model";
 import QuestionModel from "../../../../models/Question.model";
 
@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch (method) {
         case 'GET':
             try {
-                fs.readFile('./lib/mytys_mock_question.json', (err, data) => {
+                fs.readFile('./lib/mockData/mytys_mock_question.json', (err, data) => {
                     if (err) {
                         return res.status(500).end();
                     } else {

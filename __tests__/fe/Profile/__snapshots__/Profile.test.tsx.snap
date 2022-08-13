@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Profile Component Should render correctly 1`] = `
+<div>
+  <div
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:min-w-xl md:min-w-full lg:min-w-screen-lg xl:min-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
+    <div
+      class="grid grid-cols-12 gap-4"
+    >
+      <div
+        class="col-span-12 lg:col-span-5 xl-col-span-4 2xl-col-span-3"
+      >
+        <div
+          class="flex flex-col mb-16 sm:text-center sm:mb-0 border border-gray-100 shadow-xl rounded-xl p-5"
+        >
+          <img
+            alt=""
+            class="object-cover w-56 h-56 rounded-full shadow-lg mx-auto mb-10"
+            src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+          />
+          <h2
+            class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+          >
+            User
+          </h2>
+        </div>
+      </div>
+      <div
+        class="col-span-12 lg:col-span-7 xl-col-span-8 2xl-col-span-9"
+      >
+        <div
+          class="flex flex-col mb-16 sm:text-center sm:mb-0 border border-gray-100 shadow-xl rounded-xl p-5"
+        >
+          <p>
+            Solved Problems
+          </p>
+          <div
+            class="grid grid-cols-12 gap-4 mt-5"
+          >
+            <div
+              class="col-span-4"
+            >
+              <p
+                class="text-xl font-medium"
+              >
+                32
+              </p>
+              <p
+                class="text-sm"
+              >
+                Problems
+              </p>
+            </div>
+            <div
+              class="col-span-8"
+            >
+              <div
+                class="flex justify-between mb-1"
+              >
+                <span
+                  class="text-sm font-medium text-blue-700"
+                >
+                  45
+                  %
+                </span>
+              </div>
+              <div
+                class="w-full bg-gray-200 rounded-full h-2.5"
+              >
+                <div
+                  class="bg-blue-600 h-2.5 rounded-full"
+                  style="width: 45%;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from '../../../../../dbConnect';
+import dbConnect from '../../../../../lib/dbConnect';
 import QuestionModel from "../../../../../models/Question.model";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     })
                     .setOptions({ sanitizeFilter: true })
                     .exec();
-                res.status(201).json({ success: true, data: Questions });
+                res.status(200).json({ success: true, data: Questions });
             } catch (error) {
                 res.status(400).json({ success: false });
             }

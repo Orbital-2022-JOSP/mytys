@@ -6,7 +6,7 @@ export const SingleCourse: React.FC<ICourse> = ({ _id, title, description, diffi
     return (
         <GenericContainer>
             <div className="flex flex-col lg:flex-row">
-                <div className="max-w-xl pr-16 mx-auto mb-10 w-1/2 mt-5">
+                <div className="max-w-xl pr-16 mx-auto mb-10 w-full lg:w-1/2 mt-5">
                     <h5 className="mb-6 text-3xl font-extrabold leading-none">
                         {title ? title : "The quick, brown fox jumps over a lazy dog"}
                     </h5>
@@ -27,7 +27,7 @@ export const SingleCourse: React.FC<ICourse> = ({ _id, title, description, diffi
                         </Link>
                     </div>
                 </div>
-                <div className="grid gap-5 row-gap-5 sm:grid-cols-2 w-1/2">
+                <div className="grid gap-5 row-gap-5 sm:grid-cols-2 lg:w-1/2">
                     <div className="max-w-md">
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-light-blue-50">
                             <svg

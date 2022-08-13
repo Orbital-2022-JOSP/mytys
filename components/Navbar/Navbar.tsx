@@ -33,8 +33,8 @@ export const Navbar = () => {
                                 <li>
                                     <Link href={"/"}>
                                         <a
-                                            aria-label="Our product"
-                                            title="Our product"
+                                            aria-label="Home"
+                                            title="Home"
                                             className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
                                         >
                                             Home
@@ -44,8 +44,8 @@ export const Navbar = () => {
                                 <li>
                                     <Link href={"/courses"}>
                                         <a
-                                            aria-label="Our courses"
-                                            title="Our courses"
+                                            aria-label="Courses"
+                                            title="Courses"
                                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                         >
                                             Courses
@@ -53,7 +53,7 @@ export const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/questions/mcq/random"}>
+                                    <Link href={"/questions/random"}>
                                         <a
                                             aria-label="Quiz"
                                             title="Quiz"
@@ -78,11 +78,11 @@ export const Navbar = () => {
                                     <button
                                         onClick={() => signOut({ callbackUrl: "/" })}
                                         className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
-                                        aria-label="Log Out"
-                                        title="Log Out"
+                                        aria-label="Sign Out"
+                                        title="Sign Out"
                                     >
                                         <span className="font-bold">
-                                            Log Out
+                                            Sign Out
                                         </span>
                                     </button>
                                 </li>
@@ -99,8 +99,8 @@ export const Navbar = () => {
                                 <li>
                                     <Link href={"/"}>
                                         <a
-                                            aria-label="Our product"
-                                            title="Our product"
+                                            aria-label="Home"
+                                            title="Home"
                                             className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
                                         >
                                             Home
@@ -110,8 +110,8 @@ export const Navbar = () => {
                                 <li>
                                     <Link href={"/courses"}>
                                         <a
-                                            aria-label="Our courses"
-                                            title="Our courses"
+                                            aria-label="Courses"
+                                            title="Courses"
                                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                         >
                                             Courses
@@ -130,7 +130,7 @@ export const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"/aboutus"}>
+                                    <Link href={"/about-us"}>
                                         <a
                                             aria-label="About us"
                                             title="About us"
@@ -144,16 +144,16 @@ export const Navbar = () => {
                                     <button
                                         onClick={() => signIn("google", { callbackUrl: '/' })}
                                         className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-accent-400 hover:bg-light-blue-accent-700 focus:shadow-outline focus:outline-none"
-                                        aria-label="Sign up"
-                                        title="Sign up"
+                                        aria-label="Sign In"
+                                        title="Sign In"
                                     >
-                                        Log In
+                                        Sign In
                                     </button>
                                 </li>
                             </>
                     }
                 </ul>
-                <div className="lg:hidden">
+                <div className="lg:hidden z-50">
                     <button
                         aria-label="Open Menu"
                         title="Open Menu"
@@ -221,8 +221,8 @@ export const Navbar = () => {
                                             <li>
                                                 <Link href={"/"}>
                                                     <a
-                                                        aria-label="Our product"
-                                                        title="Our product"
+                                                        aria-label="Home"
+                                                        title="Home"
                                                         className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-light-blue-500"
                                                     >
                                                         Home
@@ -232,8 +232,8 @@ export const Navbar = () => {
                                             <li>
                                                 <Link href={"/courses"}>
                                                     <a
-                                                        aria-label="Our courses"
-                                                        title="Our courses"
+                                                        aria-label="Courses"
+                                                        title="Courses"
                                                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-500"
                                                     >
                                                         Courses
@@ -241,7 +241,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/questions/mcq/random"}>
+                                                <Link href={"/questions/random"}>
                                                     <a
                                                         aria-label="Quiz"
                                                         title="Quiz"
@@ -266,11 +266,11 @@ export const Navbar = () => {
                                                 <button
                                                     onClick={() => signOut()}
                                                     className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-light-blue-500 transition duration-300 rounded shadow-md bg-white hover:bg-light-blue-800 focus:shadow-outlinefocus:outline-none"
-                                                    aria-label="Log Out"
-                                                    title="Log Out"
+                                                    aria-label="Sign Out"
+                                                    title="Sign Out"
                                                 >
                                                     <span className="font-bold">
-                                                        Log Out
+                                                        Sign Out
                                                     </span>
                                                 </button>
                                             </li>
@@ -330,8 +330,8 @@ export const Navbar = () => {
                                             <li>
                                                 <Link href={"/"}>
                                                     <a
-                                                        aria-label="Our product"
-                                                        title="Our product"
+                                                        aria-label="Home"
+                                                        title="Home"
                                                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                                     >
                                                         Home
@@ -341,8 +341,8 @@ export const Navbar = () => {
                                             <li>
                                                 <Link href={"/courses"}>
                                                     <a
-                                                        aria-label="Our courses"
-                                                        title="Our courses"
+                                                        aria-label="Courses"
+                                                        title="Courses"
                                                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-light-blue-accent-400"
                                                     >
                                                         Courses
@@ -361,7 +361,7 @@ export const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href={"/aboutus"}>
+                                                <Link href={"/about-us"}>
                                                     <a
                                                         aria-label="About us"
                                                         title="About us"
@@ -375,10 +375,10 @@ export const Navbar = () => {
                                                 <button
                                                     onClick={() => signIn("google", { callbackUrl: '/' })}
                                                     className="inline-flex items-center justify-center  w-full h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md border border-light-blue-accent-400 hover:bg-light-blue-accent-700 hover:text-white focus:shadow-outline focus:outline-none"
-                                                    aria-label="Sign up"
-                                                    title="Sign up"
+                                                    aria-label="Sign In"
+                                                    title="Sign In"
                                                 >
-                                                    Log In
+                                                    Sign In
                                                 </button>
                                             </li>
                                         </ul>

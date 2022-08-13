@@ -1,6 +1,6 @@
 import sanitize from 'mongo-sanitize';
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from '../../../../dbConnect';
+import dbConnect from '../../../../lib/dbConnect';
 import CourseModel from '../../../../models/Course.model';
 import MCQOptionModel from '../../../../models/MCQOption.model';
 import QuestionModel from '../../../../models/Question.model';
@@ -81,10 +81,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                         })
                     .setOptions({ sanitizeFilter: true });
                 if (!course) {
-                    return res.status(400).json({ success: false });
+                    return res.status(404).json({ success: false });
                 }
                 res.status(200).json({ success: true, data: course });
             } catch (error) {
+                console.log(error)
                 res.status(400).json({ success: false });
             }
             break;
@@ -99,7 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     })
                     .setOptions({ sanitizeFilter: true });
                 if (!deletedCourse) {
-                    return res.status(400).json({ success: false });
+                    return res.status(404).json({ success: false });
                 }
                 res.status(200).json({ success: true, data: {} });
             } catch (error) {

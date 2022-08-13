@@ -34,13 +34,22 @@ export interface ICourse {
 
 const CourseSchema = new Schema<ICourse>({
     title: {
-        type: String
+        type: String,
+        required: [
+            function () { return this.title != null; },
+            'Title is required'
+        ]
     },
     description: {
-        type: String
+        type: String,
+        required: [
+            function () { return this.description != null; },
+            'Description is required'
+        ]
     },
     difficulty: {
-        type: Number
+        type: Number,
+        required: true
     },
     courseTopics: [{
         type: mongoose.Schema.Types.ObjectId,
@@ -64,7 +73,8 @@ const CourseSchema = new Schema<ICourse>({
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+        ref: "User",
+        required: true
     }
 }, {
     timestamps: true
