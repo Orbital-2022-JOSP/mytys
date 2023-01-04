@@ -9,6 +9,8 @@ import mongoose, { Types } from "mongoose";
  * @member {string} image The user's image uri
  * @member {boolean} emailVerified Email Verified Flag
  * @member {string} userRole The user's role
+ * @member {number} level The user's "power" level
+ * @member {string} grade The user's grade
  */
 
 export interface IUser {
@@ -18,6 +20,8 @@ export interface IUser {
   image: string;
   emailVerified: boolean;
   userRole: string;
+  level: number;
+grade: string;
 }
 
 const UserSchema = new mongoose.Schema(
