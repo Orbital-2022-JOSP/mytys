@@ -2,7 +2,7 @@ import mongoose, { model, Schema, Types } from 'mongoose';
 
 /**
  * The question type interface
- * 
+ *
  * @interface IQuestionType
  * @member {string} name The name of the question type
  */

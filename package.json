@@ -13,7 +13,8 @@
         "test": "jest --watch",
         "test:ci": "jest --ci",
         "cron": "node lib/points-calculator.js",
-        "start2": "concurrently \"npm:start\" \"npm:cron\""
+        "start2": "concurrently \"npm:start\" \"npm:cron\"",
+        "checkTs": "tsc --noEmit"
     },
     "dependencies": {
         "@heroicons/react": "^1.0.6",
