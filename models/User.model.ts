@@ -21,7 +21,7 @@ export interface IUser {
   emailVerified: boolean;
   userRole: string;
   level: number;
-grade: string;
+  grade: string;
 }
 
 const UserSchema = new mongoose.Schema(
