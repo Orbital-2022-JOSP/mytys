@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Hero4 Component Should render correctly 1`] = `
+exports[`The Hero Component Should render correctly 1`] = `
 <div>
   <div
     class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:min-w-xl md:min-w-full lg:min-w-screen-lg xl:min-w-screen-xl md:px-24 lg:px-8 lg:py-20"

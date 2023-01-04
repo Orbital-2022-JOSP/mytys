@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Hero4 } from '../../../components/Hero4/Hero4';
+import { Hero } from '../../../components/Hero/Hero';
 
 jest.mock("next-auth/react", () => {
     const originalModule = jest.requireActual('next-auth/react');
@@ -13,11 +13,11 @@ jest.mock("next-auth/react", () => {
     };
 });
 
-describe("The Hero4 Component", () => {
+describe("The Hero Component", () => {
 
     it('Should render correctly',
         async () => {
-            const { container } = render(<Hero4 />);
+            const { container } = render(<Hero />);
 
             expect(container).toMatchSnapshot()
             expect(screen.getByText("The MyTYS app provides a simple and convenient way to experience the benefits of private tuition"))
@@ -26,7 +26,7 @@ describe("The Hero4 Component", () => {
 
     it('Should render the enroll link',
         async () => {
-            const { container } = render(<Hero4 />);
+            const { container } = render(<Hero />);
 
             expect(screen.getByRole('link', { name: "Enroll For Free" }))
                 .toBeInTheDocument();
@@ -37,7 +37,7 @@ describe("The Enroll For Free Link", () => {
 
     it('Should render correctly',
         async () => {
-            const { container } = render(<Hero4 />);
+            const { container } = render(<Hero />);
 
             expect(screen.getByRole('link', { name: "Enroll For Free" }))
                 .toBeInTheDocument();
