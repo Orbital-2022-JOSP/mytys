@@ -2,7 +2,7 @@ import mongoose, { model, Schema, Types } from 'mongoose';
 
 /**
  * The mcq question option interface
- * 
+ *
  * @interface IMCQOption
  * @member {Types.ObjectId} id The id of the mcq question option
  * @member {Types.ObjectId} questionId The corresponding question id
@@ -10,25 +10,31 @@ import mongoose, { model, Schema, Types } from 'mongoose';
  */
 
 export interface IMCQOption {
-    _id?: Types.ObjectId;
-    questionId: Types.ObjectId;
-    text: string;
+  _id?: Types.ObjectId;
+  questionId: Types.ObjectId;
+  text: string;
 }
 
-export const MCQOptionSchema = new Schema<IMCQOption>({
+export const MCQOptionSchema = new Schema<IMCQOption>(
+  {
     questionId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'MCQ'
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'MCQ',
     },
     text: {
-        type: String,
-        required: [
-            function () { return this.text != null; },
-            'MCQ Option text is required'
-        ]
-    }
-}, {
-    timestamps: true
-})
+      type: String,
+      required: [
+        function () {
+          return this.text != null;
+        },
+        'MCQ Option text is required',
+      ],
+    },
+  },
+  {
+    timestamps: true,
+  },
+);
 
-export default mongoose.models.MCQOption || model<IMCQOption>('MCQOption', MCQOptionSchema)
+export default mongoose.models.MCQOption ||
+  model<IMCQOption>('MCQOption', MCQOptionSchema);

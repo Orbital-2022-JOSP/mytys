@@ -5,7 +5,7 @@ import { IQuestionType } from './QuestionType.model';
 
 /**
  * The mcq question interface that extends from the generic question interface
- * 
+ *
  * @interface IQuestion
  * @member {Types.ObjectId} id Id of the question
  * @member {string} title Title of the question
@@ -22,74 +22,92 @@ import { IQuestionType } from './QuestionType.model';
  */
 
 export interface IQuestion {
-    _id?: Types.ObjectId;
-    title: string;
-    description: string;
-    difficulty: number;
-    explanation: string;
-    questionTopics: Array<IQuestionTopic>;
-    questionTypes: Array<IQuestionType>;
-    subject: string;
-    questionType: "mcq" | "oe";
-    mcqCorrectAnswer: IMCQOption;
-    mcqOptions: Array<IMCQOption>;
-    oeCorrectAnswers: [string];
+  _id?: Types.ObjectId;
+  title: string;
+  description: string;
+  difficulty: number;
+  explanation: string;
+  questionTopics: Array<IQuestionTopic>;
+  questionTypes: Array<IQuestionType>;
+  subject: string;
+  questionType: 'mcq' | 'oe';
+  mcqCorrectAnswer: IMCQOption;
+  mcqOptions: Array<IMCQOption>;
+  oeCorrectAnswers: [string];
 }
 
-const QuestionSchema = new Schema<IQuestion>({
+const QuestionSchema = new Schema<IQuestion>(
+  {
     title: {
-        type: String,
-        required: [
-            function () { return this.title != null; },
-            'Title is required'
-        ]
+      type: String,
+      required: [
+        function () {
+          return this.title != null;
+        },
+        'Title is required',
+      ],
     },
     description: {
-        type: String
+      type: String,
     },
     difficulty: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true,
     },
     explanation: {
-        type: String,
-        required: [
-            function () { return this.explanation != null; },
-            'Explanation is required'
-        ]
+      type: String,
+      required: [
+        function () {
+          return this.explanation != null;
+        },
+        'Explanation is required',
+      ],
     },
-    questionTopics: [{
+    questionTopics: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "QuestionTopic"
-    }],
-    questionTypes: [{
+        ref: 'QuestionTopic',
+      },
+    ],
+    questionTypes: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "QuestionType"
-    }],
+        ref: 'QuestionType',
+      },
+    ],
     subject: {
-        type: String,
-        required: [
-            function () { return this.subject != null; },
-            'Subject is required'
-        ]
+      type: String,
+      required: [
+        function () {
+          return this.subject != null;
+        },
+        'Subject is required',
+      ],
     },
     questionType: {
-        type: String,
-        default: "mcq"
+      type: String,
+      default: 'mcq',
     },
     mcqCorrectAnswer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "MCQOption"
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'MCQOption',
     },
-    mcqOptions: [{
+    mcqOptions: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "MCQOption"
-    }],
-    oeCorrectAnswers: [{
-        type: String
-    }]
-}, {
-    timestamps: true
-})
+        ref: 'MCQOption',
+      },
+    ],
+    oeCorrectAnswers: [
+      {
+        type: String,
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  },
+);
 
-export default mongoose.models.Question || model<IQuestion>('Question', QuestionSchema)
+export default mongoose.models.Question ||
+  model<IQuestion>('Question', QuestionSchema);
