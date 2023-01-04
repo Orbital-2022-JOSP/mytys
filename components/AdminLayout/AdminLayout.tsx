@@ -79,7 +79,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
                     </div>
                 </div>
 
-                <div className="pt-10 bg-gray-100 min-h-screen">
+                <div className="py-10 bg-gray-100 min-h-screen">
                     {children}
                 </div>
             </div>
