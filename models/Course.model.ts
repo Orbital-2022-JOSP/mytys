@@ -1,4 +1,4 @@
-import mongoose, { model, Schema, Types } from 'mongoose';
+import mongoose, { Schema, Types, model } from 'mongoose';
 import { IQuestion } from './Question.model';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';

@@ -4,7 +4,7 @@ import { IQuestionType } from './QuestionType.model';
 
 /**
  * The user profile interface
- * 
+ *
  * @interface IUserProfile
  * @member {Types.ObjectId} userId The corresponding user id
  * @member {number} noOfPoints The number of points the user has
@@ -17,51 +17,63 @@ import { IQuestionType } from './QuestionType.model';
  */
 
 export interface IUserProfile {
-    _id?: Types.ObjectId;
-    userId: Types.ObjectId;
-    noOfPoints: number;
-    dayStreaks: number;
-    rank: string;
-    bestQuestionTopics: Array<IQuestionTopic>;
-    bestQuestionTypes: Array<IQuestionType>;
-    worstQuestionTopics: Array<IQuestionTopic>;
-    worstQuestionTypes: Array<IQuestionType>;
+  _id?: Types.ObjectId;
+  userId: Types.ObjectId;
+  noOfPoints: number;
+  dayStreaks: number;
+  rank: string;
+  bestQuestionTopics: Array<IQuestionTopic>;
+  bestQuestionTypes: Array<IQuestionType>;
+  worstQuestionTopics: Array<IQuestionTopic>;
+  worstQuestionTypes: Array<IQuestionType>;
 }
 
-const UserProfileSchema = new Schema<IUserProfile>({
+const UserProfileSchema = new Schema<IUserProfile>(
+  {
     userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
     },
     noOfPoints: {
-        type: Number,
-        min: 0
+      type: Number,
+      min: 0,
     },
     dayStreaks: {
-        type: Number,
-        min: 0
+      type: Number,
+      min: 0,
     },
     rank: {
-        type: String
+      type: String,
     },
-    bestQuestionTopics: [{
+    bestQuestionTopics: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "QuestionTopic"
-    }],
-    bestQuestionTypes: [{
+        ref: 'QuestionTopic',
+      },
+    ],
+    bestQuestionTypes: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "QuestionType"
-    }],
-    worstQuestionTopics: [{
+        ref: 'QuestionType',
+      },
+    ],
+    worstQuestionTopics: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "QuestionTopic"
-    }],
-    worstQuestionTypes: [{
+        ref: 'QuestionTopic',
+      },
+    ],
+    worstQuestionTypes: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "QuestionType"
-    }]
-}, {
-    timestamps: true
-})
+        ref: 'QuestionType',
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  },
+);
 
-export default mongoose.models.UserProfile || model<IUserProfile>('UserProfile', UserProfileSchema)
+export default mongoose.models.UserProfile ||
+  model<IUserProfile>('UserProfile', UserProfileSchema);

@@ -1,17 +1,17 @@
-import mongoose, { model, Schema, Types } from 'mongoose';
+import mongoose, { Schema, Types, model } from 'mongoose';
 import { IQuestion } from './Question.model';
 import { IUser } from './User.model';
 
 export interface IQuestionAnswerExtended {
-    user: IUser;
-    question: IQuestion;
-    score: number;
-    points: number;
+  user: IUser;
+  question: IQuestion;
+  score: number;
+  points: number;
 }
 
 /**
  * The generic question answer interface
- * 
+ *
  * @interface IQuestionAnswer
  * @member {Types.ObjectId} user The user id that answered the question
  * @member {Types.ObjectId} question The question id
@@ -19,44 +19,51 @@ export interface IQuestionAnswerExtended {
  * @member {number} points The points associated with the question
  */
 
-
 // MCQ Answer and Open Ended Answer might not be necessary in the future
 export interface IQuestionAnswer {
-    _id?: Types.ObjectId;
-    user: Types.ObjectId;
-    question: Types.ObjectId;
-    score: number;
-    points: number;
+  _id?: Types.ObjectId;
+  user: Types.ObjectId;
+  question: Types.ObjectId;
+  score: number;
+  points: number;
 }
 
-const QuestionAnswerSchema = new Schema<IQuestionAnswer>({
+const QuestionAnswerSchema = new Schema<IQuestionAnswer>(
+  {
     user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-        required: [
-            function () { return this.user != null; },
-            'User is required'
-        ]
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: [
+        function () {
+          return this.user != null;
+        },
+        'User is required',
+      ],
     },
     question: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Question",
-        required: [
-            function () { return this.question != null; },
-            'Question is required'
-        ]
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Question',
+      required: [
+        function () {
+          return this.question != null;
+        },
+        'Question is required',
+      ],
     },
     score: {
-        type: Number,
-        min: 0
+      type: Number,
+      min: 0,
     },
     points: {
-        type: Number,
-        min: 0,
-        default: 0
+      type: Number,
+      min: 0,
+      default: 0,
     },
-}, {
-    timestamps: true
-})
+  },
+  {
+    timestamps: true,
+  },
+);
 
-export default mongoose.models.QuestionAnswer || model<IQuestionAnswer>('QuestionAnswer', QuestionAnswerSchema)
+export default mongoose.models.QuestionAnswer ||
+  model<IQuestionAnswer>('QuestionAnswer', QuestionAnswerSchema);

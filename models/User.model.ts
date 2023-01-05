@@ -1,4 +1,4 @@
-import mongoose, { Types } from "mongoose";
+import mongoose, { Types } from 'mongoose';
 
 /**
  * The user interface
@@ -28,15 +28,15 @@ const UserSchema = new mongoose.Schema(
   {
     email: {
       type: String,
-      required: [true, "Required"],
+      required: [true, 'Required'],
     },
     name: {
       type: String,
-      required: [true, "Required"],
+      required: [true, 'Required'],
     },
     image: {
       type: String,
-      required: [true, "Required"],
+      required: [true, 'Required'],
     },
     emailVerified: {
       type: Boolean,
@@ -54,29 +54,29 @@ const UserSchema = new mongoose.Schema(
     grade: {
       type: String,
       enum: [
-        "Grade 1",
-        "Grade 2",
-        "Grade 3",
-        "Grade 4",
-        "Grade 5",
-        "Grade 6",
-        "Grade 7",
-        "Grade 8",
-        "Grade 9",
+        'Grade 1',
+        'Grade 2',
+        'Grade 3',
+        'Grade 4',
+        'Grade 5',
+        'Grade 6',
+        'Grade 7',
+        'Grade 8',
+        'Grade 9',
       ],
-      default: "Grade 1",
+      default: 'Grade 1',
     },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
-UserSchema.virtual("answeredQuestions", {
-  ref: "QuestionAnswer",
-  localField: "_id",
-  foreignField: "user",
+UserSchema.virtual('answeredQuestions', {
+  ref: 'QuestionAnswer',
+  localField: '_id',
+  foreignField: 'user',
 });
 
 export default mongoose.models.User ||
-  mongoose.model("User", UserSchema, "users");
+  mongoose.model('User', UserSchema, 'users');

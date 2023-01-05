@@ -8,20 +8,26 @@ import mongoose, { model, Schema, Types } from 'mongoose';
  */
 
 export interface IQuestionType {
-    _id?: Types.ObjectId;
-    name: string;
+  _id?: Types.ObjectId;
+  name: string;
 }
 
-const QuestionTypeSchema = new Schema<IQuestionType>({
+const QuestionTypeSchema = new Schema<IQuestionType>(
+  {
     name: {
-        type: String,
-        required: [
-            function () { return this.name != null; },
-            'Name is required'
-        ]
-    }
-}, {
-    timestamps: true
-})
+      type: String,
+      required: [
+        function () {
+          return this.name != null;
+        },
+        'Name is required',
+      ],
+    },
+  },
+  {
+    timestamps: true,
+  },
+);
 
-export default mongoose.models.QuestionType || model<IQuestionType>('QuestionType', QuestionTypeSchema)
+export default mongoose.models.QuestionType ||
+  model<IQuestionType>('QuestionType', QuestionTypeSchema);

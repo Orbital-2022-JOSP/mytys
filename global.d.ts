@@ -1,11 +1,11 @@
-import { MongoClient } from "mongodb";
-import type { mongoose } from "mongoose";
+import { MongoClient } from 'mongodb';
+import type { mongoose } from 'mongoose';
 
 declare global {
-    var mongoose: mongoose;
-    var _mongoClientPromise: Promise<MongoClient>
+  var mongoose: mongoose;
+  var _mongoClientPromise: Promise<MongoClient>;
 
-    interface String {
-        toTitleCase(): string;
-    }
+  interface String {
+    toTitleCase(): string;
+  }
 }

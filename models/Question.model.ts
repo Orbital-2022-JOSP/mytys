@@ -1,5 +1,5 @@
-import mongoose, { model, Schema, Types } from 'mongoose';
-import { IMCQOption, MCQOptionSchema } from './MCQOption.model';
+import mongoose, { Schema, Types, model } from 'mongoose';
+import { IMCQOption } from './MCQOption.model';
 import { IQuestionTopic } from './QuestionTopic.model';
 import { IQuestionType } from './QuestionType.model';
 

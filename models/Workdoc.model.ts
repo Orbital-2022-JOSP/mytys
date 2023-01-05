@@ -1,11 +1,11 @@
-import mongoose, { model, Schema, Types } from 'mongoose';
+import mongoose, { Schema, Types, model } from 'mongoose';
 import { IQuestionAnswer } from './QuestionAnswer.model';
 import { IUser } from './User.model';
 import { IWorksheet } from './Worksheet.model';
 
 /**
  * The work document interface
- * 
+ *
  * @interface IWorkdoc
  * @member {IWorksheet} worksheet The corresponding worksheet
  * @member {Array<IQuestionAnswer>} questionAttempts The list of question attempts
@@ -17,47 +17,53 @@ import { IWorksheet } from './Worksheet.model';
  */
 
 export interface IWorkdoc {
-    _id?: Types.ObjectId;
-    worksheet: IWorksheet;
-    questionAttempts: Array<IQuestionAnswer>;
-    user: IUser;
-    userScore: number;
-    maximumScore: number;
-    pointsEarned: number;
-    deleted: boolean;
+  _id?: Types.ObjectId;
+  worksheet: IWorksheet;
+  questionAttempts: Array<IQuestionAnswer>;
+  user: IUser;
+  userScore: number;
+  maximumScore: number;
+  pointsEarned: number;
+  deleted: boolean;
 }
 
-const WorkdocSchema = new Schema<IWorkdoc>({
+const WorkdocSchema = new Schema<IWorkdoc>(
+  {
     worksheet: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Worksheet"
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Worksheet',
     },
-    questionAttempts: [{
+    questionAttempts: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "QuestionAnswer"
-    }],
+        ref: 'QuestionAnswer',
+      },
+    ],
     user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
     },
     userScore: {
-        type: Number,
-        min: 0
+      type: Number,
+      min: 0,
     },
     maximumScore: {
-        type: Number,
-        min: 0
+      type: Number,
+      min: 0,
     },
     pointsEarned: {
-        type: Number,
-        min: 0
+      type: Number,
+      min: 0,
     },
     deleted: {
-        type: Boolean,
-        default: false
-    }
-}, {
-    timestamps: true
-})
+      type: Boolean,
+      default: false,
+    },
+  },
+  {
+    timestamps: true,
+  },
+);
 
-export default mongoose.models.Workdoc || model<IWorkdoc>('Workdoc', WorkdocSchema)
+export default mongoose.models.Workdoc ||
+  model<IWorkdoc>('Workdoc', WorkdocSchema);
